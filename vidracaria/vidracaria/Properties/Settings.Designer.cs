@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace vidracaria.Properties
+namespace VidracariaNovo.Properties
 {
 
 

@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,40 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="inicioToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAP1JREFUWEft
+        klsOgkAQBDmCR/NI3lBvhBTWrGyyLC/Bn62ERGZ6ujvErnGEvu9vPL5ei+FPn2tLTMKD60oQZCC8fOD8
+        EgQYBASP/wF/w3klMDYAxnBXsTuvBIYaQxYeMHMHvyuBkYZQDA/YqYHjJTDQCKrhARq1sL8EhxrAqvAA
+        rTewvQQHHsKm8IAbb2F9CYQewK7wgFs9YLkEAoXB7vAAj4/VyHwJFgoSrg6jXVAuMQzv4/r7yYoFXM2i
+        LMMVhPfDVc6woET6ZI4zXM2iLMMV4F0On/LR1s18TTjedDOL+lagFWgF/l+ghtKE4ypKl1FfRWnCcRWl
+        jcaErnsDv868fmVpM70AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="cadastrosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAIlJREFUWEft
+        kNEJwCAMRB2hI7mh3bDdxKbw6IcStMFCCXlw4ElyHqYgsFJrzaIDZa6/Rx7bREXUUhhZA6EjdjSE2HnY
+        0zhFz7ffZ+5UGJ2HvfeLDcREAQcFsJ3XYMxRASvEOCiA7bwGY44KWCHGQQFs5zUYc1TACjFRwF5gFcTO
+        w94yiA2Cv5HSBWhTWqOCtA1aAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="financeiroStripMenuItem5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAKpJREFUWEft
+        kNENgCAMRBnBERzdEdzAVRzBDbCVpx/6IUViAulLmtDSOy4Ex2mCWAns7KD/DHZ20BcbIPcAHQWgffR3
+        uO4wgBXkHQWgffR3uO4wgBXkDQf4Cu/nB2C/GGwuGDcYgDYbZFUCbEkSB0ZZoFEunZzHNIoro3dkeU6a
+        uEhlh5Dd6VCho/SszKy9I8ua+vyFGqiX6TfPEPoTq1QpqlUP2+OO8x8h7ITEbKcRLCcKAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
 </root>
