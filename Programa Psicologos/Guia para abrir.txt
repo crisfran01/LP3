@@ -1,0 +1,24 @@
+Guia para abrir
+
+Drives:
+para executar apenas:
+- easyphp
+- drives na pasta: Drives nescessarios
+
+para ver o codigo:
+- Visual studio 2012( o 2015 tem algumas funções diferentes) 
+
+
+Como executar:
+ 
+no easyphp:
+- abra o administration ( clicar com o botão direito no icone lateral)
+- nos modules abrir o MySQL Administration : PhpMyAdmin 4.1.4
+- criar um bando de dados chamado psidatabase
+- importar o banco da pasta banco
+
+com visual studio
+- abrir e executar o programa
+
+sem visual
+- apenas executar o programa executavel.

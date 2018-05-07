@@ -1,0 +1,15 @@
+C:\Users\Cristiane\Desktop\Psychology\Psicology\bin\Debug\Psicology.exe.config
+C:\Users\Cristiane\Desktop\Psychology\Psicology\obj\Debug\Psychology.csprojResolveAssemblyReference.cache
+C:\Users\Cristiane\Desktop\Psychology\Psicology\obj\Debug\Psicology.frmCadCli.resources
+C:\Users\Cristiane\Desktop\Psychology\Psicology\obj\Debug\Psicology.frmPrincipal.resources
+C:\Users\Cristiane\Desktop\Psychology\Psicology\obj\Debug\Psicology.frmLogin.resources
+C:\Users\Cristiane\Desktop\Psychology\Psicology\obj\Debug\Psicology.Properties.Resources.resources
+C:\Users\Cristiane\Desktop\Psychology\Psicology\obj\Debug\Psychology.csproj.GenerateResource.Cache
+C:\Users\Cristiane\Desktop\Psychology\Psicology\bin\Debug\PsiDatabase.mdf
+C:\Users\Cristiane\Desktop\Psychology\Psicology\bin\Debug\PsiDatabase_log.ldf
+C:\Users\Cristiane\Desktop\Psychology\Psicology\bin\Debug\Psicology.exe
+C:\Users\Cristiane\Desktop\Psychology\Psicology\bin\Debug\Psicology.pdb
+C:\Users\Cristiane\Desktop\Psychology\Psicology\obj\Debug\Psicology.exe
+C:\Users\Cristiane\Desktop\Psychology\Psicology\obj\Debug\Psicology.pdb
+C:\Users\Cristiane\Desktop\Psychology\Psicology\obj\Debug\Psicology.frmInseUsu.resources
+C:\Users\Cristiane\Desktop\Psychology\Psicology\obj\Debug\Psicology.frmaAlteraSenha.resources
