@@ -119,6 +119,269 @@
             this.panelEdit.SuspendLayout();
             this.SuspendLayout();
             // 
+            // telRespLabel
+            // 
+            telRespLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            telRespLabel.AutoSize = true;
+            telRespLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            telRespLabel.ForeColor = System.Drawing.SystemColors.Control;
+            telRespLabel.Location = new System.Drawing.Point(628, 323);
+            telRespLabel.Name = "telRespLabel";
+            telRespLabel.Size = new System.Drawing.Size(75, 18);
+            telRespLabel.TabIndex = 138;
+            telRespLabel.Text = "Tel Resp:";
+            // 
+            // responsavelLabel
+            // 
+            responsavelLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            responsavelLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            responsavelLabel.ForeColor = System.Drawing.SystemColors.Control;
+            responsavelLabel.Location = new System.Drawing.Point(177, 320);
+            responsavelLabel.Name = "responsavelLabel";
+            responsavelLabel.Size = new System.Drawing.Size(100, 21);
+            responsavelLabel.TabIndex = 136;
+            responsavelLabel.Text = "Responsavel:";
+            responsavelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // estCivilLabel
+            // 
+            estCivilLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            estCivilLabel.AutoSize = true;
+            estCivilLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            estCivilLabel.ForeColor = System.Drawing.SystemColors.Control;
+            estCivilLabel.Location = new System.Drawing.Point(630, 274);
+            estCivilLabel.Name = "estCivilLabel";
+            estCivilLabel.Size = new System.Drawing.Size(71, 18);
+            estCivilLabel.TabIndex = 134;
+            estCivilLabel.Text = "Est Civil:";
+            // 
+            // trabalhoLabel
+            // 
+            trabalhoLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            trabalhoLabel.AutoSize = true;
+            trabalhoLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            trabalhoLabel.ForeColor = System.Drawing.SystemColors.Control;
+            trabalhoLabel.Location = new System.Drawing.Point(415, 273);
+            trabalhoLabel.Name = "trabalhoLabel";
+            trabalhoLabel.Size = new System.Drawing.Size(77, 18);
+            trabalhoLabel.TabIndex = 132;
+            trabalhoLabel.Text = "Trabalho:";
+            // 
+            // escolaridadeLabel
+            // 
+            escolaridadeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            escolaridadeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            escolaridadeLabel.ForeColor = System.Drawing.SystemColors.Control;
+            escolaridadeLabel.Location = new System.Drawing.Point(177, 270);
+            escolaridadeLabel.Name = "escolaridadeLabel";
+            escolaridadeLabel.Size = new System.Drawing.Size(100, 21);
+            escolaridadeLabel.TabIndex = 130;
+            escolaridadeLabel.Text = "Escolaridade:";
+            escolaridadeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.ForeColor = System.Drawing.SystemColors.Control;
+            label2.Location = new System.Drawing.Point(564, 521);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(35, 18);
+            label2.TabIndex = 125;
+            label2.Text = "Cel:";
+            // 
+            // label3
+            // 
+            label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.ForeColor = System.Drawing.SystemColors.Control;
+            label3.Location = new System.Drawing.Point(177, 519);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(100, 21);
+            label3.TabIndex = 123;
+            label3.Text = "Tel:";
+            label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblPsi
+            // 
+            lblPsi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            lblPsi.AutoSize = true;
+            lblPsi.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblPsi.ForeColor = System.Drawing.SystemColors.Control;
+            lblPsi.Location = new System.Drawing.Point(473, 41);
+            lblPsi.Name = "lblPsi";
+            lblPsi.Size = new System.Drawing.Size(77, 18);
+            lblPsi.TabIndex = 118;
+            lblPsi.Text = "Psicologo:";
+            // 
+            // rgLabel
+            // 
+            rgLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            rgLabel.AutoSize = true;
+            rgLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            rgLabel.ForeColor = System.Drawing.SystemColors.Control;
+            rgLabel.Location = new System.Drawing.Point(563, 228);
+            rgLabel.Name = "rgLabel";
+            rgLabel.Size = new System.Drawing.Size(36, 18);
+            rgLabel.TabIndex = 106;
+            rgLabel.Text = "RG:";
+            // 
+            // cpfLabel
+            // 
+            cpfLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            cpfLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cpfLabel.ForeColor = System.Drawing.SystemColors.Control;
+            cpfLabel.Location = new System.Drawing.Point(177, 225);
+            cpfLabel.Name = "cpfLabel";
+            cpfLabel.Size = new System.Drawing.Size(100, 21);
+            cpfLabel.TabIndex = 104;
+            cpfLabel.Text = "CPF:";
+            cpfLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // emailLabel
+            // 
+            emailLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            emailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            emailLabel.ForeColor = System.Drawing.SystemColors.Control;
+            emailLabel.Location = new System.Drawing.Point(177, 566);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(100, 21);
+            emailLabel.TabIndex = 102;
+            emailLabel.Text = "E-mail:";
+            emailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cepLabel
+            // 
+            cepLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            cepLabel.AutoSize = true;
+            cepLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cepLabel.ForeColor = System.Drawing.SystemColors.Control;
+            cepLabel.Location = new System.Drawing.Point(682, 469);
+            cepLabel.Name = "cepLabel";
+            cepLabel.Size = new System.Drawing.Size(43, 18);
+            cepLabel.TabIndex = 100;
+            cepLabel.Text = "CEP:";
+            // 
+            // cidadeLabel
+            // 
+            cidadeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            cidadeLabel.AutoSize = true;
+            cidadeLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cidadeLabel.ForeColor = System.Drawing.SystemColors.Control;
+            cidadeLabel.Location = new System.Drawing.Point(400, 469);
+            cidadeLabel.Name = "cidadeLabel";
+            cidadeLabel.Size = new System.Drawing.Size(61, 18);
+            cidadeLabel.TabIndex = 97;
+            cidadeLabel.Text = "Cidade:";
+            // 
+            // bairroLabel
+            // 
+            bairroLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            bairroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bairroLabel.ForeColor = System.Drawing.SystemColors.Control;
+            bairroLabel.Location = new System.Drawing.Point(177, 469);
+            bairroLabel.Name = "bairroLabel";
+            bairroLabel.Size = new System.Drawing.Size(100, 21);
+            bairroLabel.TabIndex = 95;
+            bairroLabel.Text = "Bairro:";
+            bairroLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // numLabel
+            // 
+            numLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            numLabel.AutoSize = true;
+            numLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            numLabel.ForeColor = System.Drawing.SystemColors.Control;
+            numLabel.Location = new System.Drawing.Point(722, 417);
+            numLabel.Name = "numLabel";
+            numLabel.Size = new System.Drawing.Size(33, 18);
+            numLabel.TabIndex = 93;
+            numLabel.Text = "Nº:";
+            // 
+            // endLabel
+            // 
+            endLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            endLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            endLabel.ForeColor = System.Drawing.SystemColors.Control;
+            endLabel.Location = new System.Drawing.Point(177, 416);
+            endLabel.Name = "endLabel";
+            endLabel.Size = new System.Drawing.Size(100, 21);
+            endLabel.TabIndex = 91;
+            endLabel.Text = "Endereço:";
+            endLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // sexoLabel
+            // 
+            sexoLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            sexoLabel.AutoSize = true;
+            sexoLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sexoLabel.ForeColor = System.Drawing.SystemColors.Control;
+            sexoLabel.Location = new System.Drawing.Point(415, 178);
+            sexoLabel.Name = "sexoLabel";
+            sexoLabel.Size = new System.Drawing.Size(47, 18);
+            sexoLabel.TabIndex = 89;
+            sexoLabel.Text = "Sexo:";
+            // 
+            // idadeLabel
+            // 
+            idadeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            idadeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idadeLabel.ForeColor = System.Drawing.SystemColors.Control;
+            idadeLabel.Location = new System.Drawing.Point(177, 176);
+            idadeLabel.Name = "idadeLabel";
+            idadeLabel.Size = new System.Drawing.Size(100, 21);
+            idadeLabel.TabIndex = 87;
+            idadeLabel.Text = "Idade:";
+            idadeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dtNacLabel
+            // 
+            dtNacLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            dtNacLabel.AutoSize = true;
+            dtNacLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dtNacLabel.ForeColor = System.Drawing.SystemColors.Control;
+            dtNacLabel.Location = new System.Drawing.Point(581, 178);
+            dtNacLabel.Name = "dtNacLabel";
+            dtNacLabel.Size = new System.Drawing.Size(77, 18);
+            dtNacLabel.TabIndex = 86;
+            dtNacLabel.Text = "Data Nac:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            nomeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nomeLabel.ForeColor = System.Drawing.SystemColors.Control;
+            nomeLabel.Location = new System.Drawing.Point(177, 128);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(100, 21);
+            nomeLabel.TabIndex = 84;
+            nomeLabel.Text = "Nome:";
+            nomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // prontLabel
+            // 
+            prontLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            prontLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            prontLabel.ForeColor = System.Drawing.SystemColors.Control;
+            prontLabel.Location = new System.Drawing.Point(179, 38);
+            prontLabel.Name = "prontLabel";
+            prontLabel.Size = new System.Drawing.Size(100, 26);
+            prontLabel.TabIndex = 82;
+            prontLabel.Text = "Codigo";
+            // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.ForeColor = System.Drawing.SystemColors.Control;
+            label1.Location = new System.Drawing.Point(275, 596);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(481, 16);
+            label1.TabIndex = 121;
+            label1.Text = "* Em caso de criança ou adolescente o estado civil a ser marcado é o dos pais";
+            // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -129,10 +392,9 @@
             this.panel6.Controls.Add(this.btnProximo);
             this.panel6.Controls.Add(this.btnAnterior);
             this.panel6.Controls.Add(this.btnNovo);
-            this.panel6.Location = new System.Drawing.Point(0, 770);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Location = new System.Drawing.Point(0, 616);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1373, 53);
+            this.panel6.Size = new System.Drawing.Size(1030, 43);
             this.panel6.TabIndex = 98;
             // 
             // btnEdit
@@ -144,10 +406,9 @@
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(1172, 9);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEdit.Location = new System.Drawing.Point(879, 7);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(157, 33);
+            this.btnEdit.Size = new System.Drawing.Size(118, 27);
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Editar";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -159,9 +420,8 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1373, 1);
+            this.panel5.Size = new System.Drawing.Size(1030, 1);
             this.panel5.TabIndex = 7;
             // 
             // btnProximo
@@ -173,10 +433,9 @@
             this.btnProximo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnProximo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnProximo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProximo.Location = new System.Drawing.Point(707, 7);
-            this.btnProximo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnProximo.Location = new System.Drawing.Point(530, 6);
             this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(157, 33);
+            this.btnProximo.Size = new System.Drawing.Size(118, 27);
             this.btnProximo.TabIndex = 3;
             this.btnProximo.Text = "Próximo";
             this.btnProximo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -191,10 +450,9 @@
             this.btnAnterior.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnAnterior.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAnterior.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnterior.Location = new System.Drawing.Point(491, 7);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAnterior.Location = new System.Drawing.Point(368, 6);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(157, 33);
+            this.btnAnterior.Size = new System.Drawing.Size(118, 27);
             this.btnAnterior.TabIndex = 2;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -209,10 +467,9 @@
             this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovo.Location = new System.Drawing.Point(59, 11);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNovo.Location = new System.Drawing.Point(44, 9);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(157, 33);
+            this.btnNovo.Size = new System.Drawing.Size(118, 27);
             this.btnNovo.TabIndex = 1;
             this.btnNovo.Text = "Adicionar";
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -277,9 +534,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1373, 823);
+            this.panel2.Size = new System.Drawing.Size(1030, 655);
             this.panel2.TabIndex = 96;
             // 
             // panel1
@@ -289,9 +545,8 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1373, 34);
+            this.panel1.Size = new System.Drawing.Size(1030, 28);
             this.panel1.TabIndex = 187;
             // 
             // btnClose
@@ -302,7 +557,7 @@
             this.btnClose.Location = new System.Drawing.Point(0, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(51, 32);
+            this.btnClose.Size = new System.Drawing.Size(38, 26);
             this.btnClose.TabIndex = 130;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
@@ -311,10 +566,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label4.Location = new System.Drawing.Point(64, 4);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(48, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(232, 29);
+            this.label4.Size = new System.Drawing.Size(186, 23);
             this.label4.TabIndex = 95;
             this.label4.Text = "Cadastro de Clientes";
             // 
@@ -325,11 +579,10 @@
             this.dtNacTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dtNacTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNacTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtNacTextBox.Location = new System.Drawing.Point(885, 217);
-            this.dtNacTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.dtNacTextBox.Location = new System.Drawing.Point(664, 173);
             this.dtNacTextBox.Mask = "00/00/0000";
             this.dtNacTextBox.Name = "dtNacTextBox";
-            this.dtNacTextBox.Size = new System.Drawing.Size(258, 34);
+            this.dtNacTextBox.Size = new System.Drawing.Size(194, 29);
             this.dtNacTextBox.TabIndex = 6;
             // 
             // cepTextBox
@@ -339,11 +592,10 @@
             this.cepTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cepTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cepTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cepTextBox.Location = new System.Drawing.Point(975, 575);
-            this.cepTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.cepTextBox.Location = new System.Drawing.Point(731, 464);
             this.cepTextBox.Mask = "00,000-000";
             this.cepTextBox.Name = "cepTextBox";
-            this.cepTextBox.Size = new System.Drawing.Size(169, 34);
+            this.cepTextBox.Size = new System.Drawing.Size(127, 29);
             this.cepTextBox.TabIndex = 20;
             // 
             // telRespTextBox
@@ -353,11 +605,10 @@
             this.telRespTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.telRespTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telRespTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.telRespTextBox.Location = new System.Drawing.Point(945, 394);
-            this.telRespTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.telRespTextBox.Location = new System.Drawing.Point(709, 317);
             this.telRespTextBox.Mask = "(00)00000-0000";
             this.telRespTextBox.Name = "telRespTextBox";
-            this.telRespTextBox.Size = new System.Drawing.Size(198, 34);
+            this.telRespTextBox.Size = new System.Drawing.Size(149, 29);
             this.telRespTextBox.TabIndex = 13;
             // 
             // telTextBox
@@ -367,11 +618,10 @@
             this.telTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.telTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.telTextBox.Location = new System.Drawing.Point(376, 639);
-            this.telTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.telTextBox.Location = new System.Drawing.Point(282, 516);
             this.telTextBox.Mask = "(00)00000-0000";
             this.telTextBox.Name = "telTextBox";
-            this.telTextBox.Size = new System.Drawing.Size(337, 34);
+            this.telTextBox.Size = new System.Drawing.Size(253, 29);
             this.telTextBox.TabIndex = 21;
             // 
             // celTextBox
@@ -381,11 +631,10 @@
             this.celTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.celTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.celTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.celTextBox.Location = new System.Drawing.Point(813, 639);
-            this.celTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.celTextBox.Location = new System.Drawing.Point(610, 516);
             this.celTextBox.Mask = "(00)00000-0000";
             this.celTextBox.Name = "celTextBox";
-            this.celTextBox.Size = new System.Drawing.Size(330, 34);
+            this.celTextBox.Size = new System.Drawing.Size(248, 29);
             this.celTextBox.TabIndex = 22;
             // 
             // rgTextBox
@@ -395,11 +644,10 @@
             this.rgTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rgTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rgTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rgTextBox.Location = new System.Drawing.Point(807, 277);
-            this.rgTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.rgTextBox.Location = new System.Drawing.Point(605, 222);
             this.rgTextBox.Mask = "00,000,000-C";
             this.rgTextBox.Name = "rgTextBox";
-            this.rgTextBox.Size = new System.Drawing.Size(337, 34);
+            this.rgTextBox.Size = new System.Drawing.Size(253, 29);
             this.rgTextBox.TabIndex = 8;
             // 
             // cpfTextBox
@@ -409,47 +657,19 @@
             this.cpfTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpfTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpfTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cpfTextBox.Location = new System.Drawing.Point(376, 277);
-            this.cpfTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.cpfTextBox.Location = new System.Drawing.Point(282, 222);
             this.cpfTextBox.Mask = "000,000,000-00";
             this.cpfTextBox.Name = "cpfTextBox";
-            this.cpfTextBox.Size = new System.Drawing.Size(357, 34);
+            this.cpfTextBox.Size = new System.Drawing.Size(268, 29);
             this.cpfTextBox.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(839, 780);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(629, 638);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 17);
+            this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 140;
-            // 
-            // telRespLabel
-            // 
-            telRespLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            telRespLabel.AutoSize = true;
-            telRespLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telRespLabel.ForeColor = System.Drawing.SystemColors.Control;
-            telRespLabel.Location = new System.Drawing.Point(837, 401);
-            telRespLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            telRespLabel.Name = "telRespLabel";
-            telRespLabel.Size = new System.Drawing.Size(93, 24);
-            telRespLabel.TabIndex = 138;
-            telRespLabel.Text = "Tel Resp:";
-            // 
-            // responsavelLabel
-            // 
-            responsavelLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            responsavelLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            responsavelLabel.ForeColor = System.Drawing.SystemColors.Control;
-            responsavelLabel.Location = new System.Drawing.Point(236, 398);
-            responsavelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            responsavelLabel.Name = "responsavelLabel";
-            responsavelLabel.Size = new System.Drawing.Size(133, 26);
-            responsavelLabel.TabIndex = 136;
-            responsavelLabel.Text = "Responsavel:";
-            responsavelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // responsavelTextBox
             // 
@@ -458,11 +678,11 @@
             this.responsavelTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.responsavelTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.responsavelTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.responsavelTextBox.Location = new System.Drawing.Point(376, 395);
+            this.responsavelTextBox.Location = new System.Drawing.Point(282, 318);
             this.responsavelTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.responsavelTextBox.MaxLength = 30;
             this.responsavelTextBox.Name = "responsavelTextBox";
-            this.responsavelTextBox.Size = new System.Drawing.Size(433, 34);
+            this.responsavelTextBox.Size = new System.Drawing.Size(325, 29);
             this.responsavelTextBox.TabIndex = 12;
             // 
             // estCivilComboBox
@@ -481,37 +701,11 @@
             "Amasiados",
             "Separados",
             "Namorando"});
-            this.estCivilComboBox.Location = new System.Drawing.Point(945, 336);
+            this.estCivilComboBox.Location = new System.Drawing.Point(709, 270);
             this.estCivilComboBox.Margin = new System.Windows.Forms.Padding(0);
             this.estCivilComboBox.Name = "estCivilComboBox";
-            this.estCivilComboBox.Size = new System.Drawing.Size(197, 36);
+            this.estCivilComboBox.Size = new System.Drawing.Size(149, 29);
             this.estCivilComboBox.TabIndex = 11;
-            // 
-            // estCivilLabel
-            // 
-            estCivilLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            estCivilLabel.AutoSize = true;
-            estCivilLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            estCivilLabel.ForeColor = System.Drawing.SystemColors.Control;
-            estCivilLabel.Location = new System.Drawing.Point(840, 341);
-            estCivilLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            estCivilLabel.Name = "estCivilLabel";
-            estCivilLabel.Size = new System.Drawing.Size(91, 24);
-            estCivilLabel.TabIndex = 134;
-            estCivilLabel.Text = "Est Civil:";
-            // 
-            // trabalhoLabel
-            // 
-            trabalhoLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            trabalhoLabel.AutoSize = true;
-            trabalhoLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            trabalhoLabel.ForeColor = System.Drawing.SystemColors.Control;
-            trabalhoLabel.Location = new System.Drawing.Point(553, 340);
-            trabalhoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            trabalhoLabel.Name = "trabalhoLabel";
-            trabalhoLabel.Size = new System.Drawing.Size(96, 24);
-            trabalhoLabel.TabIndex = 132;
-            trabalhoLabel.Text = "Trabalho:";
             // 
             // trabalhoTextBox
             // 
@@ -520,25 +714,12 @@
             this.trabalhoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.trabalhoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trabalhoTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.trabalhoTextBox.Location = new System.Drawing.Point(661, 336);
+            this.trabalhoTextBox.Location = new System.Drawing.Point(496, 270);
             this.trabalhoTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.trabalhoTextBox.MaxLength = 20;
             this.trabalhoTextBox.Name = "trabalhoTextBox";
-            this.trabalhoTextBox.Size = new System.Drawing.Size(159, 34);
+            this.trabalhoTextBox.Size = new System.Drawing.Size(120, 29);
             this.trabalhoTextBox.TabIndex = 10;
-            // 
-            // escolaridadeLabel
-            // 
-            escolaridadeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            escolaridadeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            escolaridadeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            escolaridadeLabel.Location = new System.Drawing.Point(236, 336);
-            escolaridadeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            escolaridadeLabel.Name = "escolaridadeLabel";
-            escolaridadeLabel.Size = new System.Drawing.Size(133, 26);
-            escolaridadeLabel.TabIndex = 130;
-            escolaridadeLabel.Text = "Escolaridade:";
-            escolaridadeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // escolaridadeTextBox
             // 
@@ -547,11 +728,11 @@
             this.escolaridadeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.escolaridadeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.escolaridadeTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.escolaridadeTextBox.Location = new System.Drawing.Point(376, 334);
+            this.escolaridadeTextBox.Location = new System.Drawing.Point(282, 268);
             this.escolaridadeTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.escolaridadeTextBox.MaxLength = 30;
             this.escolaridadeTextBox.Name = "escolaridadeTextBox";
-            this.escolaridadeTextBox.Size = new System.Drawing.Size(146, 34);
+            this.escolaridadeTextBox.Size = new System.Drawing.Size(110, 29);
             this.escolaridadeTextBox.TabIndex = 9;
             // 
             // label6
@@ -560,10 +741,9 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(187, 454);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(140, 366);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 28);
+            this.label6.Size = new System.Drawing.Size(112, 23);
             this.label6.TabIndex = 129;
             this.label6.Text = "Contato";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -574,10 +754,9 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(187, 98);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(140, 79);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(252, 28);
+            this.label5.Size = new System.Drawing.Size(189, 23);
             this.label5.TabIndex = 128;
             this.label5.Text = "Dados do Cliente";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -590,39 +769,12 @@
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBuscar.Location = new System.Drawing.Point(489, 46);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(367, 36);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(56, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(42, 29);
             this.btnBuscar.TabIndex = 127;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // label2
-            // 
-            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.ForeColor = System.Drawing.SystemColors.Control;
-            label2.Location = new System.Drawing.Point(752, 645);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(45, 24);
-            label2.TabIndex = 125;
-            label2.Text = "Cel:";
-            // 
-            // label3
-            // 
-            label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.ForeColor = System.Drawing.SystemColors.Control;
-            label3.Location = new System.Drawing.Point(236, 642);
-            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(133, 26);
-            label3.TabIndex = 123;
-            label3.Text = "Tel:";
-            label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtNomePsi
             // 
@@ -632,24 +784,11 @@
             this.txtNomePsi.Enabled = false;
             this.txtNomePsi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomePsi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNomePsi.Location = new System.Drawing.Point(844, 46);
+            this.txtNomePsi.Location = new System.Drawing.Point(633, 36);
             this.txtNomePsi.Margin = new System.Windows.Forms.Padding(0);
             this.txtNomePsi.Name = "txtNomePsi";
-            this.txtNomePsi.Size = new System.Drawing.Size(299, 34);
+            this.txtNomePsi.Size = new System.Drawing.Size(225, 29);
             this.txtNomePsi.TabIndex = 122;
-            // 
-            // lblPsi
-            // 
-            lblPsi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            lblPsi.AutoSize = true;
-            lblPsi.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblPsi.ForeColor = System.Drawing.SystemColors.Control;
-            lblPsi.Location = new System.Drawing.Point(631, 52);
-            lblPsi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lblPsi.Name = "lblPsi";
-            lblPsi.Size = new System.Drawing.Size(101, 24);
-            lblPsi.TabIndex = 118;
-            lblPsi.Text = "Psicologo:";
             // 
             // txtCPsi
             // 
@@ -658,51 +797,12 @@
             this.txtCPsi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCPsi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPsi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCPsi.Location = new System.Drawing.Point(756, 46);
+            this.txtCPsi.Location = new System.Drawing.Point(567, 36);
             this.txtCPsi.Margin = new System.Windows.Forms.Padding(0);
             this.txtCPsi.Name = "txtCPsi";
             this.txtCPsi.ReadOnly = true;
-            this.txtCPsi.Size = new System.Drawing.Size(65, 34);
+            this.txtCPsi.Size = new System.Drawing.Size(49, 29);
             this.txtCPsi.TabIndex = 2;
-            // 
-            // rgLabel
-            // 
-            rgLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            rgLabel.AutoSize = true;
-            rgLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rgLabel.ForeColor = System.Drawing.SystemColors.Control;
-            rgLabel.Location = new System.Drawing.Point(751, 284);
-            rgLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            rgLabel.Name = "rgLabel";
-            rgLabel.Size = new System.Drawing.Size(45, 24);
-            rgLabel.TabIndex = 106;
-            rgLabel.Text = "RG:";
-            // 
-            // cpfLabel
-            // 
-            cpfLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            cpfLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cpfLabel.ForeColor = System.Drawing.SystemColors.Control;
-            cpfLabel.Location = new System.Drawing.Point(236, 281);
-            cpfLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            cpfLabel.Name = "cpfLabel";
-            cpfLabel.Size = new System.Drawing.Size(133, 26);
-            cpfLabel.TabIndex = 104;
-            cpfLabel.Text = "CPF:";
-            cpfLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // emailLabel
-            // 
-            emailLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            emailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.ForeColor = System.Drawing.SystemColors.Control;
-            emailLabel.Location = new System.Drawing.Point(236, 700);
-            emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(133, 26);
-            emailLabel.TabIndex = 102;
-            emailLabel.Text = "E-mail:";
-            emailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // emailTextBox
             // 
@@ -711,25 +811,12 @@
             this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.emailTextBox.Location = new System.Drawing.Point(376, 698);
+            this.emailTextBox.Location = new System.Drawing.Point(282, 564);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.emailTextBox.MaxLength = 30;
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(767, 34);
+            this.emailTextBox.Size = new System.Drawing.Size(576, 29);
             this.emailTextBox.TabIndex = 23;
-            // 
-            // cepLabel
-            // 
-            cepLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            cepLabel.AutoSize = true;
-            cepLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cepLabel.ForeColor = System.Drawing.SystemColors.Control;
-            cepLabel.Location = new System.Drawing.Point(909, 581);
-            cepLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            cepLabel.Name = "cepLabel";
-            cepLabel.Size = new System.Drawing.Size(54, 24);
-            cepLabel.TabIndex = 100;
-            cepLabel.Text = "CEP:";
             // 
             // estadoComboBox
             // 
@@ -769,24 +856,10 @@
             "SP",
             "SE",
             "TO\t\t"});
-            this.estadoComboBox.Location = new System.Drawing.Point(813, 577);
-            this.estadoComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.estadoComboBox.Location = new System.Drawing.Point(610, 466);
             this.estadoComboBox.Name = "estadoComboBox";
-            this.estadoComboBox.Size = new System.Drawing.Size(73, 36);
+            this.estadoComboBox.Size = new System.Drawing.Size(56, 29);
             this.estadoComboBox.TabIndex = 19;
-            // 
-            // cidadeLabel
-            // 
-            cidadeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            cidadeLabel.AutoSize = true;
-            cidadeLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cidadeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            cidadeLabel.Location = new System.Drawing.Point(533, 581);
-            cidadeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            cidadeLabel.Name = "cidadeLabel";
-            cidadeLabel.Size = new System.Drawing.Size(77, 24);
-            cidadeLabel.TabIndex = 97;
-            cidadeLabel.Text = "Cidade:";
             // 
             // cidadeTextBox
             // 
@@ -795,25 +868,11 @@
             this.cidadeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cidadeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cidadeTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cidadeTextBox.Location = new System.Drawing.Point(623, 577);
-            this.cidadeTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.cidadeTextBox.Location = new System.Drawing.Point(467, 466);
             this.cidadeTextBox.MaxLength = 20;
             this.cidadeTextBox.Name = "cidadeTextBox";
-            this.cidadeTextBox.Size = new System.Drawing.Size(175, 34);
+            this.cidadeTextBox.Size = new System.Drawing.Size(132, 29);
             this.cidadeTextBox.TabIndex = 17;
-            // 
-            // bairroLabel
-            // 
-            bairroLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            bairroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bairroLabel.ForeColor = System.Drawing.SystemColors.Control;
-            bairroLabel.Location = new System.Drawing.Point(236, 581);
-            bairroLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            bairroLabel.Name = "bairroLabel";
-            bairroLabel.Size = new System.Drawing.Size(133, 26);
-            bairroLabel.TabIndex = 95;
-            bairroLabel.Text = "Bairro:";
-            bairroLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // bairroTextBox
             // 
@@ -822,25 +881,12 @@
             this.bairroTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bairroTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bairroTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bairroTextBox.Location = new System.Drawing.Point(376, 575);
+            this.bairroTextBox.Location = new System.Drawing.Point(282, 464);
             this.bairroTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.bairroTextBox.MaxLength = 15;
             this.bairroTextBox.Name = "bairroTextBox";
-            this.bairroTextBox.Size = new System.Drawing.Size(133, 34);
+            this.bairroTextBox.Size = new System.Drawing.Size(100, 29);
             this.bairroTextBox.TabIndex = 16;
-            // 
-            // numLabel
-            // 
-            numLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            numLabel.AutoSize = true;
-            numLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            numLabel.ForeColor = System.Drawing.SystemColors.Control;
-            numLabel.Location = new System.Drawing.Point(963, 517);
-            numLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            numLabel.Name = "numLabel";
-            numLabel.Size = new System.Drawing.Size(41, 24);
-            numLabel.TabIndex = 93;
-            numLabel.Text = "Nº:";
             // 
             // numTextBox
             // 
@@ -849,25 +895,12 @@
             this.numTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.numTextBox.Location = new System.Drawing.Point(1021, 513);
+            this.numTextBox.Location = new System.Drawing.Point(766, 414);
             this.numTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.numTextBox.MaxLength = 5;
             this.numTextBox.Name = "numTextBox";
-            this.numTextBox.Size = new System.Drawing.Size(122, 34);
+            this.numTextBox.Size = new System.Drawing.Size(92, 29);
             this.numTextBox.TabIndex = 15;
-            // 
-            // endLabel
-            // 
-            endLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            endLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            endLabel.ForeColor = System.Drawing.SystemColors.Control;
-            endLabel.Location = new System.Drawing.Point(236, 516);
-            endLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            endLabel.Name = "endLabel";
-            endLabel.Size = new System.Drawing.Size(133, 26);
-            endLabel.TabIndex = 91;
-            endLabel.Text = "Endereço:";
-            endLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // endTextBox
             // 
@@ -876,25 +909,12 @@
             this.endTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.endTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.endTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.endTextBox.Location = new System.Drawing.Point(376, 513);
+            this.endTextBox.Location = new System.Drawing.Point(282, 414);
             this.endTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.endTextBox.MaxLength = 40;
             this.endTextBox.Name = "endTextBox";
-            this.endTextBox.Size = new System.Drawing.Size(549, 34);
+            this.endTextBox.Size = new System.Drawing.Size(412, 29);
             this.endTextBox.TabIndex = 14;
-            // 
-            // sexoLabel
-            // 
-            sexoLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            sexoLabel.AutoSize = true;
-            sexoLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sexoLabel.ForeColor = System.Drawing.SystemColors.Control;
-            sexoLabel.Location = new System.Drawing.Point(553, 223);
-            sexoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            sexoLabel.Name = "sexoLabel";
-            sexoLabel.Size = new System.Drawing.Size(58, 24);
-            sexoLabel.TabIndex = 89;
-            sexoLabel.Text = "Sexo:";
             // 
             // sexoComboBox
             // 
@@ -908,24 +928,11 @@
             this.sexoComboBox.Items.AddRange(new object[] {
             "F",
             "M"});
-            this.sexoComboBox.Location = new System.Drawing.Point(635, 219);
+            this.sexoComboBox.Location = new System.Drawing.Point(476, 175);
             this.sexoComboBox.Margin = new System.Windows.Forms.Padding(0);
             this.sexoComboBox.Name = "sexoComboBox";
-            this.sexoComboBox.Size = new System.Drawing.Size(105, 36);
+            this.sexoComboBox.Size = new System.Drawing.Size(80, 29);
             this.sexoComboBox.TabIndex = 5;
-            // 
-            // idadeLabel
-            // 
-            idadeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            idadeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idadeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            idadeLabel.Location = new System.Drawing.Point(236, 220);
-            idadeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            idadeLabel.Name = "idadeLabel";
-            idadeLabel.Size = new System.Drawing.Size(133, 26);
-            idadeLabel.TabIndex = 87;
-            idadeLabel.Text = "Idade:";
-            idadeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // idadeTextBox
             // 
@@ -934,38 +941,12 @@
             this.idadeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idadeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idadeTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.idadeTextBox.Location = new System.Drawing.Point(376, 218);
+            this.idadeTextBox.Location = new System.Drawing.Point(282, 174);
             this.idadeTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.idadeTextBox.MaxLength = 3;
             this.idadeTextBox.Name = "idadeTextBox";
-            this.idadeTextBox.Size = new System.Drawing.Size(114, 34);
+            this.idadeTextBox.Size = new System.Drawing.Size(86, 29);
             this.idadeTextBox.TabIndex = 4;
-            // 
-            // dtNacLabel
-            // 
-            dtNacLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            dtNacLabel.AutoSize = true;
-            dtNacLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dtNacLabel.ForeColor = System.Drawing.SystemColors.Control;
-            dtNacLabel.Location = new System.Drawing.Point(775, 223);
-            dtNacLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            dtNacLabel.Name = "dtNacLabel";
-            dtNacLabel.Size = new System.Drawing.Size(97, 24);
-            dtNacLabel.TabIndex = 86;
-            dtNacLabel.Text = "Data Nac:";
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            nomeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            nomeLabel.Location = new System.Drawing.Point(236, 159);
-            nomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(133, 26);
-            nomeLabel.TabIndex = 84;
-            nomeLabel.Text = "Nome:";
-            nomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nomeTextBox
             // 
@@ -974,24 +955,12 @@
             this.nomeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nomeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomeTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.nomeTextBox.Location = new System.Drawing.Point(376, 156);
+            this.nomeTextBox.Location = new System.Drawing.Point(282, 126);
             this.nomeTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.nomeTextBox.MaxLength = 30;
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(767, 34);
+            this.nomeTextBox.Size = new System.Drawing.Size(576, 29);
             this.nomeTextBox.TabIndex = 3;
-            // 
-            // prontLabel
-            // 
-            prontLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            prontLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            prontLabel.ForeColor = System.Drawing.SystemColors.Control;
-            prontLabel.Location = new System.Drawing.Point(239, 48);
-            prontLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            prontLabel.Name = "prontLabel";
-            prontLabel.Size = new System.Drawing.Size(133, 32);
-            prontLabel.TabIndex = 82;
-            prontLabel.Text = "Codigo";
             // 
             // prontTextBox
             // 
@@ -1001,25 +970,12 @@
             this.prontTextBox.Enabled = false;
             this.prontTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prontTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.prontTextBox.Location = new System.Drawing.Point(376, 46);
+            this.prontTextBox.Location = new System.Drawing.Point(282, 36);
             this.prontTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.prontTextBox.Name = "prontTextBox";
             this.prontTextBox.ReadOnly = true;
-            this.prontTextBox.Size = new System.Drawing.Size(114, 34);
+            this.prontTextBox.Size = new System.Drawing.Size(86, 29);
             this.prontTextBox.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.ForeColor = System.Drawing.SystemColors.Control;
-            label1.Location = new System.Drawing.Point(367, 746);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(582, 20);
-            label1.TabIndex = 121;
-            label1.Text = "* Em caso de criança ou adolescente o estado civil a ser marcado é o dos pais";
             // 
             // panelEdit
             // 
@@ -1029,10 +985,9 @@
             this.panelEdit.Controls.Add(this.panel4);
             this.panelEdit.Controls.Add(this.btnCancelar);
             this.panelEdit.Controls.Add(this.btnSalvar);
-            this.panelEdit.Location = new System.Drawing.Point(0, 770);
-            this.panelEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.panelEdit.Location = new System.Drawing.Point(0, 616);
             this.panelEdit.Name = "panelEdit";
-            this.panelEdit.Size = new System.Drawing.Size(1373, 53);
+            this.panelEdit.Size = new System.Drawing.Size(1030, 43);
             this.panelEdit.TabIndex = 99;
             // 
             // panel4
@@ -1041,9 +996,8 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1373, 1);
+            this.panel4.Size = new System.Drawing.Size(1030, 1);
             this.panel4.TabIndex = 6;
             // 
             // btnCancelar
@@ -1055,10 +1009,9 @@
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(967, 10);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(725, 8);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(157, 37);
+            this.btnCancelar.Size = new System.Drawing.Size(118, 30);
             this.btnCancelar.TabIndex = 25;
             this.btnCancelar.Text = "    Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -1072,22 +1025,21 @@
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(1172, 10);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalvar.Location = new System.Drawing.Point(879, 8);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(157, 37);
+            this.btnSalvar.Size = new System.Drawing.Size(118, 30);
             this.btnSalvar.TabIndex = 24;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             // 
             // frmCadCli
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1373, 823);
+            this.ClientSize = new System.Drawing.Size(1030, 655);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCadCli";
             this.Text = "frmCadCli";
             this.panel6.ResumeLayout(false);
