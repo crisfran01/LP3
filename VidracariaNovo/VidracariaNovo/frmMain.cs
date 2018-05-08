@@ -71,5 +71,16 @@ namespace VidracariaNovo
         {
 
         }
+
+        private void clientesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmCadCliente cadCli = new frmCadCliente();
+            cadCli.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

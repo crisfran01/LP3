@@ -392,3 +392,6 @@ C:\Users\Cristiane Franchini\Desktop\Programa Psicologos\Psychology\Psychology\o
 C:\Users\Cristiane Franchini\Desktop\Programa Psicologos\Psychology\Psychology\obj\Debug\Psychology.csproj.GenerateResource.Cache
 C:\Users\Cristiane Franchini\Desktop\Programa Psicologos\Psychology\Psychology\obj\Debug\RdlCompile.cache
 C:\Users\Cristiane Franchini\Desktop\Programa Psicologos\Psychology\Psychology\obj\Debug\RdlCompile.compiled
+C:\Users\IFSP\Documents\LP3\Programa Psicologos\Psychology\Psychology\bin\Debug\Psychology.exe.config
+C:\Users\IFSP\Documents\LP3\Programa Psicologos\Psychology\Psychology\obj\Debug\Psychology.exe
+C:\Users\IFSP\Documents\LP3\Programa Psicologos\Psychology\Psychology\obj\Debug\Psychology.pdb
