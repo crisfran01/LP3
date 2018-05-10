@@ -17,6 +17,17 @@ namespace VidracariaNovo
             InitializeComponent();
         }
 
+        public void showForm(Form obj)
+        {
+            obj.MdiParent = this;
+            obj.ControlBox = false;
+            obj.MaximizeBox = false;
+            obj.ShowIcon = false;
+            obj.Text = "";
+            obj.Dock = DockStyle.Fill;
+            obj.Show();
+        }
+
         private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -75,7 +86,7 @@ namespace VidracariaNovo
         private void clientesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmCadCliente cadCli = new frmCadCliente();
-            cadCli.ShowDialog();
+            showForm(cadCli);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -86,13 +97,19 @@ namespace VidracariaNovo
         private void funcionariosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmCadFuncionario CadFun = new frmCadFuncionario();
-            CadFun.ShowDialog();
+            showForm(CadFun);
         }
 
         private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCadFornecedor CadFornecedor = new frmCadFornecedor();
-            CadFornecedor.ShowDialog();
+            showForm(CadFornecedor);
+        }
+
+        private void psicologosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmCadProdutos CadProd = new frmCadProdutos();
+            showForm(CadProd);
         }
     }
 }

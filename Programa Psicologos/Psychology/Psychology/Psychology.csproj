@@ -115,7 +115,6 @@
     <Compile Include="Funcoes.cs" />
     <Compile Include="PsiEasy.cs">
       <DependentUpon>PsiEasy.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Financeiro\frmSessoesFinanceiro.cs">
       <SubType>Form</SubType>

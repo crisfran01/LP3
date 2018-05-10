@@ -17,14 +17,6 @@ namespace VidracariaNovo
             InitializeComponent();
         }
 
-        private void clientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.clientesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet1);
-
-        }
-
         public void retiraMask()
         {
             cpfTextBox.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
@@ -57,16 +49,6 @@ namespace VidracariaNovo
         {
             // TODO: This line of code loads data into the 'dataSet1.clientes' table. You can move, or remove it, as needed.
             this.clientesTableAdapter.Fill(this.dataSet1.clientes);
-
-        }
-
-        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
-        {
 
         }
 

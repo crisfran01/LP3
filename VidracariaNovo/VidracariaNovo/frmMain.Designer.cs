@@ -71,7 +71,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1179, 126);
+            this.panelMenu.Size = new System.Drawing.Size(1080, 126);
             this.panelMenu.TabIndex = 5;
             // 
             // panel6
@@ -87,7 +87,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1179, 30);
+            this.panel6.Size = new System.Drawing.Size(1080, 30);
             this.panel6.TabIndex = 11;
             // 
             // label4
@@ -117,7 +117,7 @@
             this.panel5.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1179, 1);
+            this.panel5.Size = new System.Drawing.Size(1080, 1);
             this.panel5.TabIndex = 96;
             // 
             // label2
@@ -153,7 +153,7 @@
             this.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMini.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMini.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnMini.Location = new System.Drawing.Point(1076, 1);
+            this.btnMini.Location = new System.Drawing.Point(977, 1);
             this.btnMini.Margin = new System.Windows.Forms.Padding(0);
             this.btnMini.Name = "btnMini";
             this.btnMini.Size = new System.Drawing.Size(48, 29);
@@ -169,7 +169,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnClose.Location = new System.Drawing.Point(1130, 1);
+            this.btnClose.Location = new System.Drawing.Point(1031, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(48, 29);
@@ -186,7 +186,7 @@
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel1.Location = new System.Drawing.Point(0, 124);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1179, 2);
+            this.panel1.Size = new System.Drawing.Size(1080, 2);
             this.panel1.TabIndex = 5;
             // 
             // label1
@@ -196,7 +196,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.label1.Font = new System.Drawing.Font("Edwardian Script ITC", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label1.Location = new System.Drawing.Point(472, 39);
+            this.label1.Location = new System.Drawing.Point(423, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(254, 76);
             this.label1.TabIndex = 8;
@@ -215,7 +215,7 @@
             this.configuraçõesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 126);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1179, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1080, 40);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -263,6 +263,7 @@
             this.psicologosToolStripMenuItem.Name = "psicologosToolStripMenuItem";
             this.psicologosToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
             this.psicologosToolStripMenuItem.Text = "Produtos";
+            this.psicologosToolStripMenuItem.Click += new System.EventHandler(this.psicologosToolStripMenuItem_Click_1);
             // 
             // funcionariosToolStripMenuItem
             // 
@@ -385,7 +386,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(905, 128);
+            this.button1.Location = new System.Drawing.Point(806, 128);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 38);
             this.button1.TabIndex = 102;
@@ -397,13 +398,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 460);
+            this.ClientSize = new System.Drawing.Size(1080, 780);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
