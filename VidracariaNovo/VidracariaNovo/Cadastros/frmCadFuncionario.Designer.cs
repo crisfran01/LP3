@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label rgLabel;
             System.Windows.Forms.Label cpfLabel;
@@ -41,14 +42,18 @@
             System.Windows.Forms.Label bairroLabel;
             System.Windows.Forms.Label endLabel;
             System.Windows.Forms.Label nomeLabel;
+            System.Windows.Forms.Label emailLabel;
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtFgts = new System.Windows.Forms.MaskedTextBox();
+            this.funcionariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new VidracariaNovo.DataSet1();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
             this.cepTextBox = new System.Windows.Forms.MaskedTextBox();
             this.telTextBox = new System.Windows.Forms.MaskedTextBox();
             this.celTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.txtFgts = new System.Windows.Forms.MaskedTextBox();
             this.rgTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cpfTextBox = new System.Windows.Forms.MaskedTextBox();
             this.funcaoTextBox = new System.Windows.Forms.TextBox();
@@ -71,6 +76,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.funcionariosTableAdapter = new VidracariaNovo.DataSet1TableAdapters.funcionariosTableAdapter();
+            this.tableAdapterManager = new VidracariaNovo.DataSet1TableAdapters.TableAdapterManager();
             label6 = new System.Windows.Forms.Label();
             rgLabel = new System.Windows.Forms.Label();
             cpfLabel = new System.Windows.Forms.Label();
@@ -84,170 +91,26 @@
             bairroLabel = new System.Windows.Forms.Label();
             endLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
+            emailLabel = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelEdit.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel5.Controls.Add(this.btnClose);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1030, 28);
-            this.panel5.TabIndex = 186;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(0, 1);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 26);
-            this.btnClose.TabIndex = 130;
-            this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label7.Location = new System.Drawing.Point(48, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(232, 23);
-            this.label7.TabIndex = 95;
-            this.label7.Text = "Cadastro de Funcionários";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.cepTextBox);
-            this.panel1.Controls.Add(this.telTextBox);
-            this.panel1.Controls.Add(this.celTextBox);
-            this.panel1.Controls.Add(this.txtFgts);
-            this.panel1.Controls.Add(label6);
-            this.panel1.Controls.Add(this.rgTextBox);
-            this.panel1.Controls.Add(this.cpfTextBox);
-            this.panel1.Controls.Add(rgLabel);
-            this.panel1.Controls.Add(cpfLabel);
-            this.panel1.Controls.Add(label4);
-            this.panel1.Controls.Add(this.funcaoTextBox);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(numLabel);
-            this.panel1.Controls.Add(this.numTextBox);
-            this.panel1.Controls.Add(label1);
-            this.panel1.Controls.Add(label2);
-            this.panel1.Controls.Add(label3);
-            this.panel1.Controls.Add(this.txtCod);
-            this.panel1.Controls.Add(cepLabel);
-            this.panel1.Controls.Add(this.estadoComboBox);
-            this.panel1.Controls.Add(cidadeLabel);
-            this.panel1.Controls.Add(this.cidadeTextBox);
-            this.panel1.Controls.Add(bairroLabel);
-            this.panel1.Controls.Add(this.bairroTextBox);
-            this.panel1.Controls.Add(endLabel);
-            this.panel1.Controls.Add(this.endTextBox);
-            this.panel1.Controls.Add(nomeLabel);
-            this.panel1.Controls.Add(this.nomeTextBox);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panelEdit);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1030, 669);
-            this.panel1.TabIndex = 3;
-            // 
-            // cepTextBox
-            // 
-            this.cepTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cepTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.cepTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cepTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cepTextBox.Location = new System.Drawing.Point(710, 303);
-            this.cepTextBox.Mask = "00,000-000";
-            this.cepTextBox.Name = "cepTextBox";
-            this.cepTextBox.Size = new System.Drawing.Size(127, 29);
-            this.cepTextBox.TabIndex = 10;
-            // 
-            // telTextBox
-            // 
-            this.telTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.telTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.telTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.telTextBox.Location = new System.Drawing.Point(270, 355);
-            this.telTextBox.Mask = "(00)00000-0000";
-            this.telTextBox.Name = "telTextBox";
-            this.telTextBox.Size = new System.Drawing.Size(216, 29);
-            this.telTextBox.TabIndex = 11;
-            // 
-            // celTextBox
-            // 
-            this.celTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.celTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.celTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.celTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.celTextBox.Location = new System.Drawing.Point(588, 355);
-            this.celTextBox.Mask = "(00)00000-0000";
-            this.celTextBox.Name = "celTextBox";
-            this.celTextBox.Size = new System.Drawing.Size(248, 29);
-            this.celTextBox.TabIndex = 12;
-            // 
-            // txtFgts
-            // 
-            this.txtFgts.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFgts.BackColor = System.Drawing.SystemColors.Window;
-            this.txtFgts.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFgts.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtFgts.Location = new System.Drawing.Point(585, 408);
-            this.txtFgts.Mask = "000,000,000-00";
-            this.txtFgts.Name = "txtFgts";
-            this.txtFgts.Size = new System.Drawing.Size(251, 29);
-            this.txtFgts.TabIndex = 14;
             // 
             // label6
             // 
             label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-            label6.Location = new System.Drawing.Point(518, 414);
+            label6.Location = new System.Drawing.Point(518, 462);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(53, 21);
             label6.TabIndex = 185;
             label6.Text = "FGTS:";
             label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // rgTextBox
-            // 
-            this.rgTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rgTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.rgTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rgTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rgTextBox.Location = new System.Drawing.Point(593, 209);
-            this.rgTextBox.Mask = "00,000,000-C";
-            this.rgTextBox.Name = "rgTextBox";
-            this.rgTextBox.Size = new System.Drawing.Size(244, 29);
-            this.rgTextBox.TabIndex = 4;
-            // 
-            // cpfTextBox
-            // 
-            this.cpfTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cpfTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.cpfTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpfTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cpfTextBox.Location = new System.Drawing.Point(270, 209);
-            this.cpfTextBox.Mask = "000,000,000-00";
-            this.cpfTextBox.Name = "cpfTextBox";
-            this.cpfTextBox.Size = new System.Drawing.Size(268, 29);
-            this.cpfTextBox.TabIndex = 3;
             // 
             // rgLabel
             // 
@@ -279,50 +142,11 @@
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            label4.Location = new System.Drawing.Point(180, 408);
+            label4.Location = new System.Drawing.Point(180, 456);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(63, 21);
             label4.TabIndex = 177;
             label4.Text = "Função:";
-            // 
-            // funcaoTextBox
-            // 
-            this.funcaoTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.funcaoTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.funcaoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.funcaoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.funcaoTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.funcaoTextBox.Location = new System.Drawing.Point(270, 406);
-            this.funcaoTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.funcaoTextBox.Name = "funcaoTextBox";
-            this.funcaoTextBox.Size = new System.Drawing.Size(217, 29);
-            this.funcaoTextBox.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(140, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(230, 31);
-            this.label5.TabIndex = 176;
-            this.label5.Text = "Dados do Funcionário";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Location = new System.Drawing.Point(372, 111);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(35, 29);
-            this.btnBuscar.TabIndex = 175;
-            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // numLabel
             // 
@@ -335,19 +159,6 @@
             numLabel.Size = new System.Drawing.Size(32, 21);
             numLabel.TabIndex = 171;
             numLabel.Text = "Nº:";
-            // 
-            // numTextBox
-            // 
-            this.numTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.numTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.numTextBox.Location = new System.Drawing.Point(744, 252);
-            this.numTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.numTextBox.Name = "numTextBox";
-            this.numTextBox.Size = new System.Drawing.Size(94, 29);
-            this.numTextBox.TabIndex = 6;
             // 
             // label1
             // 
@@ -385,20 +196,6 @@
             label3.TabIndex = 164;
             label3.Text = "Telefone:";
             // 
-            // txtCod
-            // 
-            this.txtCod.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCod.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCod.Enabled = false;
-            this.txtCod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCod.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtCod.Location = new System.Drawing.Point(270, 111);
-            this.txtCod.Margin = new System.Windows.Forms.Padding(0);
-            this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(85, 29);
-            this.txtCod.TabIndex = 1;
-            // 
             // cepLabel
             // 
             cepLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -411,10 +208,321 @@
             cepLabel.TabIndex = 161;
             cepLabel.Text = "CEP:";
             // 
+            // cidadeLabel
+            // 
+            cidadeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            cidadeLabel.AutoSize = true;
+            cidadeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cidadeLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
+            cidadeLabel.Location = new System.Drawing.Point(378, 306);
+            cidadeLabel.Name = "cidadeLabel";
+            cidadeLabel.Size = new System.Drawing.Size(61, 21);
+            cidadeLabel.TabIndex = 158;
+            cidadeLabel.Text = "Cidade:";
+            // 
+            // bairroLabel
+            // 
+            bairroLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            bairroLabel.AutoSize = true;
+            bairroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bairroLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
+            bairroLabel.Location = new System.Drawing.Point(180, 306);
+            bairroLabel.Name = "bairroLabel";
+            bairroLabel.Size = new System.Drawing.Size(55, 21);
+            bairroLabel.TabIndex = 156;
+            bairroLabel.Text = "Bairro:";
+            // 
+            // endLabel
+            // 
+            endLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            endLabel.AutoSize = true;
+            endLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            endLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
+            endLabel.Location = new System.Drawing.Point(180, 254);
+            endLabel.Name = "endLabel";
+            endLabel.Size = new System.Drawing.Size(77, 21);
+            endLabel.TabIndex = 154;
+            endLabel.Text = "Endereço:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            nomeLabel.AutoSize = true;
+            nomeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nomeLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
+            nomeLabel.Location = new System.Drawing.Point(180, 165);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(56, 21);
+            nomeLabel.TabIndex = 152;
+            nomeLabel.Text = "Nome:";
+            // 
+            // emailLabel
+            // 
+            emailLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            emailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            emailLabel.ForeColor = System.Drawing.SystemColors.Control;
+            emailLabel.Location = new System.Drawing.Point(180, 406);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(90, 21);
+            emailLabel.TabIndex = 217;
+            emailLabel.Text = "E-mail:";
+            emailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel5.Controls.Add(this.btnClose);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1030, 28);
+            this.panel5.TabIndex = 186;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(0, 1);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 26);
+            this.btnClose.TabIndex = 130;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.label7.Location = new System.Drawing.Point(48, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(232, 23);
+            this.label7.TabIndex = 95;
+            this.label7.Text = "Cadastro de Funcionários";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.txtFgts);
+            this.panel1.Controls.Add(emailLabel);
+            this.panel1.Controls.Add(this.emailTextBox);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.cepTextBox);
+            this.panel1.Controls.Add(this.telTextBox);
+            this.panel1.Controls.Add(this.celTextBox);
+            this.panel1.Controls.Add(label6);
+            this.panel1.Controls.Add(this.rgTextBox);
+            this.panel1.Controls.Add(this.cpfTextBox);
+            this.panel1.Controls.Add(rgLabel);
+            this.panel1.Controls.Add(cpfLabel);
+            this.panel1.Controls.Add(label4);
+            this.panel1.Controls.Add(this.funcaoTextBox);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Controls.Add(numLabel);
+            this.panel1.Controls.Add(this.numTextBox);
+            this.panel1.Controls.Add(label1);
+            this.panel1.Controls.Add(label2);
+            this.panel1.Controls.Add(label3);
+            this.panel1.Controls.Add(this.txtCod);
+            this.panel1.Controls.Add(cepLabel);
+            this.panel1.Controls.Add(this.estadoComboBox);
+            this.panel1.Controls.Add(cidadeLabel);
+            this.panel1.Controls.Add(this.cidadeTextBox);
+            this.panel1.Controls.Add(bairroLabel);
+            this.panel1.Controls.Add(this.bairroTextBox);
+            this.panel1.Controls.Add(endLabel);
+            this.panel1.Controls.Add(this.endTextBox);
+            this.panel1.Controls.Add(nomeLabel);
+            this.panel1.Controls.Add(this.nomeTextBox);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panelEdit);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1030, 669);
+            this.panel1.TabIndex = 3;
+            // 
+            // txtFgts
+            // 
+            this.txtFgts.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtFgts.BackColor = System.Drawing.SystemColors.Window;
+            this.txtFgts.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "fgts", true));
+            this.txtFgts.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFgts.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtFgts.Location = new System.Drawing.Point(585, 453);
+            this.txtFgts.Mask = "000,000,000-00";
+            this.txtFgts.Name = "txtFgts";
+            this.txtFgts.Size = new System.Drawing.Size(251, 29);
+            this.txtFgts.TabIndex = 218;
+            // 
+            // funcionariosBindingSource
+            // 
+            this.funcionariosBindingSource.DataMember = "funcionarios";
+            this.funcionariosBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.emailTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "email", true));
+            this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.emailTextBox.Location = new System.Drawing.Point(270, 404);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.emailTextBox.MaxLength = 30;
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(566, 29);
+            this.emailTextBox.TabIndex = 216;
+            // 
+            // cepTextBox
+            // 
+            this.cepTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cepTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "cep", true));
+            this.cepTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cepTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cepTextBox.Location = new System.Drawing.Point(710, 303);
+            this.cepTextBox.Mask = "00,000-000";
+            this.cepTextBox.Name = "cepTextBox";
+            this.cepTextBox.Size = new System.Drawing.Size(127, 29);
+            this.cepTextBox.TabIndex = 10;
+            // 
+            // telTextBox
+            // 
+            this.telTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.telTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.telTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "tel", true));
+            this.telTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.telTextBox.Location = new System.Drawing.Point(270, 355);
+            this.telTextBox.Mask = "(00)00000-0000";
+            this.telTextBox.Name = "telTextBox";
+            this.telTextBox.Size = new System.Drawing.Size(216, 29);
+            this.telTextBox.TabIndex = 11;
+            // 
+            // celTextBox
+            // 
+            this.celTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.celTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.celTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "cell", true));
+            this.celTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.celTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.celTextBox.Location = new System.Drawing.Point(588, 355);
+            this.celTextBox.Mask = "(00)00000-0000";
+            this.celTextBox.Name = "celTextBox";
+            this.celTextBox.Size = new System.Drawing.Size(248, 29);
+            this.celTextBox.TabIndex = 12;
+            // 
+            // rgTextBox
+            // 
+            this.rgTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rgTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.rgTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "RG", true));
+            this.rgTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rgTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rgTextBox.Location = new System.Drawing.Point(593, 209);
+            this.rgTextBox.Mask = "00,000,000-C";
+            this.rgTextBox.Name = "rgTextBox";
+            this.rgTextBox.Size = new System.Drawing.Size(244, 29);
+            this.rgTextBox.TabIndex = 4;
+            // 
+            // cpfTextBox
+            // 
+            this.cpfTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cpfTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "cpf", true));
+            this.cpfTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpfTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cpfTextBox.Location = new System.Drawing.Point(270, 209);
+            this.cpfTextBox.Mask = "000,000,000-00";
+            this.cpfTextBox.Name = "cpfTextBox";
+            this.cpfTextBox.Size = new System.Drawing.Size(268, 29);
+            this.cpfTextBox.TabIndex = 3;
+            // 
+            // funcaoTextBox
+            // 
+            this.funcaoTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.funcaoTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.funcaoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.funcaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "funcao", true));
+            this.funcaoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.funcaoTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.funcaoTextBox.Location = new System.Drawing.Point(270, 454);
+            this.funcaoTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.funcaoTextBox.Name = "funcaoTextBox";
+            this.funcaoTextBox.Size = new System.Drawing.Size(217, 29);
+            this.funcaoTextBox.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Location = new System.Drawing.Point(140, 60);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(230, 31);
+            this.label5.TabIndex = 176;
+            this.label5.Text = "Dados do Funcionário";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Location = new System.Drawing.Point(372, 111);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(35, 29);
+            this.btnBuscar.TabIndex = 175;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // numTextBox
+            // 
+            this.numTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.numTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "num", true));
+            this.numTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.numTextBox.Location = new System.Drawing.Point(744, 252);
+            this.numTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.numTextBox.Name = "numTextBox";
+            this.numTextBox.Size = new System.Drawing.Size(94, 29);
+            this.numTextBox.TabIndex = 6;
+            // 
+            // txtCod
+            // 
+            this.txtCod.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCod.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCod.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "codigo", true));
+            this.txtCod.Enabled = false;
+            this.txtCod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtCod.Location = new System.Drawing.Point(270, 111);
+            this.txtCod.Margin = new System.Windows.Forms.Padding(0);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(85, 29);
+            this.txtCod.TabIndex = 1;
+            // 
             // estadoComboBox
             // 
             this.estadoComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.estadoComboBox.BackColor = System.Drawing.SystemColors.Window;
+            this.estadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "uf", true));
             this.estadoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.estadoComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.estadoComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -454,23 +562,12 @@
             this.estadoComboBox.Size = new System.Drawing.Size(56, 29);
             this.estadoComboBox.TabIndex = 9;
             // 
-            // cidadeLabel
-            // 
-            cidadeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            cidadeLabel.AutoSize = true;
-            cidadeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cidadeLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
-            cidadeLabel.Location = new System.Drawing.Point(378, 306);
-            cidadeLabel.Name = "cidadeLabel";
-            cidadeLabel.Size = new System.Drawing.Size(61, 21);
-            cidadeLabel.TabIndex = 158;
-            cidadeLabel.Text = "Cidade:";
-            // 
             // cidadeTextBox
             // 
             this.cidadeTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cidadeTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.cidadeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "cidade", true));
             this.cidadeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cidadeTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cidadeTextBox.Location = new System.Drawing.Point(445, 304);
@@ -478,23 +575,12 @@
             this.cidadeTextBox.Size = new System.Drawing.Size(132, 29);
             this.cidadeTextBox.TabIndex = 8;
             // 
-            // bairroLabel
-            // 
-            bairroLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            bairroLabel.AutoSize = true;
-            bairroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bairroLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
-            bairroLabel.Location = new System.Drawing.Point(180, 306);
-            bairroLabel.Name = "bairroLabel";
-            bairroLabel.Size = new System.Drawing.Size(55, 21);
-            bairroLabel.TabIndex = 156;
-            bairroLabel.Text = "Bairro:";
-            // 
             // bairroTextBox
             // 
             this.bairroTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bairroTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.bairroTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "bairro", true));
             this.bairroTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bairroTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.bairroTextBox.Location = new System.Drawing.Point(270, 304);
@@ -503,23 +589,12 @@
             this.bairroTextBox.Size = new System.Drawing.Size(100, 29);
             this.bairroTextBox.TabIndex = 7;
             // 
-            // endLabel
-            // 
-            endLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            endLabel.AutoSize = true;
-            endLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            endLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
-            endLabel.Location = new System.Drawing.Point(180, 254);
-            endLabel.Name = "endLabel";
-            endLabel.Size = new System.Drawing.Size(77, 21);
-            endLabel.TabIndex = 154;
-            endLabel.Text = "Endereço:";
-            // 
             // endTextBox
             // 
             this.endTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.endTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.endTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.endTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "end", true));
             this.endTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.endTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.endTextBox.Location = new System.Drawing.Point(270, 252);
@@ -528,23 +603,12 @@
             this.endTextBox.Size = new System.Drawing.Size(412, 29);
             this.endTextBox.TabIndex = 5;
             // 
-            // nomeLabel
-            // 
-            nomeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            nomeLabel.AutoSize = true;
-            nomeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
-            nomeLabel.Location = new System.Drawing.Point(180, 165);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(56, 21);
-            nomeLabel.TabIndex = 152;
-            nomeLabel.Text = "Nome:";
-            // 
             // nomeTextBox
             // 
             this.nomeTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nomeTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.nomeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionariosBindingSource, "nome", true));
             this.nomeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomeTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.nomeTextBox.Location = new System.Drawing.Point(270, 163);
@@ -583,6 +647,7 @@
             this.btnEdit.Text = "Editar";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel3
             // 
@@ -610,6 +675,7 @@
             this.btnProximo.Text = "Próximo";
             this.btnProximo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProximo.UseVisualStyleBackColor = false;
+            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // btnAnterior
             // 
@@ -627,6 +693,7 @@
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAnterior.UseVisualStyleBackColor = false;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnNovo
             // 
@@ -644,6 +711,7 @@
             this.btnNovo.Text = "Adicionar";
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // panelEdit
             // 
@@ -683,6 +751,7 @@
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "    Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -699,6 +768,24 @@
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // funcionariosTableAdapter
+            // 
+            this.funcionariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.agendaTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.clientesTableAdapter = null;
+            this.tableAdapterManager.fornecedoresTableAdapter = null;
+            this.tableAdapterManager.funcionariosTableAdapter = this.funcionariosTableAdapter;
+            this.tableAdapterManager.itensTableAdapter = null;
+            this.tableAdapterManager.produtosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = VidracariaNovo.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usuariosTableAdapter = null;
+            this.tableAdapterManager.vendasTableAdapter = null;
             // 
             // frmCadFuncionario
             // 
@@ -713,6 +800,8 @@
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panelEdit.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -728,7 +817,6 @@
         private System.Windows.Forms.MaskedTextBox cepTextBox;
         private System.Windows.Forms.MaskedTextBox telTextBox;
         private System.Windows.Forms.MaskedTextBox celTextBox;
-        private System.Windows.Forms.MaskedTextBox txtFgts;
         private System.Windows.Forms.MaskedTextBox rgTextBox;
         private System.Windows.Forms.MaskedTextBox cpfTextBox;
         private System.Windows.Forms.TextBox funcaoTextBox;
@@ -751,5 +839,11 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource funcionariosBindingSource;
+        private DataSet1TableAdapters.funcionariosTableAdapter funcionariosTableAdapter;
+        private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.MaskedTextBox txtFgts;
     }
 }

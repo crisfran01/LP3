@@ -82,5 +82,17 @@ namespace VidracariaNovo
         {
             this.Close();
         }
+
+        private void funcionariosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmCadFuncionario CadFun = new frmCadFuncionario();
+            CadFun.ShowDialog();
+        }
+
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadFornecedor CadFornecedor = new frmCadFornecedor();
+            CadFornecedor.ShowDialog();
+        }
     }
 }

@@ -38,7 +38,6 @@ namespace VidracariaNovo
         private void enableText(Boolean enable, Boolean enablec)
         {
             nomeTextBox.ReadOnly = enable;
-            idadeTextBox.ReadOnly = enable;
             sexoComboBox.Enabled = enablec;
             dtNacTextBox.ReadOnly = enable;
             cpfTextBox.ReadOnly = enable;
@@ -111,7 +110,6 @@ namespace VidracariaNovo
                 this.tableAdapterManager.UpdateAll(this.dataSet1);
                 this.clientesTableAdapter.Fill(this.dataSet1.clientes);
                 panelEdit.SendToBack();
-                txtCPsi.ReadOnly = true;
                 enableText(true, false);    
            
         }

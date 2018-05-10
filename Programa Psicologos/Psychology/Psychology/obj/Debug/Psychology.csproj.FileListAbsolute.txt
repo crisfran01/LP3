@@ -395,3 +395,6 @@ C:\Users\Cristiane Franchini\Desktop\Programa Psicologos\Psychology\Psychology\o
 C:\Users\IFSP\Documents\LP3\Programa Psicologos\Psychology\Psychology\bin\Debug\Psychology.exe.config
 C:\Users\IFSP\Documents\LP3\Programa Psicologos\Psychology\Psychology\obj\Debug\Psychology.exe
 C:\Users\IFSP\Documents\LP3\Programa Psicologos\Psychology\Psychology\obj\Debug\Psychology.pdb
+C:\Users\IFSP-\Documents\LP3\Programa Psicologos\Psychology\Psychology\bin\Debug\Psychology.exe.config
+C:\Users\IFSP-\Documents\LP3\Programa Psicologos\Psychology\Psychology\obj\Debug\Psychology.exe
+C:\Users\IFSP-\Documents\LP3\Programa Psicologos\Psychology\Psychology\obj\Debug\Psychology.pdb
