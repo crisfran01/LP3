@@ -109,5 +109,10 @@ namespace VidracariaNovo
             enableText(true, false);
             this.clientesBindingSource.CancelEdit();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

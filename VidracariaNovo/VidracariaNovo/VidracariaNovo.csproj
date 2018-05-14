@@ -76,11 +76,23 @@
     <Compile Include="Cadastros\frmCadCliente.Designer.cs">
       <DependentUpon>frmCadCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadProdutos.cs">
+    <Compile Include="Busca\frmBuscaCli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadProdutos.Designer.cs">
-      <DependentUpon>frmCadProdutos.cs</DependentUpon>
+    <Compile Include="Busca\frmBuscaCli.Designer.cs">
+      <DependentUpon>frmBuscaCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadProduto.Designer.cs">
+      <DependentUpon>frmCadProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busca\frmBuscaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\frmBuscaProdutos.Designer.cs">
+      <DependentUpon>frmBuscaProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -94,8 +106,17 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendas.Designer.cs">
+      <DependentUpon>frmVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Busca\frmBuscaCli.resx">
+      <DependentUpon>frmBuscaCli.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\frmCadFuncionario.resx">
       <DependentUpon>frmCadFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,14 +126,20 @@
     <EmbeddedResource Include="Cadastros\frmCadCliente.resx">
       <DependentUpon>frmCadCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadProdutos.resx">
-      <DependentUpon>frmCadProdutos.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastros\frmCadProduto.resx">
+      <DependentUpon>frmCadProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca\frmBuscaProdutos.resx">
+      <DependentUpon>frmBuscaProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendas.resx">
+      <DependentUpon>frmVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

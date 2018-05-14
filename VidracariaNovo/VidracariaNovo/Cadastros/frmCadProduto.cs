@@ -10,14 +10,13 @@ using System.Windows.Forms;
 
 namespace VidracariaNovo
 {
-    public partial class frmCadProdutos : Form
+    public partial class frmCadProduto : Form
     {
-        public frmCadProdutos()
+        public frmCadProduto()
         {
             InitializeComponent();
         }
 
-       
         private void enableText(Boolean enable, Boolean enablec)
         {
             txtNome.ReadOnly = enable;
@@ -79,7 +78,7 @@ namespace VidracariaNovo
             this.produtosBindingSource.CancelEdit();
         }
 
-        private void frmCadProdutos_Load(object sender, EventArgs e)
+        private void frmCadProduto_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet1.produtos' table. You can move, or remove it, as needed.
             this.produtosTableAdapter.Fill(this.dataSet1.produtos);

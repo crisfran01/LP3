@@ -108,8 +108,14 @@ namespace VidracariaNovo
 
         private void psicologosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            frmCadProdutos CadProd = new frmCadProdutos();
+            frmCadProduto CadProd = new frmCadProduto();
             showForm(CadProd);
+        }
+
+        private void consultaStripMenuItem6_Click_1(object sender, EventArgs e)
+        {
+            frmVendas vendas = new frmVendas();
+            showForm(vendas);
         }
     }
 }

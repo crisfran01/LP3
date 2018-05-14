@@ -48,6 +48,8 @@ namespace VidracariaNovo
         {
             // TODO: This line of code loads data into the 'dataSet1.fornecedores' table. You can move, or remove it, as needed.
             this.fornecedoresTableAdapter.Fill(this.dataSet1.fornecedores);
+            // TODO: This line of code loads data into the 'dataSet1.fornecedores' table. You can move, or remove it, as needed.
+            this.fornecedoresTableAdapter.Fill(this.dataSet1.fornecedores);
 
         }
 
