@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 24-Jun-2016 às 03:32
+-- Generation Time: 14-Maio-2018 às 12:43
 -- Versão do servidor: 5.6.15-log
 -- PHP Version: 5.4.24
 
@@ -23,6 +23,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `agenda`
+--
+
+CREATE TABLE IF NOT EXISTS `agenda` (
+  `Cod_registro` int(11) NOT NULL AUTO_INCREMENT,
+  `CodP` int(11) NOT NULL,
+  `Titulo` varchar(128) NOT NULL,
+  `Descricao` text,
+  `Data` date DEFAULT NULL,
+  `Hora` time DEFAULT NULL,
+  `Status` varchar(24) DEFAULT 'Incompleto',
+  PRIMARY KEY (`Cod_registro`),
+  KEY `CodP` (`CodP`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `clientes`
 --
 
@@ -30,9 +48,12 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `cod` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(30) DEFAULT NULL,
   `apelido` varchar(20) DEFAULT NULL,
+  `data_nasc` date DEFAULT NULL,
+  `sexo` char(1) DEFAULT NULL,
   `CPF` varchar(14) DEFAULT NULL,
   `RG` varchar(12) DEFAULT NULL,
   `end` varchar(50) DEFAULT NULL,
+  `num` int(11) DEFAULT NULL,
   `bairro` varchar(15) DEFAULT NULL,
   `cidade` varchar(20) DEFAULT NULL,
   `UF` varchar(2) NOT NULL,
@@ -47,10 +68,10 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 -- Extraindo dados da tabela `clientes`
 --
 
-INSERT INTO `clientes` (`cod`, `nome`, `apelido`, `CPF`, `RG`, `end`, `bairro`, `cidade`, `UF`, `CEP`, `tel`, `cel`, `email`) VALUES
-(1, 'Cristiane Franchini', 'Cris', '31544632835', '49510257x', 'Av. 6 de agosto 212', 'Vila nova', 'Pirassununga', '', '', '1930552353', '19996086192', 'crisfr01@gmail.com'),
-(2, 'Cristiane Franchini', NULL, '31544632825', '49510257x', 'Av. 6 de agosto 212', 'Vila nova ', 'Pirassununga', '', '', '1930552353', '19996086192', 'crisfr01@gmail.com'),
-(3, 'Transportadora Amente', NULL, '30', '0', 'R. Pereira Bueno 1137', 'Rosario', 'Pirassununga', 'SP', '13634310', '3561-5387', '97160878', NULL);
+INSERT INTO `clientes` (`cod`, `nome`, `apelido`, `data_nasc`, `sexo`, `CPF`, `RG`, `end`, `num`, `bairro`, `cidade`, `UF`, `CEP`, `tel`, `cel`, `email`) VALUES
+(1, 'Cristiane Franchini', 'Cris', NULL, 'F', '31544632835', '49510257x', 'Av. 6 de agosto 212', NULL, 'Vila nova', 'Pirassununga', '', '', '1930552353', '19996086192', 'crisfr01@gmail.com'),
+(2, 'Cristiane Franchini', NULL, NULL, NULL, '31544632825', '49510257x', 'Av. 6 de agosto 212', NULL, 'Vila nova ', 'Pirassununga', '', '', '1930552353', '19996086192', 'crisfr01@gmail.com'),
+(3, 'Transportadora Amente', NULL, NULL, NULL, '30', '0', 'R. Pereira Bueno 1137', NULL, 'Rosario', 'Pirassununga', 'SP', '13634310', '3561-5387', '97160878', NULL);
 
 -- --------------------------------------------------------
 
@@ -62,7 +83,15 @@ CREATE TABLE IF NOT EXISTS `condpg` (
   `cod` int(11) NOT NULL AUTO_INCREMENT,
   `descricao` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`cod`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `condpg`
+--
+
+INSERT INTO `condpg` (`cod`, `descricao`) VALUES
+(1, 'A vista'),
+(2, '3 X');
 
 -- --------------------------------------------------------
 
@@ -72,17 +101,19 @@ CREATE TABLE IF NOT EXISTS `condpg` (
 
 CREATE TABLE IF NOT EXISTS `fornecedores` (
   `cod` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_fantasia` varchar(150) DEFAULT NULL,
   `razao_social` varchar(20) DEFAULT NULL,
   `cnpj` varchar(14) DEFAULT NULL,
+  `ie` varchar(15) DEFAULT NULL,
   `end` varchar(30) DEFAULT NULL,
-  `UF` varchar(2) NOT NULL,
-  `CEP` varchar(9) NOT NULL,
-  `bairro` varchar(15) NOT NULL,
+  `UF` varchar(2) DEFAULT NULL,
+  `CEP` varchar(9) DEFAULT NULL,
+  `bairro` varchar(15) DEFAULT NULL,
   `Cidade` varchar(15) DEFAULT NULL,
   `tel` varchar(13) DEFAULT NULL,
   `cel` varchar(13) DEFAULT NULL,
   `email` varchar(25) DEFAULT NULL,
-  `servico` varchar(20) NOT NULL,
+  `servico` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`cod`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
@@ -90,9 +121,42 @@ CREATE TABLE IF NOT EXISTS `fornecedores` (
 -- Extraindo dados da tabela `fornecedores`
 --
 
-INSERT INTO `fornecedores` (`cod`, `razao_social`, `cnpj`, `end`, `UF`, `CEP`, `bairro`, `Cidade`, `tel`, `cel`, `email`, `servico`) VALUES
-(1, 'AlGlas', '35273126389380', 'R. 13 de maio 2230', 'SP', '136863293', 'Vl industrial', 'São Paulo', '1376136892173', '1378947896589', 'Al.glas@123.com', 'Aluminio'),
-(2, 'StarTemper', '46872648917203', 'rua oliveiras 422', 'SP', '739472984', 'Santa rita', 'Campinas', '7489372894720', '3092748972389', 'Startemper@gmail.com', 'Vidro temperado');
+INSERT INTO `fornecedores` (`cod`, `nome_fantasia`, `razao_social`, `cnpj`, `ie`, `end`, `UF`, `CEP`, `bairro`, `Cidade`, `tel`, `cel`, `email`, `servico`) VALUES
+(1, NULL, 'AlGlas', '35273126389380', '', 'R. 13 de maio 2230', 'SP', '136863293', 'Vl industrial', 'São Paulo', '1376136892173', '1378947896589', 'Al.glas@123.com', 'Aluminio'),
+(2, NULL, 'StarTemper', '46872648917203', '', 'rua oliveiras 422', 'SP', '739472984', 'Santa rita', 'Campinas', '7489372894720', '3092748972389', 'Startemper@gmail.com', 'Vidro temperado');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `funcionarios`
+--
+
+CREATE TABLE IF NOT EXISTS `funcionarios` (
+  `cod` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(200) NOT NULL,
+  `cpf` varchar(12) NOT NULL,
+  `rg` varchar(12) DEFAULT NULL,
+  `endereco` varchar(200) DEFAULT NULL,
+  `num` int(11) DEFAULT NULL,
+  `bairro` varchar(40) DEFAULT NULL,
+  `cidade` varchar(50) DEFAULT NULL,
+  `uf` varchar(2) DEFAULT NULL,
+  `cep` varchar(10) DEFAULT NULL,
+  `telefone` varchar(12) DEFAULT NULL,
+  `cel` varchar(12) DEFAULT NULL,
+  `email` int(11) DEFAULT NULL,
+  `funcao` varchar(20) DEFAULT NULL,
+  `FGTS` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`cod`),
+  UNIQUE KEY `cpf` (`cpf`,`rg`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `funcionarios`
+--
+
+INSERT INTO `funcionarios` (`cod`, `nome`, `cpf`, `rg`, `endereco`, `num`, `bairro`, `cidade`, `uf`, `cep`, `telefone`, `cel`, `email`, `funcao`, `FGTS`) VALUES
+(1, 'teste', '12131313131', '', NULL, NULL, NULL, NULL, NULL, '', '', '', NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -117,10 +181,10 @@ CREATE TABLE IF NOT EXISTS `itens` (
 --
 
 INSERT INTO `itens` (`codVend`, `codProd`, `altura`, `largura`, `qtde`, `metragem`, `Preco`) VALUES
-(1, 1, 1, 1, 1, 1, 1),
-(1, 2, 2, 2, 2, 2, 2),
-(2, 2, 2, 2, 2, 2, 2),
-(2, 2, 23, 34, 34, 34, 3);
+(1, 1, 1, 1, 1, 1, 100),
+(2, 3, 1, 1, 1, 1, 20),
+(2, 2, 2, 2, 2, 8, 80),
+(3, 1, 1, 1, 1, 1, 100);
 
 -- --------------------------------------------------------
 
@@ -130,42 +194,23 @@ INSERT INTO `itens` (`codVend`, `codProd`, `altura`, `largura`, `qtde`, `metrage
 
 CREATE TABLE IF NOT EXISTS `produtos` (
   `cod` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
   `descricao` varchar(30) DEFAULT NULL,
   `pr_custo` int(11) DEFAULT NULL,
   `pr_venda` int(11) DEFAULT NULL,
   `qntd` int(11) DEFAULT NULL,
   `unid_med` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`cod`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `produtos`
 --
 
-INSERT INTO `produtos` (`cod`, `descricao`, `pr_custo`, `pr_venda`, `qntd`, `unid_med`) VALUES
-(1, 'Vidro Pontilhado', 100, 80, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `teste`
---
-
-CREATE TABLE IF NOT EXISTS `teste` (
-  `cod` int(11) NOT NULL,
-  `nomeCli` varchar(50) DEFAULT NULL,
-  `teste` varchar(10) DEFAULT NULL,
-  KEY `cod_fk` (`cod`),
-  KEY `nome_fk` (`nomeCli`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `teste`
---
-
-INSERT INTO `teste` (`cod`, `nomeCli`, `teste`) VALUES
-(1, NULL, '1'),
-(2, NULL, '2');
+INSERT INTO `produtos` (`cod`, `nome`, `descricao`, `pr_custo`, `pr_venda`, `qntd`, `unid_med`) VALUES
+(1, '', 'Vidro Pontilhado', 100, 200, 100, 'm2'),
+(2, '', 'Vidro Cane', 10, 20, 200, 'm2'),
+(3, '', 'Tucano grande', 20, 30, 10, 'un');
 
 -- --------------------------------------------------------
 
@@ -210,17 +255,16 @@ CREATE TABLE IF NOT EXISTS `vendas` (
   KEY `codPg_fk` (`codPG`),
   KEY `codFun_fk` (`codFun`),
   KEY `codCli_fk` (`codCli`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Extraindo dados da tabela `vendas`
 --
 
 INSERT INTO `vendas` (`cod`, `codCli`, `data`, `Obs`, `codFun`, `codPG`, `Valor`) VALUES
-(1, 1, '2016-02-22', 'ds', 2, 1, 2),
-(2, 2, '2222-02-22', 'dfsf', 1, 2, 232),
-(3, 3, NULL, 'dsfwea', 2, 1, 111),
-(4, 2, NULL, 'fdvd', 2, 1, 23);
+(1, 2, NULL, '1', 1, 1, 100),
+(2, 3, NULL, NULL, NULL, NULL, 100),
+(3, 1, '2018-05-13', '1', 1, 1, 100);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

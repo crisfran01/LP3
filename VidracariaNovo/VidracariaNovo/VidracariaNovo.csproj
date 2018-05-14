@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1F78C7CD-C6F3-4EDE-A192-F3D2AC97AA8B}</ProjectGuid>
+    <ProjectGuid>{BE5A55BF-C9BD-4ECD-AB66-38D314E6F55D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>VidracariaNovo</RootNamespace>
     <AssemblyName>VidracariaNovo</AssemblyName>
@@ -32,8 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,12 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastros\frmCadCli.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastros\frmCadCli.Designer.cs">
-      <DependentUpon>frmCadCli.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cadastros\frmCadFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,11 +62,37 @@
     <Compile Include="Cadastros\frmCadFornecedor.Designer.cs">
       <DependentUpon>frmCadFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadProdutos.cs">
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadProdutos.Designer.cs">
-      <DependentUpon>frmCadProdutos.cs</DependentUpon>
+    <Compile Include="Cadastros\frmCadCliente.Designer.cs">
+      <DependentUpon>frmCadCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busca\frmBuscaCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\frmBuscaCli.Designer.cs">
+      <DependentUpon>frmBuscaCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadProduto.Designer.cs">
+      <DependentUpon>frmCadProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busca\frmBuscaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\frmBuscaProdutos.Designer.cs">
+      <DependentUpon>frmBuscaProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -81,10 +106,16 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendas.Designer.cs">
+      <DependentUpon>frmVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cadastros\frmCadCli.resx">
-      <DependentUpon>frmCadCli.cs</DependentUpon>
+    <EmbeddedResource Include="Busca\frmBuscaCli.resx">
+      <DependentUpon>frmBuscaCli.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\frmCadFuncionario.resx">
       <DependentUpon>frmCadFuncionario.cs</DependentUpon>
@@ -92,14 +123,23 @@
     <EmbeddedResource Include="Cadastros\frmCadFornecedor.resx">
       <DependentUpon>frmCadFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadProdutos.resx">
-      <DependentUpon>frmCadProdutos.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastros\frmCadCliente.resx">
+      <DependentUpon>frmCadCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmCadProduto.resx">
+      <DependentUpon>frmCadProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca\frmBuscaProdutos.resx">
+      <DependentUpon>frmBuscaProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendas.resx">
+      <DependentUpon>frmVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +150,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
