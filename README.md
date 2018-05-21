@@ -1,17 +1,23 @@
 # LP3 #
 
+
 Trabalho da disciplina de LP3. 
 
 Criação de um programa para vidraçarias na plataforma Visual Studio.
 
-#### Informações para Execução
+----------------------------------------------------------------
+
+### Informações para Execução
 
   A versão do visual studio utilizada é a de 2015
   Os drives Necessários se encontram na pasta "Drives Necessários"
   O banco de dados precisa ter o nome de "vidracaria" e seu backup está na raiz. 
 
+----------------------------------------------------------------
 
- #### Já desenvolvido:
+### Features
+
+#### Já desenvolvido:
 
  - [X] Tela de cadastro de clientes
  - [X] Tela de cadastro de produtos
