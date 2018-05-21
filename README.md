@@ -1,44 +1,44 @@
-# LP3
+# LP3 #
 
 Trabalho da disciplina de LP3. 
 
-CriaÁ„o de um programa para vidraÁarias na plataforma Visual Studio.
+Cria√ß√£o de um programa para vidra√ßarias na plataforma Visual Studio.
 
--InformaÁıes para ExecuÁ„o
+#### Informa√ß√µes para Execu√ß√£o
 
-  A vers„o do visual studio utilizada È a de 2015
-  Os drives Necess·rios se encontram na pasta "Drives Necess·rios"
-  O banco de dados precisa ter o nome de "vidracaria" e seu backup est· na raiz. 
-
-
- *** J· desenvolvido:
-
- - Tela de cadastro de clientes
- - Tela de cadastro de produtos
- - Tela de cadastro de funcion·rios
- - Tela de cadastro de fornecedores
+  A vers√£o do visual studio utilizada √© a de 2015
+  Os drives Necess√°rios se encontram na pasta "Drives Necess√°rios"
+  O banco de dados precisa ter o nome de "vidracaria" e seu backup est√° na raiz. 
 
 
-*** Em desenvolvimento
+ #### J√° desenvolvido:
 
- - Tela de Busca de Clientes (falta aumentar os tipos de buscas)
- - Tela de Busca de produtos (falta aumentar os tipos de buscas)
- - Tela de Vendas (j· faz o cadastro, falta implementar impress„o e melhorar alguns aspectos)
+ - [X] Tela de cadastro de clientes
+ - [X] Tela de cadastro de produtos
+ - [X] Tela de cadastro de funcion√°rios
+ - [X] Tela de cadastro de fornecedores
 
 
-*** A ser desenvolvido
+#### Em desenvolvimento
 
- - Tela de busca de fornecedores
- - Tela de busca de funcion·rios
- - Agenda
- - Controle de caixa
- - Login
- - Sistema de nÌveis
- - Impress„o de recibo
- - Cadastro e modificaÁ„o de usu·rios
- - Trocar senha
- - Classe de utilidades para concentrar tarefas comuns
- - Acabamento de todas as telas ( parte visual e outros detalhes)
- - Classe de utilidades
+ - [ ] Tela de Busca de Clientes (falta aumentar os tipos de buscas)
+ - [ ] Tela de Busca de produtos (falta aumentar os tipos de buscas)
+ - [ ] Tela de Vendas (j√° faz o cadastro, falta implementar impress√£o e melhorar alguns aspectos)
+
+
+#### A ser desenvolvido
+
+ - [ ] Tela de busca de fornecedores
+ - [ ] Tela de busca de funcion√°rios
+ - [ ] Agenda
+ - [ ] Controle de caixa
+ - [ ] Login
+ - [ ] Sistema de n√≠veis
+ - [ ] Impress√£o de recibo
+ - [ ] Cadastro e modifica√ß√£o de usu√°rios
+ - [ ] Trocar senha
+ - [ ] Classe de utilidades para concentrar tarefas comuns
+ - [ ] Acabamento de todas as telas ( parte visual e outros detalhes)
+ - [ ] Classe de utilidades
 
 
