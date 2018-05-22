@@ -18,6 +18,12 @@ namespace VidracariaNovo
             enableText(true, false);
         }
 
+        private void frmCadFuncionario_Load(object sender, EventArgs e)
+        {
+            this.funcionariosTableAdapter.Fill(this.dataSet1.funcionarios);
+
+        }
+
         private void btnNovo_Click(object sender, EventArgs e)
         {
             enableText(false, true);
@@ -101,6 +107,8 @@ namespace VidracariaNovo
             this.funcionariosBindingSource.CancelEdit();
             this.Dispose();
         }
+
+
 
 
     }

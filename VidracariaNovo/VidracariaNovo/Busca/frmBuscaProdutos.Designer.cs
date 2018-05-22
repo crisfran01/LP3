@@ -32,15 +32,6 @@
             System.Windows.Forms.Label label1;
             this.panel2 = new System.Windows.Forms.Panel();
             this.produtosDataGridView = new System.Windows.Forms.DataGridView();
-            this.txtConsulta = new System.Windows.Forms.TextBox();
-            this.cbPesquisa = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dataSet1 = new VidracariaNovo.DataSet1();
-            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.produtosTableAdapter = new VidracariaNovo.DataSet1TableAdapters.produtosTableAdapter();
-            this.tableAdapterManager = new VidracariaNovo.DataSet1TableAdapters.TableAdapterManager();
             this.codDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,13 +39,35 @@
             this.prvendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qntdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidmedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new VidracariaNovo.DataSet1();
+            this.txtConsulta = new System.Windows.Forms.TextBox();
+            this.cbPesquisa = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.produtosTableAdapter = new VidracariaNovo.DataSet1TableAdapters.produtosTableAdapter();
+            this.tableAdapterManager = new VidracariaNovo.DataSet1TableAdapters.TableAdapterManager();
             label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            label1.Location = new System.Drawing.Point(121, 81);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(108, 28);
+            label1.TabIndex = 193;
+            label1.Text = "Buscar por:";
             // 
             // panel2
             // 
@@ -98,18 +111,64 @@
             this.produtosDataGridView.TabIndex = 194;
             this.produtosDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.produtosDataGridView_CellDoubleClick);
             // 
-            // label1
+            // codDataGridViewTextBoxColumn
             // 
-            label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            label1.Location = new System.Drawing.Point(121, 81);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(108, 28);
-            label1.TabIndex = 193;
-            label1.Text = "Buscar por:";
+            this.codDataGridViewTextBoxColumn.DataPropertyName = "cod";
+            this.codDataGridViewTextBoxColumn.HeaderText = "cod";
+            this.codDataGridViewTextBoxColumn.Name = "codDataGridViewTextBoxColumn";
+            this.codDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "descricao";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prcustoDataGridViewTextBoxColumn
+            // 
+            this.prcustoDataGridViewTextBoxColumn.DataPropertyName = "pr_custo";
+            this.prcustoDataGridViewTextBoxColumn.HeaderText = "pr_custo";
+            this.prcustoDataGridViewTextBoxColumn.Name = "prcustoDataGridViewTextBoxColumn";
+            this.prcustoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prvendaDataGridViewTextBoxColumn
+            // 
+            this.prvendaDataGridViewTextBoxColumn.DataPropertyName = "pr_venda";
+            this.prvendaDataGridViewTextBoxColumn.HeaderText = "pr_venda";
+            this.prvendaDataGridViewTextBoxColumn.Name = "prvendaDataGridViewTextBoxColumn";
+            this.prvendaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qntdDataGridViewTextBoxColumn
+            // 
+            this.qntdDataGridViewTextBoxColumn.DataPropertyName = "qntd";
+            this.qntdDataGridViewTextBoxColumn.HeaderText = "qntd";
+            this.qntdDataGridViewTextBoxColumn.Name = "qntdDataGridViewTextBoxColumn";
+            this.qntdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // unidmedDataGridViewTextBoxColumn
+            // 
+            this.unidmedDataGridViewTextBoxColumn.DataPropertyName = "unid_med";
+            this.unidmedDataGridViewTextBoxColumn.HeaderText = "unid_med";
+            this.unidmedDataGridViewTextBoxColumn.Name = "unidmedDataGridViewTextBoxColumn";
+            this.unidmedDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // produtosBindingSource
+            // 
+            this.produtosBindingSource.DataMember = "produtos";
+            this.produtosBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtConsulta
             // 
@@ -161,6 +220,7 @@
             this.btnClose.Size = new System.Drawing.Size(51, 32);
             this.btnClose.TabIndex = 130;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label4
             // 
@@ -174,16 +234,6 @@
             this.label4.TabIndex = 95;
             this.label4.Text = "Busca de Produtos";
             // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // produtosBindingSource
-            // 
-            this.produtosBindingSource.DataMember = "produtos";
-            this.produtosBindingSource.DataSource = this.dataSet1;
-            // 
             // produtosTableAdapter
             // 
             this.produtosTableAdapter.ClearBeforeFill = true;
@@ -193,6 +243,7 @@
             this.tableAdapterManager.agendaTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.clientesTableAdapter = null;
+            this.tableAdapterManager.condpgTableAdapter = null;
             this.tableAdapterManager.fornecedoresTableAdapter = null;
             this.tableAdapterManager.funcionariosTableAdapter = null;
             this.tableAdapterManager.itensTableAdapter = null;
@@ -200,55 +251,6 @@
             this.tableAdapterManager.UpdateOrder = VidracariaNovo.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = null;
             this.tableAdapterManager.vendasTableAdapter = null;
-            // 
-            // codDataGridViewTextBoxColumn
-            // 
-            this.codDataGridViewTextBoxColumn.DataPropertyName = "cod";
-            this.codDataGridViewTextBoxColumn.HeaderText = "cod";
-            this.codDataGridViewTextBoxColumn.Name = "codDataGridViewTextBoxColumn";
-            this.codDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "descricao";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prcustoDataGridViewTextBoxColumn
-            // 
-            this.prcustoDataGridViewTextBoxColumn.DataPropertyName = "pr_custo";
-            this.prcustoDataGridViewTextBoxColumn.HeaderText = "pr_custo";
-            this.prcustoDataGridViewTextBoxColumn.Name = "prcustoDataGridViewTextBoxColumn";
-            this.prcustoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prvendaDataGridViewTextBoxColumn
-            // 
-            this.prvendaDataGridViewTextBoxColumn.DataPropertyName = "pr_venda";
-            this.prvendaDataGridViewTextBoxColumn.HeaderText = "pr_venda";
-            this.prvendaDataGridViewTextBoxColumn.Name = "prvendaDataGridViewTextBoxColumn";
-            this.prvendaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qntdDataGridViewTextBoxColumn
-            // 
-            this.qntdDataGridViewTextBoxColumn.DataPropertyName = "qntd";
-            this.qntdDataGridViewTextBoxColumn.HeaderText = "qntd";
-            this.qntdDataGridViewTextBoxColumn.Name = "qntdDataGridViewTextBoxColumn";
-            this.qntdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // unidmedDataGridViewTextBoxColumn
-            // 
-            this.unidmedDataGridViewTextBoxColumn.DataPropertyName = "unid_med";
-            this.unidmedDataGridViewTextBoxColumn.HeaderText = "unid_med";
-            this.unidmedDataGridViewTextBoxColumn.Name = "unidmedDataGridViewTextBoxColumn";
-            this.unidmedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmBuscaProdutos
             // 
@@ -263,10 +265,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

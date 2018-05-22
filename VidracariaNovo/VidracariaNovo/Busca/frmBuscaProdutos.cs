@@ -51,5 +51,10 @@ namespace VidracariaNovo
             name = produtosDataGridView.CurrentRow.Cells[1].Value.ToString();
             this.Dispose();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

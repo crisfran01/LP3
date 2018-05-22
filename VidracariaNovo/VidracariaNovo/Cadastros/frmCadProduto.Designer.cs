@@ -42,6 +42,18 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.prontTextBox = new System.Windows.Forms.TextBox();
+            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new VidracariaNovo.DataSet1();
+            this.txtUnidadeDeMedida = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtLucroP = new System.Windows.Forms.TextBox();
+            this.txtLucro = new System.Windows.Forms.TextBox();
+            this.txtPrVenda = new System.Windows.Forms.TextBox();
+            this.txtPrCompra = new System.Windows.Forms.TextBox();
+            this.txtQtde = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -53,20 +65,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtUnidadeDeMedida = new System.Windows.Forms.TextBox();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.txtLucroP = new System.Windows.Forms.TextBox();
-            this.txtLucro = new System.Windows.Forms.TextBox();
-            this.txtPrVenda = new System.Windows.Forms.TextBox();
-            this.txtPrCompra = new System.Windows.Forms.TextBox();
-            this.txtQtde = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.dataSet1 = new VidracariaNovo.DataSet1();
-            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.produtosTableAdapter = new VidracariaNovo.DataSet1TableAdapters.produtosTableAdapter();
             this.tableAdapterManager = new VidracariaNovo.DataSet1TableAdapters.TableAdapterManager();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.prontTextBox = new System.Windows.Forms.TextBox();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             lucroPorcentLabel = new System.Windows.Forms.Label();
@@ -78,11 +78,127 @@
             prontLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panelEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.ForeColor = System.Drawing.SystemColors.Control;
+            label2.Location = new System.Drawing.Point(130, 359);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(133, 26);
+            label2.TabIndex = 216;
+            label2.Text = "Un Medida";
+            // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.ForeColor = System.Drawing.SystemColors.Control;
+            label1.Location = new System.Drawing.Point(133, 430);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(133, 26);
+            label1.TabIndex = 213;
+            label1.Text = "Descrição:";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            label1.UseCompatibleTextRendering = true;
+            // 
+            // lucroPorcentLabel
+            // 
+            lucroPorcentLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            lucroPorcentLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lucroPorcentLabel.ForeColor = System.Drawing.SystemColors.Control;
+            lucroPorcentLabel.Location = new System.Drawing.Point(799, 359);
+            lucroPorcentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lucroPorcentLabel.Name = "lucroPorcentLabel";
+            lucroPorcentLabel.Size = new System.Drawing.Size(108, 26);
+            lucroPorcentLabel.TabIndex = 212;
+            lucroPorcentLabel.Text = "Lucro(%):";
+            lucroPorcentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lucroReaisLabel
+            // 
+            lucroReaisLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            lucroReaisLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lucroReaisLabel.ForeColor = System.Drawing.SystemColors.Control;
+            lucroReaisLabel.Location = new System.Drawing.Point(501, 359);
+            lucroReaisLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lucroReaisLabel.Name = "lucroReaisLabel";
+            lucroReaisLabel.Size = new System.Drawing.Size(109, 26);
+            lucroReaisLabel.TabIndex = 210;
+            lucroReaisLabel.Text = "Lucro(R$):";
+            lucroReaisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // precoVendaLabel
+            // 
+            precoVendaLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            precoVendaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            precoVendaLabel.ForeColor = System.Drawing.SystemColors.Control;
+            precoVendaLabel.Location = new System.Drawing.Point(755, 294);
+            precoVendaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            precoVendaLabel.Name = "precoVendaLabel";
+            precoVendaLabel.Size = new System.Drawing.Size(164, 26);
+            precoVendaLabel.TabIndex = 208;
+            precoVendaLabel.Text = "Preço de Venda:";
+            precoVendaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // precoCompraLabel
+            // 
+            precoCompraLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            precoCompraLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            precoCompraLabel.ForeColor = System.Drawing.SystemColors.Control;
+            precoCompraLabel.Location = new System.Drawing.Point(430, 294);
+            precoCompraLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            precoCompraLabel.Name = "precoCompraLabel";
+            precoCompraLabel.Size = new System.Drawing.Size(180, 26);
+            precoCompraLabel.TabIndex = 206;
+            precoCompraLabel.Text = "Preço de Compra:";
+            precoCompraLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // qtdLabel
+            // 
+            qtdLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            qtdLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            qtdLabel.ForeColor = System.Drawing.SystemColors.Control;
+            qtdLabel.Location = new System.Drawing.Point(130, 294);
+            qtdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            qtdLabel.Name = "qtdLabel";
+            qtdLabel.Size = new System.Drawing.Size(133, 26);
+            qtdLabel.TabIndex = 203;
+            qtdLabel.Text = "Quantidade:";
+            qtdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            nomeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nomeLabel.ForeColor = System.Drawing.SystemColors.Control;
+            nomeLabel.Location = new System.Drawing.Point(130, 230);
+            nomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(133, 26);
+            nomeLabel.TabIndex = 202;
+            nomeLabel.Text = "Nome:";
+            nomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // prontLabel
+            // 
+            prontLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            prontLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            prontLabel.ForeColor = System.Drawing.SystemColors.Control;
+            prontLabel.Location = new System.Drawing.Point(128, 160);
+            prontLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            prontLabel.Name = "prontLabel";
+            prontLabel.Size = new System.Drawing.Size(133, 32);
+            prontLabel.TabIndex = 218;
+            prontLabel.Text = "Codigo";
             // 
             // panel1
             // 
@@ -155,6 +271,165 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1165, 660);
             this.panel2.TabIndex = 98;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBuscar.Location = new System.Drawing.Point(405, 158);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(56, 36);
+            this.btnBuscar.TabIndex = 219;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // prontTextBox
+            // 
+            this.prontTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.prontTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.prontTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prontTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "cod", true));
+            this.prontTextBox.Enabled = false;
+            this.prontTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prontTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.prontTextBox.Location = new System.Drawing.Point(271, 159);
+            this.prontTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.prontTextBox.Name = "prontTextBox";
+            this.prontTextBox.ReadOnly = true;
+            this.prontTextBox.Size = new System.Drawing.Size(114, 34);
+            this.prontTextBox.TabIndex = 217;
+            // 
+            // produtosBindingSource
+            // 
+            this.produtosBindingSource.DataMember = "produtos";
+            this.produtosBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtUnidadeDeMedida
+            // 
+            this.txtUnidadeDeMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUnidadeDeMedida.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUnidadeDeMedida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUnidadeDeMedida.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "unid_med", true));
+            this.txtUnidadeDeMedida.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnidadeDeMedida.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtUnidadeDeMedida.Location = new System.Drawing.Point(270, 354);
+            this.txtUnidadeDeMedida.Margin = new System.Windows.Forms.Padding(0);
+            this.txtUnidadeDeMedida.MaxLength = 3;
+            this.txtUnidadeDeMedida.Name = "txtUnidadeDeMedida";
+            this.txtUnidadeDeMedida.Size = new System.Drawing.Size(114, 34);
+            this.txtUnidadeDeMedida.TabIndex = 215;
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDescricao.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescricao.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "descricao", true));
+            this.txtDescricao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtDescricao.Location = new System.Drawing.Point(270, 428);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(0);
+            this.txtDescricao.MaxLength = 30;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(767, 34);
+            this.txtDescricao.TabIndex = 214;
+            // 
+            // txtLucroP
+            // 
+            this.txtLucroP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLucroP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLucroP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLucroP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLucroP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtLucroP.Location = new System.Drawing.Point(923, 354);
+            this.txtLucroP.Margin = new System.Windows.Forms.Padding(0);
+            this.txtLucroP.MaxLength = 3;
+            this.txtLucroP.Name = "txtLucroP";
+            this.txtLucroP.Size = new System.Drawing.Size(114, 34);
+            this.txtLucroP.TabIndex = 211;
+            // 
+            // txtLucro
+            // 
+            this.txtLucro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLucro.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLucro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLucro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLucro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtLucro.Location = new System.Drawing.Point(618, 354);
+            this.txtLucro.Margin = new System.Windows.Forms.Padding(0);
+            this.txtLucro.MaxLength = 3;
+            this.txtLucro.Name = "txtLucro";
+            this.txtLucro.Size = new System.Drawing.Size(114, 34);
+            this.txtLucro.TabIndex = 209;
+            // 
+            // txtPrVenda
+            // 
+            this.txtPrVenda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPrVenda.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPrVenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrVenda.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "pr_venda", true));
+            this.txtPrVenda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrVenda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtPrVenda.Location = new System.Drawing.Point(923, 289);
+            this.txtPrVenda.Margin = new System.Windows.Forms.Padding(0);
+            this.txtPrVenda.MaxLength = 3;
+            this.txtPrVenda.Name = "txtPrVenda";
+            this.txtPrVenda.Size = new System.Drawing.Size(114, 34);
+            this.txtPrVenda.TabIndex = 207;
+            // 
+            // txtPrCompra
+            // 
+            this.txtPrCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPrCompra.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPrCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrCompra.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "pr_custo", true));
+            this.txtPrCompra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrCompra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtPrCompra.Location = new System.Drawing.Point(618, 289);
+            this.txtPrCompra.Margin = new System.Windows.Forms.Padding(0);
+            this.txtPrCompra.MaxLength = 3;
+            this.txtPrCompra.Name = "txtPrCompra";
+            this.txtPrCompra.Size = new System.Drawing.Size(114, 34);
+            this.txtPrCompra.TabIndex = 205;
+            // 
+            // txtQtde
+            // 
+            this.txtQtde.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtQtde.BackColor = System.Drawing.SystemColors.Window;
+            this.txtQtde.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQtde.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "qntd", true));
+            this.txtQtde.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQtde.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtQtde.Location = new System.Drawing.Point(270, 289);
+            this.txtQtde.Margin = new System.Windows.Forms.Padding(0);
+            this.txtQtde.MaxLength = 3;
+            this.txtQtde.Name = "txtQtde";
+            this.txtQtde.Size = new System.Drawing.Size(114, 34);
+            this.txtQtde.TabIndex = 201;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNome.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "nome", true));
+            this.txtNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtNome.Location = new System.Drawing.Point(270, 227);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(0);
+            this.txtNome.MaxLength = 30;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(767, 34);
+            this.txtNome.TabIndex = 200;
             // 
             // label7
             // 
@@ -329,237 +604,6 @@
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // label2
-            // 
-            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.ForeColor = System.Drawing.SystemColors.Control;
-            label2.Location = new System.Drawing.Point(130, 359);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(133, 26);
-            label2.TabIndex = 216;
-            label2.Text = "Un Medida";
-            // 
-            // txtUnidadeDeMedida
-            // 
-            this.txtUnidadeDeMedida.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUnidadeDeMedida.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUnidadeDeMedida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUnidadeDeMedida.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "unid_med", true));
-            this.txtUnidadeDeMedida.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnidadeDeMedida.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtUnidadeDeMedida.Location = new System.Drawing.Point(270, 354);
-            this.txtUnidadeDeMedida.Margin = new System.Windows.Forms.Padding(0);
-            this.txtUnidadeDeMedida.MaxLength = 3;
-            this.txtUnidadeDeMedida.Name = "txtUnidadeDeMedida";
-            this.txtUnidadeDeMedida.Size = new System.Drawing.Size(114, 34);
-            this.txtUnidadeDeMedida.TabIndex = 215;
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDescricao.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescricao.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "descricao", true));
-            this.txtDescricao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtDescricao.Location = new System.Drawing.Point(270, 428);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(0);
-            this.txtDescricao.MaxLength = 30;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(767, 34);
-            this.txtDescricao.TabIndex = 214;
-            // 
-            // label1
-            // 
-            label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.ForeColor = System.Drawing.SystemColors.Control;
-            label1.Location = new System.Drawing.Point(133, 430);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(133, 26);
-            label1.TabIndex = 213;
-            label1.Text = "Descrição:";
-            label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            label1.UseCompatibleTextRendering = true;
-            // 
-            // lucroPorcentLabel
-            // 
-            lucroPorcentLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            lucroPorcentLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lucroPorcentLabel.ForeColor = System.Drawing.SystemColors.Control;
-            lucroPorcentLabel.Location = new System.Drawing.Point(799, 359);
-            lucroPorcentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lucroPorcentLabel.Name = "lucroPorcentLabel";
-            lucroPorcentLabel.Size = new System.Drawing.Size(108, 26);
-            lucroPorcentLabel.TabIndex = 212;
-            lucroPorcentLabel.Text = "Lucro(%):";
-            lucroPorcentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtLucroP
-            // 
-            this.txtLucroP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLucroP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtLucroP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLucroP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLucroP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtLucroP.Location = new System.Drawing.Point(923, 354);
-            this.txtLucroP.Margin = new System.Windows.Forms.Padding(0);
-            this.txtLucroP.MaxLength = 3;
-            this.txtLucroP.Name = "txtLucroP";
-            this.txtLucroP.Size = new System.Drawing.Size(114, 34);
-            this.txtLucroP.TabIndex = 211;
-            // 
-            // lucroReaisLabel
-            // 
-            lucroReaisLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            lucroReaisLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lucroReaisLabel.ForeColor = System.Drawing.SystemColors.Control;
-            lucroReaisLabel.Location = new System.Drawing.Point(501, 359);
-            lucroReaisLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lucroReaisLabel.Name = "lucroReaisLabel";
-            lucroReaisLabel.Size = new System.Drawing.Size(109, 26);
-            lucroReaisLabel.TabIndex = 210;
-            lucroReaisLabel.Text = "Lucro(R$):";
-            lucroReaisLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtLucro
-            // 
-            this.txtLucro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLucro.BackColor = System.Drawing.SystemColors.Window;
-            this.txtLucro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLucro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLucro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtLucro.Location = new System.Drawing.Point(618, 354);
-            this.txtLucro.Margin = new System.Windows.Forms.Padding(0);
-            this.txtLucro.MaxLength = 3;
-            this.txtLucro.Name = "txtLucro";
-            this.txtLucro.Size = new System.Drawing.Size(114, 34);
-            this.txtLucro.TabIndex = 209;
-            // 
-            // precoVendaLabel
-            // 
-            precoVendaLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            precoVendaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precoVendaLabel.ForeColor = System.Drawing.SystemColors.Control;
-            precoVendaLabel.Location = new System.Drawing.Point(755, 294);
-            precoVendaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            precoVendaLabel.Name = "precoVendaLabel";
-            precoVendaLabel.Size = new System.Drawing.Size(164, 26);
-            precoVendaLabel.TabIndex = 208;
-            precoVendaLabel.Text = "Preço de Venda:";
-            precoVendaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtPrVenda
-            // 
-            this.txtPrVenda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrVenda.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPrVenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrVenda.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "pr_venda", true));
-            this.txtPrVenda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrVenda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtPrVenda.Location = new System.Drawing.Point(923, 289);
-            this.txtPrVenda.Margin = new System.Windows.Forms.Padding(0);
-            this.txtPrVenda.MaxLength = 3;
-            this.txtPrVenda.Name = "txtPrVenda";
-            this.txtPrVenda.Size = new System.Drawing.Size(114, 34);
-            this.txtPrVenda.TabIndex = 207;
-            // 
-            // precoCompraLabel
-            // 
-            precoCompraLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            precoCompraLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precoCompraLabel.ForeColor = System.Drawing.SystemColors.Control;
-            precoCompraLabel.Location = new System.Drawing.Point(430, 294);
-            precoCompraLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            precoCompraLabel.Name = "precoCompraLabel";
-            precoCompraLabel.Size = new System.Drawing.Size(180, 26);
-            precoCompraLabel.TabIndex = 206;
-            precoCompraLabel.Text = "Preço de Compra:";
-            precoCompraLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtPrCompra
-            // 
-            this.txtPrCompra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrCompra.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPrCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrCompra.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "pr_custo", true));
-            this.txtPrCompra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrCompra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtPrCompra.Location = new System.Drawing.Point(618, 289);
-            this.txtPrCompra.Margin = new System.Windows.Forms.Padding(0);
-            this.txtPrCompra.MaxLength = 3;
-            this.txtPrCompra.Name = "txtPrCompra";
-            this.txtPrCompra.Size = new System.Drawing.Size(114, 34);
-            this.txtPrCompra.TabIndex = 205;
-            // 
-            // qtdLabel
-            // 
-            qtdLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            qtdLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            qtdLabel.ForeColor = System.Drawing.SystemColors.Control;
-            qtdLabel.Location = new System.Drawing.Point(130, 294);
-            qtdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            qtdLabel.Name = "qtdLabel";
-            qtdLabel.Size = new System.Drawing.Size(133, 26);
-            qtdLabel.TabIndex = 203;
-            qtdLabel.Text = "Quantidade:";
-            qtdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtQtde
-            // 
-            this.txtQtde.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtQtde.BackColor = System.Drawing.SystemColors.Window;
-            this.txtQtde.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtQtde.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "qntd", true));
-            this.txtQtde.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQtde.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtQtde.Location = new System.Drawing.Point(270, 289);
-            this.txtQtde.Margin = new System.Windows.Forms.Padding(0);
-            this.txtQtde.MaxLength = 3;
-            this.txtQtde.Name = "txtQtde";
-            this.txtQtde.Size = new System.Drawing.Size(114, 34);
-            this.txtQtde.TabIndex = 201;
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            nomeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.ForeColor = System.Drawing.SystemColors.Control;
-            nomeLabel.Location = new System.Drawing.Point(130, 230);
-            nomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(133, 26);
-            nomeLabel.TabIndex = 202;
-            nomeLabel.Text = "Nome:";
-            nomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNome.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNome.Location = new System.Drawing.Point(270, 227);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(0);
-            this.txtNome.MaxLength = 30;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(767, 34);
-            this.txtNome.TabIndex = 200;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // produtosBindingSource
-            // 
-            this.produtosBindingSource.DataMember = "produtos";
-            this.produtosBindingSource.DataSource = this.dataSet1;
-            // 
             // produtosTableAdapter
             // 
             this.produtosTableAdapter.ClearBeforeFill = true;
@@ -569,6 +613,7 @@
             this.tableAdapterManager.agendaTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.clientesTableAdapter = null;
+            this.tableAdapterManager.condpgTableAdapter = null;
             this.tableAdapterManager.fornecedoresTableAdapter = null;
             this.tableAdapterManager.funcionariosTableAdapter = null;
             this.tableAdapterManager.itensTableAdapter = null;
@@ -576,49 +621,6 @@
             this.tableAdapterManager.UpdateOrder = VidracariaNovo.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = null;
             this.tableAdapterManager.vendasTableAdapter = null;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBuscar.Location = new System.Drawing.Point(405, 158);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(56, 36);
-            this.btnBuscar.TabIndex = 219;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // prontLabel
-            // 
-            prontLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            prontLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            prontLabel.ForeColor = System.Drawing.SystemColors.Control;
-            prontLabel.Location = new System.Drawing.Point(128, 160);
-            prontLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            prontLabel.Name = "prontLabel";
-            prontLabel.Size = new System.Drawing.Size(133, 32);
-            prontLabel.TabIndex = 218;
-            prontLabel.Text = "Codigo";
-            // 
-            // prontTextBox
-            // 
-            this.prontTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.prontTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.prontTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prontTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "cod", true));
-            this.prontTextBox.Enabled = false;
-            this.prontTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prontTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.prontTextBox.Location = new System.Drawing.Point(271, 159);
-            this.prontTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.prontTextBox.Name = "prontTextBox";
-            this.prontTextBox.ReadOnly = true;
-            this.prontTextBox.Size = new System.Drawing.Size(114, 34);
-            this.prontTextBox.TabIndex = 217;
             // 
             // frmCadProduto
             // 
@@ -634,10 +636,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panelEdit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

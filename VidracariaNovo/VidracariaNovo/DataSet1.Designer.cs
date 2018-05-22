@@ -7775,8 +7775,8 @@ namespace VidracariaNovo.DataSet1TableAdapters {
             this._commandCollection[1].Parameters.Add(param);
             this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        ROUND(SUM(preco), 2) AS Total\r\nFROM            itens\r\nWHERE        " +
-                "(codVend = @codVend)";
+            this._commandCollection[2].CommandText = "SELECT        ROUND(SUM(preco), 2) AS Total\nFROM            itens\nWHERE        (c" +
+                "odVend = @codVend)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@codVend";
@@ -8392,8 +8392,8 @@ namespace VidracariaNovo.DataSet1TableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[3];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT cod, descricao, pr_custo, pr_venda, qntd, unid_med, nome\r\nFROM     produto" +
-                "s";
+            this._commandCollection[0].CommandText = "SELECT cod, descricao, pr_custo, pr_venda, qntd, unid_med, nome\nFROM     produtos" +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -8409,8 +8409,8 @@ namespace VidracariaNovo.DataSet1TableAdapters {
             this._commandCollection[1].Parameters.Add(param);
             this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT cod, descricao, pr_custo, pr_venda, qntd, unid_med, nome\r\nFROM     produto" +
-                "s\r\nWHERE  (nome = @name)";
+            this._commandCollection[2].CommandText = "SELECT cod, descricao, pr_custo, pr_venda, qntd, unid_med, nome\nFROM     produtos" +
+                "\nWHERE  (nome = @name)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@name";

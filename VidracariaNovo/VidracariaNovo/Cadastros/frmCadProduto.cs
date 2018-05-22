@@ -17,7 +17,7 @@ namespace VidracariaNovo
             InitializeComponent();
         }
 
-        private void enableText(Boolean enable, Boolean enablec)
+        private void enableText(Boolean enable)
         {
             txtNome.ReadOnly = enable;
             txtUnidadeDeMedida.ReadOnly = enable;
@@ -37,7 +37,7 @@ namespace VidracariaNovo
             panelEdit.BringToFront();
             produtosBindingSource.CancelEdit();
             produtosBindingSource.AddNew();
-            enableText(false, true);
+            enableText(true);
             txtNome.Focus();
         }
 
@@ -56,7 +56,7 @@ namespace VidracariaNovo
         private void btnEdit_Click(object sender, EventArgs e)
         {
             panelEdit.BringToFront();
-            enableText(false, true);
+            enableText(true);
             txtNome.Focus();
         }
 
@@ -67,14 +67,14 @@ namespace VidracariaNovo
             this.tableAdapterManager.UpdateAll(this.dataSet1);
             this.produtosTableAdapter.Fill(this.dataSet1.produtos);
             panelEdit.SendToBack();
-            enableText(true, false);
+            enableText(false);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
 
             panelEdit.SendToBack();
-            enableText(true, false);
+            enableText(false);
             this.produtosBindingSource.CancelEdit();
         }
 

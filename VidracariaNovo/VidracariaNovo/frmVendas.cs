@@ -31,9 +31,6 @@ namespace VidracariaNovo
         {
             DataRow rowVenda = ((DataRowView)vendasBindingSource.Current).Row;
             int cod_vend = (int)rowVenda["cod"];
-
-            // decimal total = Convert.ToDecimal(itens_subtTableAdapter.TotalVend(cod_vend).ToString());
-
             lblTotal.Text = itensTableAdapter.TotalVend(cod_vend).ToString();
 
         }
@@ -64,16 +61,15 @@ namespace VidracariaNovo
 
             DataRow rowVend = ((DataRowView)vendasBindingSource.Current).Row;
             rowVend["data"] = dt_date.Value;
+            this.Validate();
             this.vendasBindingSource.EndEdit();
             this.vendasTableAdapter.Update(this.dataSet1);
-
         }
 
         public void insereCliVend(String codigo, String name)
         {     
             DataRow rowVen = ((DataRowView)vendasBindingSource.Current).Row;
             rowVen["codCli"] = Convert.ToInt32(codigo);
-            this.clientesBindingSource.Find("cod", Convert.ToInt32(codigo));
             txtCodCli.Text = codigo;
             txtNomeC.Text = name;
             txtCodP.Select();
@@ -109,7 +105,6 @@ namespace VidracariaNovo
             codV = Convert.ToInt32(rowIteVend["codVend"]);
             this.itensBindingSource.EndEdit();
             this.itensTableAdapter.Update(this.dataSet1);
-            this.itensTableAdapter.Fill(this.dataSet1.itens);
 
             this.itensTableAdapter.FillByCod(this.dataSet1.itens, codV);
             itensBindingSource.MoveLast();
@@ -122,11 +117,7 @@ namespace VidracariaNovo
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            salvaVend();
-            this.Validate();
-            this.vendasBindingSource.EndEdit();
-
-            this.vendasTableAdapter.Update(this.dataSet1);
+            salvaVend();           
             this.Dispose();
         }
 
