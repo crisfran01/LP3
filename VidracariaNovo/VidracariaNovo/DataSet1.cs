@@ -9,3 +9,10 @@
         }
     }
 }
+
+namespace VidracariaNovo.DataSet1TableAdapters {
+    
+    
+    public partial class itensTableAdapter {
+    }
+}

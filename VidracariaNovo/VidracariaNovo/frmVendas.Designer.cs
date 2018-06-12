@@ -36,15 +36,20 @@
             System.Windows.Forms.Label obsLabel;
             System.Windows.Forms.Label dataLabel;
             System.Windows.Forms.Label codLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.descricaoComboBox = new System.Windows.Forms.ComboBox();
+            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new VidracariaNovo.DataSet1();
+            this.condpgBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnImp = new System.Windows.Forms.Button();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtCodV = new System.Windows.Forms.TextBox();
             this.txtNomeC = new System.Windows.Forms.TextBox();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtCodCli = new System.Windows.Forms.TextBox();
             this.txtFun = new System.Windows.Forms.TextBox();
             this.txtObs = new System.Windows.Forms.TextBox();
@@ -61,7 +66,7 @@
             this.txtDProd = new System.Windows.Forms.TextBox();
             this.txtCodP = new System.Windows.Forms.TextBox();
             this.itens_subtDataGridView = new System.Windows.Forms.DataGridView();
-            this.seq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itensBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.dt_date = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,26 +74,22 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new VidracariaNovo.DataSet1();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.codVendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codProdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.larguraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metragemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itensBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vendasTableAdapter = new VidracariaNovo.DataSet1TableAdapters.vendasTableAdapter();
             this.itensTableAdapter = new VidracariaNovo.DataSet1TableAdapters.itensTableAdapter();
             this.tableAdapterManager = new VidracariaNovo.DataSet1TableAdapters.TableAdapterManager();
             this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.produtosTableAdapter = new VidracariaNovo.DataSet1TableAdapters.produtosTableAdapter();
             this.clientesTableAdapter = new VidracariaNovo.DataSet1TableAdapters.clientesTableAdapter();
-            this.descricaoComboBox = new System.Windows.Forms.ComboBox();
             this.condpgTableAdapter = new VidracariaNovo.DataSet1TableAdapters.condpgTableAdapter();
-            this.condpgBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.item_produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.item_produtoTableAdapter = new VidracariaNovo.DataSet1TableAdapters.item_produtoTableAdapter();
+            this.seq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codProdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.larguraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label10 = new System.Windows.Forms.Label();
             valorLabel = new System.Windows.Forms.Label();
             codPGLabel = new System.Windows.Forms.Label();
@@ -97,14 +98,15 @@
             dataLabel = new System.Windows.Forms.Label();
             codLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itens_subtDataGridView)).BeginInit();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itensBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.condpgBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itens_subtDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itensBindingSource)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item_produtoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -242,6 +244,34 @@
             this.panel1.Size = new System.Drawing.Size(1165, 660);
             this.panel1.TabIndex = 4;
             // 
+            // descricaoComboBox
+            // 
+            this.descricaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vendasBindingSource, "codPG", true));
+            this.descricaoComboBox.DataSource = this.condpgBindingSource;
+            this.descricaoComboBox.DisplayMember = "descricao";
+            this.descricaoComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descricaoComboBox.FormattingEnabled = true;
+            this.descricaoComboBox.Location = new System.Drawing.Point(222, 524);
+            this.descricaoComboBox.Name = "descricaoComboBox";
+            this.descricaoComboBox.Size = new System.Drawing.Size(145, 36);
+            this.descricaoComboBox.TabIndex = 221;
+            this.descricaoComboBox.ValueMember = "cod";
+            // 
+            // vendasBindingSource
+            // 
+            this.vendasBindingSource.DataMember = "vendas";
+            this.vendasBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // condpgBindingSource
+            // 
+            this.condpgBindingSource.DataMember = "condpg";
+            this.condpgBindingSource.DataSource = this.dataSet1;
+            // 
             // btnImp
             // 
             this.btnImp.BackColor = System.Drawing.Color.Transparent;
@@ -264,6 +294,8 @@
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(75, 30);
             this.txtDesc.TabIndex = 204;
+            this.txtDesc.TextChanged += new System.EventHandler(this.txtDesc_TextChanged);
+            this.txtDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDesc_KeyDown);
             // 
             // lblTotal
             // 
@@ -299,6 +331,11 @@
             this.txtNomeC.Size = new System.Drawing.Size(476, 30);
             this.txtNomeC.TabIndex = 189;
             this.txtNomeC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNomeC_KeyDown);
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "clientes";
+            this.clientesBindingSource.DataSource = this.dataSet1;
             // 
             // txtCodCli
             // 
@@ -353,6 +390,7 @@
             this.txtAl.Name = "txtAl";
             this.txtAl.Size = new System.Drawing.Size(131, 30);
             this.txtAl.TabIndex = 196;
+            this.txtAl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAl_KeyDown);
             // 
             // label1
             // 
@@ -449,6 +487,7 @@
             this.txtLa.Name = "txtLa";
             this.txtLa.Size = new System.Drawing.Size(131, 30);
             this.txtLa.TabIndex = 197;
+            this.txtLa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLa_KeyDown);
             // 
             // txtDProd
             // 
@@ -476,54 +515,51 @@
             // 
             this.itens_subtDataGridView.AutoGenerateColumns = false;
             this.itens_subtDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itens_subtDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itens_subtDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.itens_subtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.itens_subtDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.seq,
-            this.codVendDataGridViewTextBoxColumn,
             this.codProdDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
             this.alturaDataGridViewTextBoxColumn,
             this.larguraDataGridViewTextBoxColumn,
             this.qtdeDataGridViewTextBoxColumn,
-            this.metragemDataGridViewTextBoxColumn,
             this.precoDataGridViewTextBoxColumn});
-            this.itens_subtDataGridView.DataSource = this.itensBindingSource;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.itens_subtDataGridView.DefaultCellStyle = dataGridViewCellStyle20;
+            this.itens_subtDataGridView.DataSource = this.item_produtoBindingSource;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.itens_subtDataGridView.DefaultCellStyle = dataGridViewCellStyle11;
             this.itens_subtDataGridView.Enabled = false;
             this.itens_subtDataGridView.Location = new System.Drawing.Point(163, 263);
             this.itens_subtDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.itens_subtDataGridView.Name = "itens_subtDataGridView";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itens_subtDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itens_subtDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.itens_subtDataGridView.Size = new System.Drawing.Size(843, 188);
             this.itens_subtDataGridView.TabIndex = 209;
             // 
-            // seq
+            // itensBindingSource
             // 
-            this.seq.DataPropertyName = "seq";
-            this.seq.HeaderText = "seq";
-            this.seq.Name = "seq";
-            this.seq.Visible = false;
+            this.itensBindingSource.DataMember = "itens";
+            this.itensBindingSource.DataSource = this.dataSet1;
             // 
             // btnAdicionar
             // 
@@ -614,68 +650,6 @@
             this.label7.TabIndex = 95;
             this.label7.Text = "Inserir Venda";
             // 
-            // vendasBindingSource
-            // 
-            this.vendasBindingSource.DataMember = "vendas";
-            this.vendasBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "clientes";
-            this.clientesBindingSource.DataSource = this.dataSet1;
-            // 
-            // codVendDataGridViewTextBoxColumn
-            // 
-            this.codVendDataGridViewTextBoxColumn.DataPropertyName = "codVend";
-            this.codVendDataGridViewTextBoxColumn.HeaderText = "codVend";
-            this.codVendDataGridViewTextBoxColumn.Name = "codVendDataGridViewTextBoxColumn";
-            // 
-            // codProdDataGridViewTextBoxColumn
-            // 
-            this.codProdDataGridViewTextBoxColumn.DataPropertyName = "codProd";
-            this.codProdDataGridViewTextBoxColumn.HeaderText = "codProd";
-            this.codProdDataGridViewTextBoxColumn.Name = "codProdDataGridViewTextBoxColumn";
-            // 
-            // alturaDataGridViewTextBoxColumn
-            // 
-            this.alturaDataGridViewTextBoxColumn.DataPropertyName = "altura";
-            this.alturaDataGridViewTextBoxColumn.HeaderText = "altura";
-            this.alturaDataGridViewTextBoxColumn.Name = "alturaDataGridViewTextBoxColumn";
-            // 
-            // larguraDataGridViewTextBoxColumn
-            // 
-            this.larguraDataGridViewTextBoxColumn.DataPropertyName = "largura";
-            this.larguraDataGridViewTextBoxColumn.HeaderText = "largura";
-            this.larguraDataGridViewTextBoxColumn.Name = "larguraDataGridViewTextBoxColumn";
-            // 
-            // qtdeDataGridViewTextBoxColumn
-            // 
-            this.qtdeDataGridViewTextBoxColumn.DataPropertyName = "qtde";
-            this.qtdeDataGridViewTextBoxColumn.HeaderText = "qtde";
-            this.qtdeDataGridViewTextBoxColumn.Name = "qtdeDataGridViewTextBoxColumn";
-            // 
-            // metragemDataGridViewTextBoxColumn
-            // 
-            this.metragemDataGridViewTextBoxColumn.DataPropertyName = "metragem";
-            this.metragemDataGridViewTextBoxColumn.HeaderText = "metragem";
-            this.metragemDataGridViewTextBoxColumn.Name = "metragemDataGridViewTextBoxColumn";
-            // 
-            // precoDataGridViewTextBoxColumn
-            // 
-            this.precoDataGridViewTextBoxColumn.DataPropertyName = "Preco";
-            this.precoDataGridViewTextBoxColumn.HeaderText = "Preco";
-            this.precoDataGridViewTextBoxColumn.Name = "precoDataGridViewTextBoxColumn";
-            // 
-            // itensBindingSource
-            // 
-            this.itensBindingSource.DataMember = "itens";
-            this.itensBindingSource.DataSource = this.dataSet1;
-            // 
             // vendasTableAdapter
             // 
             this.vendasTableAdapter.ClearBeforeFill = true;
@@ -711,27 +685,61 @@
             // 
             this.clientesTableAdapter.ClearBeforeFill = true;
             // 
-            // descricaoComboBox
-            // 
-            this.descricaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.vendasBindingSource, "codPG", true));
-            this.descricaoComboBox.DataSource = this.condpgBindingSource;
-            this.descricaoComboBox.DisplayMember = "descricao";
-            this.descricaoComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descricaoComboBox.FormattingEnabled = true;
-            this.descricaoComboBox.Location = new System.Drawing.Point(222, 524);
-            this.descricaoComboBox.Name = "descricaoComboBox";
-            this.descricaoComboBox.Size = new System.Drawing.Size(145, 36);
-            this.descricaoComboBox.TabIndex = 221;
-            this.descricaoComboBox.ValueMember = "cod";
-            // 
             // condpgTableAdapter
             // 
             this.condpgTableAdapter.ClearBeforeFill = true;
             // 
-            // condpgBindingSource
+            // item_produtoBindingSource
             // 
-            this.condpgBindingSource.DataMember = "condpg";
-            this.condpgBindingSource.DataSource = this.dataSet1;
+            this.item_produtoBindingSource.DataMember = "item_produto";
+            this.item_produtoBindingSource.DataSource = this.dataSet1;
+            // 
+            // item_produtoTableAdapter
+            // 
+            this.item_produtoTableAdapter.ClearBeforeFill = true;
+            // 
+            // seq
+            // 
+            this.seq.DataPropertyName = "seq";
+            this.seq.HeaderText = "seq";
+            this.seq.Name = "seq";
+            this.seq.Visible = false;
+            // 
+            // codProdDataGridViewTextBoxColumn
+            // 
+            this.codProdDataGridViewTextBoxColumn.DataPropertyName = "codProd";
+            this.codProdDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codProdDataGridViewTextBoxColumn.Name = "codProdDataGridViewTextBoxColumn";
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            // 
+            // alturaDataGridViewTextBoxColumn
+            // 
+            this.alturaDataGridViewTextBoxColumn.DataPropertyName = "altura";
+            this.alturaDataGridViewTextBoxColumn.HeaderText = "Altura";
+            this.alturaDataGridViewTextBoxColumn.Name = "alturaDataGridViewTextBoxColumn";
+            // 
+            // larguraDataGridViewTextBoxColumn
+            // 
+            this.larguraDataGridViewTextBoxColumn.DataPropertyName = "largura";
+            this.larguraDataGridViewTextBoxColumn.HeaderText = "Largura";
+            this.larguraDataGridViewTextBoxColumn.Name = "larguraDataGridViewTextBoxColumn";
+            // 
+            // qtdeDataGridViewTextBoxColumn
+            // 
+            this.qtdeDataGridViewTextBoxColumn.DataPropertyName = "qtde";
+            this.qtdeDataGridViewTextBoxColumn.HeaderText = "Qtde";
+            this.qtdeDataGridViewTextBoxColumn.Name = "qtdeDataGridViewTextBoxColumn";
+            // 
+            // precoDataGridViewTextBoxColumn
+            // 
+            this.precoDataGridViewTextBoxColumn.DataPropertyName = "preco";
+            this.precoDataGridViewTextBoxColumn.HeaderText = "Preço";
+            this.precoDataGridViewTextBoxColumn.Name = "precoDataGridViewTextBoxColumn";
             // 
             // frmVendas
             // 
@@ -745,15 +753,16 @@
             this.Load += new System.EventHandler(this.frmVendas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itens_subtDataGridView)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itensBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.condpgBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itens_subtDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itensBindingSource)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item_produtoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -785,7 +794,6 @@
         public System.Windows.Forms.TextBox txtDProd;
         public System.Windows.Forms.TextBox txtCodP;
         private System.Windows.Forms.DataGridView itens_subtDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn seq;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.DateTimePicker dt_date;
         private System.Windows.Forms.Label label2;
@@ -795,13 +803,6 @@
         private System.Windows.Forms.BindingSource vendasBindingSource;
         private DataSet1TableAdapters.itensTableAdapter itensTableAdapter;
         private System.Windows.Forms.BindingSource itensBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codVendDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codProdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alturaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn larguraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtdeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn metragemDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource produtosBindingSource;
         private DataSet1TableAdapters.produtosTableAdapter produtosTableAdapter;
@@ -810,5 +811,14 @@
         private System.Windows.Forms.ComboBox descricaoComboBox;
         private System.Windows.Forms.BindingSource condpgBindingSource;
         private DataSet1TableAdapters.condpgTableAdapter condpgTableAdapter;
+        private System.Windows.Forms.BindingSource item_produtoBindingSource;
+        private DataSet1TableAdapters.item_produtoTableAdapter item_produtoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn seq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codProdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alturaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn larguraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtdeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
     }
 }

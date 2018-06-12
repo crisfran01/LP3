@@ -31,9 +31,9 @@ namespace VidracariaNovo
         {
             DataRow rowVenda = ((DataRowView)vendasBindingSource.Current).Row;
             int cod_vend = (int)rowVenda["cod"];
-            lblTotal.Text = itensTableAdapter.TotalVend(cod_vend).ToString();
-
+            lblTotal.Text = Convert.ToString( itensTableAdapter.TotalVend(cod_vend) - Convert.ToDecimal(txtDesc));
         }
+
         private void limp()
         {
             txtAl.Clear();
@@ -44,17 +44,19 @@ namespace VidracariaNovo
             txtQtde.Clear();
         }
 
-        public void habProd()
+        public void habProd(bool hab)
         {
-            txtCodP.Enabled = true;
-            txtDProd.Enabled = true;
-            txtAl.Enabled = true;
-            txtLa.Enabled = true;
-            txtQtde.Enabled = true;
-            txtNomeC.Enabled = false;
-            txtCodCli.Enabled = false;
-            itens_subtDataGridView.Enabled = true;
+            txtCodP.Enabled = hab;
+            txtDProd.Enabled = hab;
+            txtAl.Enabled = hab;
+            txtLa.Enabled = hab;
+            txtQtde.Enabled = hab;
+            txtNomeC.Enabled = hab;
+            txtCodCli.Enabled = hab;
+            itens_subtDataGridView.Enabled = hab;
         }
+
+       
 
         private void salvaVend()
         {
@@ -72,6 +74,7 @@ namespace VidracariaNovo
             rowVen["codCli"] = Convert.ToInt32(codigo);
             txtCodCli.Text = codigo;
             txtNomeC.Text = name;
+            habProd(true);
             txtCodP.Select();
 
         }
@@ -83,6 +86,8 @@ namespace VidracariaNovo
             txtPreU.Text = Convert.ToString(dataSet1.produtos[produtosBindingSource.Position].pr_custo);
             txtAl.Select();
         }
+
+       
 
         private void gravarItem(int codP, double al, double la, double qtde, double pr)
         {
@@ -106,8 +111,8 @@ namespace VidracariaNovo
             this.itensBindingSource.EndEdit();
             this.itensTableAdapter.Update(this.dataSet1);
 
-            this.itensTableAdapter.FillByCod(this.dataSet1.itens, codV);
-            itensBindingSource.MoveLast();
+            this.item_produtoTableAdapter.FillByCod(this.dataSet1.item_produto, codV);
+            item_produtoBindingSource.MoveLast();
 
             limp();
             atualizaTotal();
@@ -170,7 +175,7 @@ namespace VidracariaNovo
                     int i = clientesTableAdapter.FillByCod(this.dataSet1.clientes, Convert.ToInt32(txtCodCli.Text));
                     if (i == 1)
                     {
-                        habProd();
+                        
                         insereCliVend(txtCodCli.Text, Convert.ToString(dataSet1.clientes[clientesBindingSource.Position].nome));
 
                     }
@@ -235,6 +240,36 @@ namespace VidracariaNovo
             }
         }
 
-       
+        private void txtAl_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtLa.Select();
+            }
+        }
+
+        private void txtLa_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                 txtQtde.Select();
+            }
+        }
+
+        private void txtDesc_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtFun.Select();
+            }
+        }
+
+        private void txtDesc_TextChanged(object sender, EventArgs e)
+        {
+            double desc = Convert.ToDouble(lblTotal.Text);
+            double valor = Convert.ToDouble(txtDesc.Text);
+
+            lblTotal.Text = Convert.ToString(valor - desc);
+        }
     }
 }
