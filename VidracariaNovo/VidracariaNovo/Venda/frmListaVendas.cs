@@ -76,27 +76,33 @@ namespace VidracariaNovo
 
         private void vendas_cliDataGridView_KeyDown(object sender, KeyEventArgs e)
         {
-
-
-            int cod = Convert.ToInt32(vendas_cliDataGridView.CurrentRow.Cells[0].Value.ToString());
-            if (e.KeyCode == Keys.D)
+            try
             {
-                e.Handled = false;
-
-                this.vendasTableAdapter.DeleteByCod(cod);
-            }
-            else if (e.KeyCode == Keys.P)
-            {
-                if (vendas_cliDataGridView.CurrentRow.Cells[6].Value.ToString() != "Pago")
+                int cod = Convert.ToInt32(vendas_cliDataGridView.CurrentRow.Cells[0].Value.ToString());
+                if (e.KeyCode == Keys.D)
                 {
-                    decimal valor = Convert.ToDecimal(vendas_cliDataGridView.CurrentRow.Cells[5].Value.ToString());
-                    this.vendasTableAdapter.UpdateStatusFinalizado(cod);
-                    DateTime data = DateTime.Now;
-                    this.caixaTableAdapter.InsertQuery(valor, "Pagamento da venda " + vendas_cliDataGridView.CurrentRow.Cells[0].Value.ToString(), usuario, data);
+                    e.Handled = false;
+
+                    this.vendasTableAdapter.DeleteByCod(cod);
                 }
+                else if (e.KeyCode == Keys.P)
+                {
+                    if (vendas_cliDataGridView.CurrentRow.Cells[6].Value.ToString() != "Pago")
+                    {
+                        decimal valor = Convert.ToDecimal(vendas_cliDataGridView.CurrentRow.Cells[5].Value.ToString());
+                        this.vendasTableAdapter.UpdateStatusFinalizado(cod);
+                        DateTime data = DateTime.Now;
+                        this.caixaTableAdapter.InsertQuery(valor, "Pagamento da venda " + vendas_cliDataGridView.CurrentRow.Cells[0].Value.ToString(), usuario, data);
+                    }
+                }
+                this.vendasTableAdapter.Update(this.dataSet1);
+                this.busca();
             }
-            this.vendasTableAdapter.Update(this.dataSet1);
-            this.busca();
+            catch
+            {
+                return;
+            }
+
         }
 
         private void cbPendente_CheckedChanged(object sender, EventArgs e)
@@ -106,10 +112,8 @@ namespace VidracariaNovo
 
         private void vendas_cliDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
             frmVendaDetalhes obj = new frmVendaDetalhes(Convert.ToInt32(vendas_cliDataGridView.CurrentRow.Cells[0].Value.ToString()));
-           
-            obj.ShowDialog(); 
+            obj.Show(); 
         }
 
         private void btnClose_Click(object sender, EventArgs e)

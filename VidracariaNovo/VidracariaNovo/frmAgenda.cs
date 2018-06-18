@@ -27,7 +27,6 @@ namespace VidracariaNovo
             this.agendaTableAdapter.Fill(this.dataSet1.agenda);
 
             agendaBindingSource.Filter = "Status = 'Incompleto'";
-
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -100,23 +99,10 @@ namespace VidracariaNovo
             this.tableAdapterManager.UpdateAll(this.dataSet1);
 
         }
-
-        private void agendaBindingNavigator_RefreshItems(object sender, EventArgs e)
-        {                    }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

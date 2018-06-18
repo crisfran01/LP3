@@ -131,7 +131,7 @@
             label10.BackColor = System.Drawing.Color.Transparent;
             label10.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label10.ForeColor = System.Drawing.SystemColors.Control;
-            label10.Location = new System.Drawing.Point(345, 531);
+            label10.Location = new System.Drawing.Point(306, 561);
             label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(100, 24);
@@ -144,7 +144,7 @@
             valorLabel.BackColor = System.Drawing.Color.Transparent;
             valorLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             valorLabel.ForeColor = System.Drawing.SystemColors.Control;
-            valorLabel.Location = new System.Drawing.Point(536, 531);
+            valorLabel.Location = new System.Drawing.Point(497, 561);
             valorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             valorLabel.Name = "valorLabel";
             valorLabel.Size = new System.Drawing.Size(62, 24);
@@ -157,7 +157,7 @@
             codPGLabel.BackColor = System.Drawing.Color.Transparent;
             codPGLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codPGLabel.ForeColor = System.Drawing.SystemColors.Control;
-            codPGLabel.Location = new System.Drawing.Point(159, 531);
+            codPGLabel.Location = new System.Drawing.Point(120, 561);
             codPGLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codPGLabel.Name = "codPGLabel";
             codPGLabel.Size = new System.Drawing.Size(32, 24);
@@ -170,7 +170,7 @@
             codFunLabel.BackColor = System.Drawing.Color.Transparent;
             codFunLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codFunLabel.ForeColor = System.Drawing.SystemColors.Control;
-            codFunLabel.Location = new System.Drawing.Point(680, 530);
+            codFunLabel.Location = new System.Drawing.Point(641, 561);
             codFunLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codFunLabel.Name = "codFunLabel";
             codFunLabel.Size = new System.Drawing.Size(55, 24);
@@ -183,7 +183,7 @@
             obsLabel.BackColor = System.Drawing.Color.Transparent;
             obsLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             obsLabel.ForeColor = System.Drawing.SystemColors.Control;
-            obsLabel.Location = new System.Drawing.Point(159, 481);
+            obsLabel.Location = new System.Drawing.Point(120, 510);
             obsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             obsLabel.Name = "obsLabel";
             obsLabel.Size = new System.Drawing.Size(51, 24);
@@ -196,7 +196,7 @@
             dataLabel.BackColor = System.Drawing.Color.Transparent;
             dataLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataLabel.ForeColor = System.Drawing.SystemColors.Control;
-            dataLabel.Location = new System.Drawing.Point(454, 147);
+            dataLabel.Location = new System.Drawing.Point(415, 176);
             dataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dataLabel.Name = "dataLabel";
             dataLabel.Size = new System.Drawing.Size(52, 24);
@@ -209,7 +209,7 @@
             codLabel.BackColor = System.Drawing.Color.Transparent;
             codLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codLabel.ForeColor = System.Drawing.SystemColors.Control;
-            codLabel.Location = new System.Drawing.Point(175, 147);
+            codLabel.Location = new System.Drawing.Point(136, 176);
             codLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codLabel.Name = "codLabel";
             codLabel.Size = new System.Drawing.Size(66, 24);
@@ -280,7 +280,7 @@
             // 
             this.tabCImpre.Controls.Add(this.tabPage1);
             this.tabCImpre.Controls.Add(this.tabPage2);
-            this.tabCImpre.Location = new System.Drawing.Point(302, 41);
+            this.tabCImpre.Location = new System.Drawing.Point(373, 59);
             this.tabCImpre.Name = "tabCImpre";
             this.tabCImpre.SelectedIndex = 0;
             this.tabCImpre.Size = new System.Drawing.Size(433, 456);
@@ -295,7 +295,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(425, 427);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Ordem de Serviço";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // reportViewer1
@@ -310,9 +310,14 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "VidracariaNovo.repOrdS.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ShowBackButton = false;
+            this.reportViewer1.ShowExportButton = false;
+            this.reportViewer1.ShowFindControls = false;
+            this.reportViewer1.ShowPageNavigationControls = false;
+            this.reportViewer1.ShowStopButton = false;
+            this.reportViewer1.ShowZoomControl = false;
             this.reportViewer1.Size = new System.Drawing.Size(419, 421);
             this.reportViewer1.TabIndex = 224;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // tabPage2
             // 
@@ -321,7 +326,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(425, 427);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Nota Fiscal";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // cbFun
@@ -331,7 +336,7 @@
             this.cbFun.DisplayMember = "nome";
             this.cbFun.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFun.FormattingEnabled = true;
-            this.cbFun.Location = new System.Drawing.Point(736, 526);
+            this.cbFun.Location = new System.Drawing.Point(697, 555);
             this.cbFun.Name = "cbFun";
             this.cbFun.Size = new System.Drawing.Size(167, 36);
             this.cbFun.TabIndex = 223;
@@ -354,7 +359,7 @@
             this.descricaoComboBox.DisplayMember = "descricao";
             this.descricaoComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descricaoComboBox.FormattingEnabled = true;
-            this.descricaoComboBox.Location = new System.Drawing.Point(222, 524);
+            this.descricaoComboBox.Location = new System.Drawing.Point(183, 555);
             this.descricaoComboBox.Name = "descricaoComboBox";
             this.descricaoComboBox.Size = new System.Drawing.Size(114, 36);
             this.descricaoComboBox.TabIndex = 221;
@@ -372,7 +377,8 @@
             this.btnImp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImp.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImp.ForeColor = System.Drawing.Color.Indigo;
-            this.btnImp.Location = new System.Drawing.Point(924, 527);
+            this.btnImp.Image = global::VidracariaNovo.Properties.Resources._326675_20;
+            this.btnImp.Location = new System.Drawing.Point(885, 557);
             this.btnImp.Margin = new System.Windows.Forms.Padding(4);
             this.btnImp.Name = "btnImp";
             this.btnImp.Size = new System.Drawing.Size(44, 33);
@@ -383,13 +389,12 @@
             // txtDesc
             // 
             this.txtDesc.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesc.Location = new System.Drawing.Point(456, 526);
+            this.txtDesc.Location = new System.Drawing.Point(417, 558);
             this.txtDesc.Margin = new System.Windows.Forms.Padding(4);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(75, 30);
             this.txtDesc.TabIndex = 204;
             this.txtDesc.Text = "0";
-            this.txtDesc.TextChanged += new System.EventHandler(this.txtDesc_TextChanged);
             this.txtDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDesc_KeyDown);
             this.txtDesc.Leave += new System.EventHandler(this.txtDesc_Leave);
             // 
@@ -400,7 +405,7 @@
             this.lblTotal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "Valor", true));
             this.lblTotal.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotal.Location = new System.Drawing.Point(598, 531);
+            this.lblTotal.Location = new System.Drawing.Point(559, 561);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(51, 24);
@@ -411,7 +416,7 @@
             // 
             this.txtCodV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "cod", true));
             this.txtCodV.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodV.Location = new System.Drawing.Point(270, 142);
+            this.txtCodV.Location = new System.Drawing.Point(231, 171);
             this.txtCodV.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodV.Name = "txtCodV";
             this.txtCodV.Size = new System.Drawing.Size(132, 30);
@@ -421,7 +426,7 @@
             // 
             this.txtNomeC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "nome", true));
             this.txtNomeC.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeC.Location = new System.Drawing.Point(527, 102);
+            this.txtNomeC.Location = new System.Drawing.Point(488, 131);
             this.txtNomeC.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomeC.Name = "txtNomeC";
             this.txtNomeC.Size = new System.Drawing.Size(556, 30);
@@ -437,7 +442,7 @@
             // 
             this.txtCodCli.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "cod", true));
             this.txtCodCli.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodCli.Location = new System.Drawing.Point(270, 102);
+            this.txtCodCli.Location = new System.Drawing.Point(231, 131);
             this.txtCodCli.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodCli.Name = "txtCodCli";
             this.txtCodCli.Size = new System.Drawing.Size(132, 30);
@@ -448,7 +453,7 @@
             // 
             this.txtObs.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vendasBindingSource, "Obs", true));
             this.txtObs.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObs.Location = new System.Drawing.Point(222, 477);
+            this.txtObs.Location = new System.Drawing.Point(183, 506);
             this.txtObs.Margin = new System.Windows.Forms.Padding(4);
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(861, 30);
@@ -460,7 +465,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(593, 199);
+            this.label8.Location = new System.Drawing.Point(554, 228);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 24);
@@ -471,7 +476,7 @@
             // 
             this.txtAl.Enabled = false;
             this.txtAl.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAl.Location = new System.Drawing.Point(563, 225);
+            this.txtAl.Location = new System.Drawing.Point(524, 254);
             this.txtAl.Margin = new System.Windows.Forms.Padding(4);
             this.txtAl.Name = "txtAl";
             this.txtAl.Size = new System.Drawing.Size(131, 30);
@@ -485,7 +490,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(964, 199);
+            this.label1.Location = new System.Drawing.Point(925, 228);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 24);
@@ -498,7 +503,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(867, 199);
+            this.label6.Location = new System.Drawing.Point(828, 228);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 24);
@@ -511,7 +516,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(725, 199);
+            this.label5.Location = new System.Drawing.Point(686, 228);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 24);
@@ -524,7 +529,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(323, 198);
+            this.label4.Location = new System.Drawing.Point(284, 227);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 24);
@@ -537,7 +542,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(181, 198);
+            this.label3.Location = new System.Drawing.Point(142, 227);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 24);
@@ -549,7 +554,7 @@
             this.txtPreU.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtosBindingSource, "pr_venda", true));
             this.txtPreU.Enabled = false;
             this.txtPreU.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreU.Location = new System.Drawing.Point(955, 225);
+            this.txtPreU.Location = new System.Drawing.Point(916, 254);
             this.txtPreU.Margin = new System.Windows.Forms.Padding(4);
             this.txtPreU.Name = "txtPreU";
             this.txtPreU.Size = new System.Drawing.Size(128, 30);
@@ -564,7 +569,7 @@
             // 
             this.txtQtde.Enabled = false;
             this.txtQtde.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQtde.Location = new System.Drawing.Point(843, 225);
+            this.txtQtde.Location = new System.Drawing.Point(804, 254);
             this.txtQtde.Margin = new System.Windows.Forms.Padding(4);
             this.txtQtde.Name = "txtQtde";
             this.txtQtde.Size = new System.Drawing.Size(103, 30);
@@ -576,7 +581,7 @@
             // 
             this.txtLa.Enabled = false;
             this.txtLa.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLa.Location = new System.Drawing.Point(703, 225);
+            this.txtLa.Location = new System.Drawing.Point(664, 254);
             this.txtLa.Margin = new System.Windows.Forms.Padding(4);
             this.txtLa.Name = "txtLa";
             this.txtLa.Size = new System.Drawing.Size(131, 30);
@@ -588,7 +593,7 @@
             // 
             this.txtDProd.Enabled = false;
             this.txtDProd.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDProd.Location = new System.Drawing.Point(253, 224);
+            this.txtDProd.Location = new System.Drawing.Point(214, 253);
             this.txtDProd.Margin = new System.Windows.Forms.Padding(4);
             this.txtDProd.Name = "txtDProd";
             this.txtDProd.Size = new System.Drawing.Size(302, 30);
@@ -599,7 +604,7 @@
             // 
             this.txtCodP.Enabled = false;
             this.txtCodP.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodP.Location = new System.Drawing.Point(163, 224);
+            this.txtCodP.Location = new System.Drawing.Point(124, 253);
             this.txtCodP.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodP.Name = "txtCodP";
             this.txtCodP.Size = new System.Drawing.Size(80, 30);
@@ -640,7 +645,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.itens_subtDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.itens_subtDataGridView.Enabled = false;
-            this.itens_subtDataGridView.Location = new System.Drawing.Point(163, 263);
+            this.itens_subtDataGridView.Location = new System.Drawing.Point(124, 292);
             this.itens_subtDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.itens_subtDataGridView.Name = "itens_subtDataGridView";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -730,7 +735,7 @@
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdicionar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAdicionar.Location = new System.Drawing.Point(976, 526);
+            this.btnAdicionar.Location = new System.Drawing.Point(937, 557);
             this.btnAdicionar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(107, 33);
@@ -744,7 +749,7 @@
             this.dt_date.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vendasBindingSource, "data", true));
             this.dt_date.Enabled = false;
             this.dt_date.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dt_date.Location = new System.Drawing.Point(527, 142);
+            this.dt_date.Location = new System.Drawing.Point(488, 171);
             this.dt_date.Margin = new System.Windows.Forms.Padding(4);
             this.dt_date.Name = "dt_date";
             this.dt_date.Size = new System.Drawing.Size(556, 30);
@@ -756,7 +761,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(447, 107);
+            this.label2.Location = new System.Drawing.Point(408, 136);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 24);
@@ -769,7 +774,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(159, 107);
+            this.label9.Location = new System.Drawing.Point(120, 136);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 24);
@@ -793,6 +798,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::VidracariaNovo.Properties.Resources._134226_20;
             this.btnClose.Location = new System.Drawing.Point(0, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
@@ -830,6 +836,7 @@
             // 
             this.tableAdapterManager.agendaTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.caixaTableAdapter = null;
             this.tableAdapterManager.clientesTableAdapter = null;
             this.tableAdapterManager.condpgTableAdapter = null;
             this.tableAdapterManager.fornecedoresTableAdapter = null;

@@ -12,39 +12,22 @@ namespace VidracariaNovo
 {
     public partial class frmAlteraSenha : Form
     {
-        public frmAlteraSenha()
+        int usuario;
+        public frmAlteraSenha(int usu)
         {
             InitializeComponent();
+            usuario = usu;
         }
 
         private void frmAlteraSenha_Load(object sender, EventArgs e)
         {
-          
+            // TODO: This line of code loads data into the 'dataSet1.usuarios' table. You can move, or remove it, as needed.
+            this.usuariosTableAdapter.Fill(this.dataSet1.usuarios);
         }
-
-        private frmLogin _instanciaLogin = null;
-        public frmLogin instanciaLogin
-        {
-            get
-            {
-                return _instanciaLogin;
-            }
-            set
-            {
-                _instanciaLogin = value;
-            }
-        }
-
-        frmLogin frmLogin = new frmLogin();
-
-        public String senha;
-
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(txtSenhaAt.Text);
-
-            //MessageBox.Show(frmLogin.psiDataSet1.usuario[frmLogin.usuarioBindingSource.Position].senha);
-            if (txtSenhaAt.Text == frmLogin.dataSet1.usuarios[frmLogin.usuariosBindingSource.Position].senha)
+            usuariosTableAdapter.FillBySenha(this.dataSet1.usuarios, usuario);
+            if (txtSenhaAt.Text == dataSet1.usuarios[usuariosBindingSource.Position].senha)
             {
                 if (txtSenhaN.Text == txtSenhaNC.Text)
                 {
@@ -61,16 +44,10 @@ namespace VidracariaNovo
                     }
                     else
                     {
-                        frmLogin.dataSet1.usuarios[frmLogin.usuariosBindingSource.Position].senha = txtSenhaN.Text;
-                        frmLogin.usuariosBindingSource.EndEdit();
-                        frmLogin.usuariosTableAdapter.Update(frmLogin.dataSet1);
-                        frmLogin.dataSet1.AcceptChanges();
+                        usuariosTableAdapter.UpdateSenha(txtSenhaN.Text, usuario);
                         MessageBox.Show("Senha Alterada com sucesso!");
                         this.Dispose();
                     }
-
-
-
                 }
                 else
                 {
@@ -83,11 +60,6 @@ namespace VidracariaNovo
                 MessageBox.Show("Senha incorreta");
                 txtSenhaAt.Select();
             }
-        }
-
-        private void frmAlterarSenha_Load(object sender, EventArgs e)
-        {
-            frmLogin = instanciaLogin;
         }
 
         private void txtSenhaNC_KeyDown(object sender, KeyEventArgs e)
@@ -118,7 +90,12 @@ namespace VidracariaNovo
                 btnAlterar.PerformClick();
             }
         }
+        private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuariosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet1);
 
-       
+        }
     }
 }

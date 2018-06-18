@@ -273,6 +273,7 @@
             this.adicionarUsuáriosToolStripMenuItem.Name = "adicionarUsuáriosToolStripMenuItem";
             this.adicionarUsuáriosToolStripMenuItem.Size = new System.Drawing.Size(253, 32);
             this.adicionarUsuáriosToolStripMenuItem.Text = "Adicionar usuários";
+            this.adicionarUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.adicionarUsuáriosToolStripMenuItem_Click);
             // 
             // gerenciarUsuáriosToolStripMenuItem
             // 
@@ -291,8 +292,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = global::VidracariaNovo.Properties.Resources.logout;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1075, 158);
+            this.button1.Location = new System.Drawing.Point(1287, 155);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 47);
@@ -409,10 +411,10 @@
             this.reciboToolStripMenuItem});
             this.financeiroStripMenuItem5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.financeiroStripMenuItem5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.financeiroStripMenuItem5.Image = ((System.Drawing.Image)(resources.GetObject("financeiroStripMenuItem5.Image")));
+            this.financeiroStripMenuItem5.Image = global::VidracariaNovo.Properties.Resources.money;
             this.financeiroStripMenuItem5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.financeiroStripMenuItem5.Name = "financeiroStripMenuItem5";
-            this.financeiroStripMenuItem5.Size = new System.Drawing.Size(178, 45);
+            this.financeiroStripMenuItem5.Size = new System.Drawing.Size(170, 45);
             this.financeiroStripMenuItem5.Text = "Financeiro";
             // 
             // caixatripMenuItem8
@@ -421,7 +423,7 @@
             this.caixatripMenuItem8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.caixatripMenuItem8.ForeColor = System.Drawing.Color.GhostWhite;
             this.caixatripMenuItem8.Name = "caixatripMenuItem8";
-            this.caixatripMenuItem8.Size = new System.Drawing.Size(152, 32);
+            this.caixatripMenuItem8.Size = new System.Drawing.Size(181, 32);
             this.caixatripMenuItem8.Text = "Caixa";
             this.caixatripMenuItem8.Click += new System.EventHandler(this.caixatripMenuItem8_Click);
             // 
@@ -431,7 +433,7 @@
             this.reciboToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reciboToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.reciboToolStripMenuItem.Name = "reciboToolStripMenuItem";
-            this.reciboToolStripMenuItem.Size = new System.Drawing.Size(152, 32);
+            this.reciboToolStripMenuItem.Size = new System.Drawing.Size(181, 32);
             this.reciboToolStripMenuItem.Text = "Recibo";
             // 
             // frmMain

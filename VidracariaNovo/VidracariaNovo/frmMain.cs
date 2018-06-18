@@ -45,7 +45,7 @@ namespace VidracariaNovo
 
 
 
-        public string nivel;
+        public int nivel;
         public int usuario;
 
 
@@ -59,61 +59,6 @@ namespace VidracariaNovo
             obj.Text = "";
             obj.Dock = DockStyle.Fill;
             obj.Show();
-        }
-
-        private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void psicologosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void funcionariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void triagemToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void artigoToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void documentosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void consultaStripMenuItem6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void caixaStripMenuItem8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void reciboToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void clientesToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -172,8 +117,19 @@ namespace VidracariaNovo
 
         private void alterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAlteraSenha obj = new frmAlteraSenha();
+            frmAlteraSenha obj = new frmAlteraSenha(usuario);
             showForm(obj);
+        }
+
+        private void adicionarUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCriarUsuario objInsereUsu = new frmCriarUsuario();
+            if (nivel != 1)
+            {
+                objInsereUsu.cbNivel.Visible = false;
+            }
+            
+            showForm(objInsereUsu);
         }
     }
 }

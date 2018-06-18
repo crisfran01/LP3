@@ -49,16 +49,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnProximo = new System.Windows.Forms.Button();
-            this.btnAnterior = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.panelEdit = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vendasTableAdapter = new VidracariaNovo.DataSet1TableAdapters.vendasTableAdapter();
             this.tableAdapterManager = new VidracariaNovo.DataSet1TableAdapters.TableAdapterManager();
@@ -71,8 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.venda_clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panelEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.caixaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -101,8 +89,6 @@
             this.panel2.Controls.Add(this.vendas_cliDataGridView);
             this.panel2.Controls.Add(this.btnAddV);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panelEdit);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -110,6 +96,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1185, 731);
             this.panel2.TabIndex = 98;
+            // 
             // cbPendente
             // 
             this.cbPendente.AutoSize = true;
@@ -129,7 +116,7 @@
             this.btnBusca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBusca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBusca.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBusca.Image = global::VidracariaNovo.Properties.Resources._314478_20;
+            this.btnBusca.Image = global::VidracariaNovo.Properties.Resources.search;
             this.btnBusca.Location = new System.Drawing.Point(1019, 136);
             this.btnBusca.Margin = new System.Windows.Forms.Padding(4);
             this.btnBusca.Name = "btnBusca";
@@ -255,7 +242,7 @@
             this.btnAddV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddV.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAddV.Image = global::VidracariaNovo.Properties.Resources._103172_20;
-            this.btnAddV.Location = new System.Drawing.Point(1083, 137);
+            this.btnAddV.Location = new System.Drawing.Point(1083, 136);
             this.btnAddV.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddV.Name = "btnAddV";
             this.btnAddV.Size = new System.Drawing.Size(35, 32);
@@ -299,164 +286,6 @@
             this.label4.Size = new System.Drawing.Size(182, 29);
             this.label4.TabIndex = 95;
             this.label4.Text = "Lista de Vendas";
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel6.Controls.Add(this.btnEdit);
-            this.panel6.Controls.Add(this.panel5);
-            this.panel6.Controls.Add(this.btnProximo);
-            this.panel6.Controls.Add(this.btnAnterior);
-            this.panel6.Controls.Add(this.btnNovo);
-            this.panel6.Location = new System.Drawing.Point(0, 705);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(437, 49);
-            this.panel6.TabIndex = 98;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(983, 5);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(157, 33);
-            this.btnEdit.TabIndex = 8;
-            this.btnEdit.Text = "Editar";
-            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(437, 1);
-            this.panel5.TabIndex = 7;
-            // 
-            // btnProximo
-            // 
-            this.btnProximo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnProximo.BackColor = System.Drawing.Color.Transparent;
-            this.btnProximo.FlatAppearance.BorderSize = 0;
-            this.btnProximo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProximo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnProximo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProximo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProximo.Location = new System.Drawing.Point(612, 3);
-            this.btnProximo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(157, 33);
-            this.btnProximo.TabIndex = 3;
-            this.btnProximo.Text = "Próximo";
-            this.btnProximo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProximo.UseVisualStyleBackColor = false;
-            // 
-            // btnAnterior
-            // 
-            this.btnAnterior.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAnterior.BackColor = System.Drawing.Color.Transparent;
-            this.btnAnterior.FlatAppearance.BorderSize = 0;
-            this.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnterior.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAnterior.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAnterior.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnterior.Location = new System.Drawing.Point(396, 3);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(157, 33);
-            this.btnAnterior.TabIndex = 2;
-            this.btnAnterior.Text = "Anterior";
-            this.btnAnterior.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAnterior.UseVisualStyleBackColor = false;
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNovo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNovo.FlatAppearance.BorderSize = 0;
-            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnNovo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovo.Location = new System.Drawing.Point(59, 7);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(157, 33);
-            this.btnNovo.TabIndex = 1;
-            this.btnNovo.Text = "Adicionar";
-            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNovo.UseVisualStyleBackColor = false;
-            // 
-            // panelEdit
-            // 
-            this.panelEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panelEdit.Controls.Add(this.panel4);
-            this.panelEdit.Controls.Add(this.btnCancelar);
-            this.panelEdit.Controls.Add(this.btnSalvar);
-            this.panelEdit.Location = new System.Drawing.Point(0, 704);
-            this.panelEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.panelEdit.Name = "panelEdit";
-            this.panelEdit.Size = new System.Drawing.Size(437, 53);
-            this.panelEdit.TabIndex = 99;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(437, 1);
-            this.panel4.TabIndex = 6;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(778, 10);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(157, 37);
-            this.btnCancelar.TabIndex = 25;
-            this.btnCancelar.Text = "    Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalvar.FlatAppearance.BorderSize = 0;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(983, 10);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(157, 37);
-            this.btnSalvar.TabIndex = 24;
-            this.btnSalvar.Text = "   Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
             // vendasBindingSource
             // 
@@ -512,8 +341,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panelEdit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.caixaBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -528,16 +355,6 @@
         public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnProximo;
-        private System.Windows.Forms.Button btnAnterior;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Panel panelEdit;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnSalvar;
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource vendasBindingSource;
         private DataSet1TableAdapters.vendasTableAdapter vendasTableAdapter;

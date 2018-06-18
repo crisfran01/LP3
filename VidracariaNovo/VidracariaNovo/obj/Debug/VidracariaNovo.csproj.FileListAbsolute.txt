@@ -55,3 +55,4 @@ C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\Vidraca
 C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmAgenda.resources
 C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmCaixa.resources
 C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmAlteraSenha.resources
+C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmCriarUsuario.resources

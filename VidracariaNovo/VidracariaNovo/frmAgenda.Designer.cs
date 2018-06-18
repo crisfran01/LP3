@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.agendaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new VidracariaNovo.DataSet1();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
             this.txtStatus = new System.Windows.Forms.Label();
             this.checkBoxStatus = new System.Windows.Forms.CheckBox();
+            this.txtCodF = new System.Windows.Forms.Label();
             this.btnNovo = new System.Windows.Forms.Button();
             this.agendaDataGridView = new System.Windows.Forms.DataGridView();
             this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +55,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panelNovo = new System.Windows.Forms.Panel();
+            this.dataDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtHora = new System.Windows.Forms.MaskedTextBox();
@@ -61,8 +63,6 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.agendaTableAdapter = new VidracariaNovo.DataSet1TableAdapters.agendaTableAdapter();
             this.tableAdapterManager = new VidracariaNovo.DataSet1TableAdapters.TableAdapterManager();
-            this.txtCodF = new System.Windows.Forms.Label();
-            this.dataDateTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.agendaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -100,7 +100,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1185, 696);
             this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnEditar
             // 
@@ -110,6 +109,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditar.Image = global::VidracariaNovo.Properties.Resources._353430_32;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.Location = new System.Drawing.Point(1019, 57);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
@@ -148,6 +148,19 @@
             this.checkBoxStatus.UseVisualStyleBackColor = true;
             this.checkBoxStatus.CheckedChanged += new System.EventHandler(this.checkBoxStatus_CheckedChanged);
             // 
+            // txtCodF
+            // 
+            this.txtCodF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodF.AutoSize = true;
+            this.txtCodF.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendaBindingSource, "CodFun", true));
+            this.txtCodF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtCodF.Location = new System.Drawing.Point(706, 69);
+            this.txtCodF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtCodF.Name = "txtCodF";
+            this.txtCodF.Size = new System.Drawing.Size(46, 17);
+            this.txtCodF.TabIndex = 190;
+            this.txtCodF.Text = "label5";
+            // 
             // btnNovo
             // 
             this.btnNovo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -156,6 +169,7 @@
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnNovo.Image = global::VidracariaNovo.Properties.Resources._103172_20;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovo.Location = new System.Drawing.Point(46, 57);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
@@ -176,14 +190,14 @@
             this.agendaDataGridView.AutoGenerateColumns = false;
             this.agendaDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.agendaDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.agendaDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.agendaDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.agendaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.agendaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tituloDataGridViewTextBoxColumn,
@@ -191,27 +205,27 @@
             this.horaDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.agendaDataGridView.DataSource = this.agendaBindingSource;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.agendaDataGridView.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.agendaDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.agendaDataGridView.Location = new System.Drawing.Point(42, 116);
             this.agendaDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.agendaDataGridView.MultiSelect = false;
             this.agendaDataGridView.Name = "agendaDataGridView";
             this.agendaDataGridView.ReadOnly = true;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.agendaDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.agendaDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.agendaDataGridView.RowHeadersVisible = false;
             this.agendaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.agendaDataGridView.Size = new System.Drawing.Size(470, 562);
@@ -283,7 +297,6 @@
             this.label7.Size = new System.Drawing.Size(96, 29);
             this.label7.TabIndex = 95;
             this.label7.Text = "Agenda";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel2
             // 
@@ -388,6 +401,15 @@
             this.panelNovo.TabIndex = 188;
             this.panelNovo.Visible = false;
             // 
+            // dataDateTimePicker
+            // 
+            this.dataDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agendaBindingSource, "Data", true));
+            this.dataDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataDateTimePicker.Location = new System.Drawing.Point(36, 91);
+            this.dataDateTimePicker.Name = "dataDateTimePicker";
+            this.dataDateTimePicker.Size = new System.Drawing.Size(416, 34);
+            this.dataDateTimePicker.TabIndex = 7;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -468,6 +490,7 @@
             // 
             this.tableAdapterManager.agendaTableAdapter = this.agendaTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.caixaTableAdapter = null;
             this.tableAdapterManager.clientesTableAdapter = null;
             this.tableAdapterManager.condpgTableAdapter = null;
             this.tableAdapterManager.fornecedoresTableAdapter = null;
@@ -477,28 +500,6 @@
             this.tableAdapterManager.UpdateOrder = VidracariaNovo.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = null;
             this.tableAdapterManager.vendasTableAdapter = null;
-            // 
-            // txtCodF
-            // 
-            this.txtCodF.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodF.AutoSize = true;
-            this.txtCodF.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agendaBindingSource, "CodFun", true));
-            this.txtCodF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.txtCodF.Location = new System.Drawing.Point(706, 69);
-            this.txtCodF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtCodF.Name = "txtCodF";
-            this.txtCodF.Size = new System.Drawing.Size(46, 17);
-            this.txtCodF.TabIndex = 190;
-            this.txtCodF.Text = "label5";
-            // 
-            // dataDateTimePicker
-            // 
-            this.dataDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agendaBindingSource, "Data", true));
-            this.dataDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataDateTimePicker.Location = new System.Drawing.Point(36, 91);
-            this.dataDateTimePicker.Name = "dataDateTimePicker";
-            this.dataDateTimePicker.Size = new System.Drawing.Size(416, 34);
-            this.dataDateTimePicker.TabIndex = 7;
             // 
             // frmAgenda
             // 

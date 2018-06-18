@@ -24,11 +24,7 @@ namespace VidracariaNovo
 
         }
 
-        private void txtLogin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void txtSenha_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -42,17 +38,17 @@ namespace VidracariaNovo
                         frmMain objPrin = new frmMain();
 
                         objPrin.instanciaLogin = this;
+
+                        int usuario = dataSet1.usuarios[usuariosBindingSource.Position].cod; ;
                         if (txtLogin.Text.Equals(txtSenha.Text))
                         {
-                            frmAlteraSenha frmS = new frmAlteraSenha();
-                            frmS.instanciaLogin = this;
-                            frmS.txtSenhaAt.Text = txtSenha.Text;
-                            frmS.txtSenhaN.Select();
+                            frmAlteraSenha frmS = new frmAlteraSenha(usuario);
+                            
                             frmS.ShowDialog();
                         }
                         objPrin.Show();
                         objPrin.nivel = dataSet1.usuarios[usuariosBindingSource.Position].nivel;
-                        objPrin.usuario = dataSet1.usuarios[usuariosBindingSource.Position].cod;
+                        objPrin.usuario = usuario;
                         this.Visible = false;
                     }
                     else

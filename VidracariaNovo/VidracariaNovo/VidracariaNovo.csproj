@@ -115,6 +115,12 @@
     <Compile Include="frmAlteraSenha.Designer.cs">
       <DependentUpon>frmAlteraSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCriarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCriarUsuario.Designer.cs">
+      <DependentUpon>frmCriarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Venda\frmListaVendas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAlteraSenha.resx">
       <DependentUpon>frmAlteraSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCriarUsuario.resx">
+      <DependentUpon>frmCriarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venda\frmListaVendas.resx">
       <DependentUpon>frmListaVendas.cs</DependentUpon>
@@ -252,7 +261,9 @@
   <ItemGroup>
     <None Include="Resources\326675-20.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\314478-20.png" />
   </ItemGroup>
@@ -261,6 +272,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\134226-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

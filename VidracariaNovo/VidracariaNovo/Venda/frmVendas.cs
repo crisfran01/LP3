@@ -61,8 +61,6 @@ namespace VidracariaNovo
             itens_subtDataGridView.Enabled = hab;
         }
 
-       
-
         private void salvaVend()
         {
             this.Validate();
@@ -93,8 +91,6 @@ namespace VidracariaNovo
             txtAl.Select();
         }
 
-       
-
         private void gravarItem(int codP, double al, double la, double qtde, double pr)
         {
             double met = al * la * qtde;
@@ -124,7 +120,6 @@ namespace VidracariaNovo
             atualizaTotal();
 
         }
-
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
@@ -158,7 +153,6 @@ namespace VidracariaNovo
 
             }
         }
-       
 
         private void txtCodP_KeyDown(object sender, KeyEventArgs e)
         {
@@ -259,8 +253,6 @@ namespace VidracariaNovo
             {
                 txtLa.Select();
             }
-
-
         }
 
         private void txtLa_KeyDown(object sender, KeyEventArgs e)
@@ -278,19 +270,12 @@ namespace VidracariaNovo
                 cbFun.Select();
             }
         }
-
-        private void txtDesc_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
+     
         private void itens_subtDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-
             DataRow rowIS = ((DataRowView)item_produtoBindingSource.Current).Row;
 
             int seq = Convert.ToInt32(itens_subtDataGridView.CurrentRow.Cells[8].Value.ToString());
-
 
             decimal qtde = Convert.ToDecimal(itens_subtDataGridView.CurrentRow.Cells[6].Value.ToString().Replace('.',','));
 
@@ -310,7 +295,6 @@ namespace VidracariaNovo
             item_produtoBindingSource.MoveLast();
 
             atualizaTotal();
-
         }
 
         private void txtDesc_Leave(object sender, EventArgs e)
@@ -327,7 +311,6 @@ namespace VidracariaNovo
                 itensTableAdapter.DeleteItem(seq);
             }
         }
-
         private void txtAl_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsNumber(e.KeyChar) || e.KeyChar == (char)8 || e.KeyChar == ',' || e.KeyChar == '.'))
@@ -335,7 +318,6 @@ namespace VidracariaNovo
                 e.Handled = true;
             }
         }
-
         private void btnImp_Click(object sender, EventArgs e)
         {
             try
@@ -347,19 +329,12 @@ namespace VidracariaNovo
                 else
                 {
                     tabCImpre.Visible = true;
-
-                
                 }
             }
             catch
             {
                 return;
             }
-        }
-
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
