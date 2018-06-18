@@ -47,3 +47,11 @@ C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\Vidraca
 C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmCadProduto.resources
 C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmBuscaCli.resources
 C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmBuscaProdutos.resources
+C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\RdlCompile.cache
+C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\RdlCompile.compiled
+C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmListaVendas.resources
+C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmVendaDetalhes.resources
+C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmAgenda.resources
+C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmCaixa.resources
+C:\Users\crisf\Documents\ADS\LP3\VidracariaNovo\VidracariaNovo\obj\Debug\VidracariaNovo.frmAlteraSenha.resources

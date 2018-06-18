@@ -17,6 +17,39 @@ namespace VidracariaNovo
             InitializeComponent();
         }
 
+        private frmLogin _instanciaLogin = null;
+        public frmLogin instanciaLogin
+        {
+            get
+            {
+                return _instanciaLogin;
+            }
+            set
+            {
+                _instanciaLogin = value;
+            }
+        }
+
+        private frmListaVendas _instanciaLista = null;
+        public frmListaVendas instanciaLista
+        {
+            get
+            {
+                return _instanciaLista;
+            }
+            set
+            {
+                _instanciaLista = value;
+            }
+        }
+
+
+
+        public string nivel;
+        public int usuario;
+
+
+
         public void showForm(Form obj)
         {
             obj.MdiParent = this;
@@ -91,7 +124,7 @@ namespace VidracariaNovo
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(1);
         }
 
         private void funcionariosToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -112,10 +145,35 @@ namespace VidracariaNovo
             showForm(CadProd);
         }
 
-        private void consultaStripMenuItem6_Click_1(object sender, EventArgs e)
+    
+        private void tsMenuInsereVenda_Click(object sender, EventArgs e)
         {
             frmVendas vendas = new frmVendas();
             showForm(vendas);
+        }
+
+        private void tsVerVendas_Click(object sender, EventArgs e)
+        {
+            frmListaVendas lVendas = new frmListaVendas(usuario);
+            showForm(lVendas);
+        }
+
+        private void agendaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmAgenda agenda = new frmAgenda(usuario);
+            showForm(agenda);
+        }
+
+        private void caixatripMenuItem8_Click(object sender, EventArgs e)
+        {
+            frmCaixa caixa = new frmCaixa(usuario);
+            showForm(caixa);
+        }
+
+        private void alterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlteraSenha obj = new frmAlteraSenha();
+            showForm(obj);
         }
     }
 }

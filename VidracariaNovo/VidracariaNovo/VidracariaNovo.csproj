@@ -32,6 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -39,6 +41,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -88,16 +91,40 @@
     <Compile Include="Cadastros\frmCadProduto.Designer.cs">
       <DependentUpon>frmCadProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Busca\frmBuscaProdutos.cs">
+    <Compile Include="Cadastros\frmBuscaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busca\frmBuscaProdutos.Designer.cs">
+    <Compile Include="Cadastros\frmBuscaProdutos.Designer.cs">
       <DependentUpon>frmBuscaProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="frmAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="frmAgenda.Designer.cs">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\frmCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\frmCaixa.Designer.cs">
+      <DependentUpon>frmCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlteraSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlteraSenha.Designer.cs">
+      <DependentUpon>frmAlteraSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venda\frmListaVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venda\frmListaVendas.Designer.cs">
+      <DependentUpon>frmListaVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
@@ -106,14 +133,25 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVendas.cs">
+    <Compile Include="Venda\frmVendaDetalhes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVendas.Designer.cs">
+    <Compile Include="Venda\frmVendaDetalhes.Designer.cs">
+      <DependentUpon>frmVendaDetalhes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venda\frmVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venda\frmVendas.Designer.cs">
       <DependentUpon>frmVendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vidracariaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vidracariaDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Busca\frmBuscaCli.resx">
       <DependentUpon>frmBuscaCli.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,16 +167,31 @@
     <EmbeddedResource Include="Cadastros\frmCadProduto.resx">
       <DependentUpon>frmCadProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Busca\frmBuscaProdutos.resx">
+    <EmbeddedResource Include="Cadastros\frmBuscaProdutos.resx">
       <DependentUpon>frmBuscaProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="frmAgenda.resx">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\frmCaixa.resx">
+      <DependentUpon>frmCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlteraSenha.resx">
+      <DependentUpon>frmAlteraSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venda\frmListaVendas.resx">
+      <DependentUpon>frmListaVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVendas.resx">
+    <EmbeddedResource Include="Venda\frmVendaDetalhes.resx">
+      <DependentUpon>frmVendaDetalhes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venda\frmVendas.resx">
       <DependentUpon>frmVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -149,7 +202,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="repOrdS.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -169,9 +225,42 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="vidracariaDataSet.xsc">
+      <DependentUpon>vidracariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vidracariaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vidracariaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vidracariaDataSet.xss">
+      <DependentUpon>vidracariaDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111044-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111104-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cadastros\134226-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\326675-20.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\314478-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103172-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\134226-20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

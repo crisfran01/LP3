@@ -19,19 +19,24 @@ namespace VidracariaNovo
 
         private void frmVendas_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vidracariaDataSet.usuarios' table. You can move, or remove it, as needed.
+            this.usuariosTableAdapter.Fill(this.vidracariaDataSet.usuarios);
             // TODO: This line of code loads data into the 'dataSet1.condpg' table. You can move, or remove it, as needed.
             this.condpgTableAdapter.Fill(this.dataSet1.condpg);
             // TODO: This line of code loads data into the 'dataSet1.vendas' table. You can move, or remove it, as needed.
             this.vendasTableAdapter.Fill(this.dataSet1.vendas);
             vendasBindingSource.AddNew();
-        }
+            descricaoComboBox.SelectedIndex = 0;
 
+        }
+        decimal totalBanco;
         int codV;
         private void atualizaTotal()
         {
             DataRow rowVenda = ((DataRowView)vendasBindingSource.Current).Row;
             int cod_vend = (int)rowVenda["cod"];
-            lblTotal.Text = Convert.ToString( itensTableAdapter.TotalVend(cod_vend) - Convert.ToDecimal(txtDesc));
+            totalBanco = Convert.ToDecimal( itensTableAdapter.TotalVend(cod_vend));
+            lblTotal.Text = Convert.ToString(totalBanco - Convert.ToDecimal(txtDesc.Text));
         }
 
         private void limp()
@@ -60,9 +65,10 @@ namespace VidracariaNovo
 
         private void salvaVend()
         {
-
+            this.Validate();
             DataRow rowVend = ((DataRowView)vendasBindingSource.Current).Row;
             rowVend["data"] = dt_date.Value;
+            rowVend["status"] = "Pendente";
             this.Validate();
             this.vendasBindingSource.EndEdit();
             this.vendasTableAdapter.Update(this.dataSet1);
@@ -83,7 +89,7 @@ namespace VidracariaNovo
         {
             produtosTableAdapter.FillByCod(this.dataSet1.produtos, Convert.ToInt32(txtCodP.Text));
             txtDProd.Text = dataSet1.produtos[produtosBindingSource.Position].nome;
-            txtPreU.Text = Convert.ToString(dataSet1.produtos[produtosBindingSource.Position].pr_custo);
+            txtPreU.Text = Convert.ToString(dataSet1.produtos[produtosBindingSource.Position].pr_venda);
             txtAl.Select();
         }
 
@@ -105,13 +111,13 @@ namespace VidracariaNovo
             rowIteVend["largura"] = la;
             rowIteVend["qtde"] = qtde;
             rowIteVend["metragem"] = met;
-            rowIteVend["preco"] = sub;
+            rowIteVend["Preco"] = sub;
 
             codV = Convert.ToInt32(rowIteVend["codVend"]);
             this.itensBindingSource.EndEdit();
             this.itensTableAdapter.Update(this.dataSet1);
 
-            this.item_produtoTableAdapter.FillByCod(this.dataSet1.item_produto, codV);
+            this.item_produtoTableAdapter.FillbyCod(this.dataSet1.item_produto, codV);
             item_produtoBindingSource.MoveLast();
 
             limp();
@@ -122,8 +128,14 @@ namespace VidracariaNovo
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            salvaVend();           
-            this.Dispose();
+            if (item_produtoTableAdapter.HaveItem(codV) > 0)
+            {
+                salvaVend();           
+                this.Dispose();
+            }else
+            {
+                MessageBox.Show("Não há itens na venda");
+            }
         }
 
         private void txtQtde_KeyDown(object sender, KeyEventArgs e)
@@ -133,8 +145,8 @@ namespace VidracariaNovo
                 try
                 {
 
-                    gravarItem(Convert.ToInt32(txtCodP.Text), Convert.ToDouble(txtAl.Text),
-                    Convert.ToDouble(txtLa.Text), Convert.ToDouble(txtQtde.Text),
+                    gravarItem(Convert.ToInt32(txtCodP.Text), Convert.ToDouble(txtAl.Text.Replace('.', ',')),
+                    Convert.ToDouble(txtLa.Text.Replace('.', ',')), Convert.ToDouble(txtQtde.Text.Replace('.', ',')),
                     Convert.ToDouble(txtPreU.Text));
                     txtCodP.Select();
 
@@ -236,6 +248,7 @@ namespace VidracariaNovo
             DialogResult resultado = MessageBox.Show(" Os dados da venda serão perdidos. Deseja mesmo sair? ", "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
+                itensTableAdapter.DeleteAll(codV);
                 this.Dispose();
             }
         }
@@ -246,6 +259,8 @@ namespace VidracariaNovo
             {
                 txtLa.Select();
             }
+
+
         }
 
         private void txtLa_KeyDown(object sender, KeyEventArgs e)
@@ -260,16 +275,91 @@ namespace VidracariaNovo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txtFun.Select();
+                cbFun.Select();
             }
         }
 
         private void txtDesc_TextChanged(object sender, EventArgs e)
         {
-            double desc = Convert.ToDouble(lblTotal.Text);
-            double valor = Convert.ToDouble(txtDesc.Text);
+           
+        }
 
-            lblTotal.Text = Convert.ToString(valor - desc);
+        private void itens_subtDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+
+            DataRow rowIS = ((DataRowView)item_produtoBindingSource.Current).Row;
+
+            int seq = Convert.ToInt32(itens_subtDataGridView.CurrentRow.Cells[8].Value.ToString());
+
+
+            decimal qtde = Convert.ToDecimal(itens_subtDataGridView.CurrentRow.Cells[6].Value.ToString().Replace('.',','));
+
+            decimal a = Convert.ToDecimal(itens_subtDataGridView.CurrentRow.Cells[4].Value.ToString().Replace('.', ','));
+
+            decimal l = Convert.ToDecimal(itens_subtDataGridView.CurrentRow.Cells[5].Value.ToString().Replace('.', ','));
+
+            decimal met = a * l * qtde;
+
+            decimal precoUnitario = Convert.ToDecimal(itens_subtDataGridView.CurrentRow.Cells[9].Value.ToString());
+
+            decimal precoFinal = a * l * qtde * precoUnitario;
+
+            itensTableAdapter.UpdateItem(a, l, qtde, met, precoFinal, seq);
+
+            this.item_produtoTableAdapter.FillbyCod(this.dataSet1.item_produto, Convert.ToInt32(rowIS["CodVend"]));
+            item_produtoBindingSource.MoveLast();
+
+            atualizaTotal();
+
+        }
+
+        private void txtDesc_Leave(object sender, EventArgs e)
+        {
+            decimal desc = Convert.ToDecimal(txtDesc.Text);
+            lblTotal.Text = Convert.ToString(totalBanco - desc);
+        }
+
+        private void itens_subtDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Delete)
+            {
+                int seq = Convert.ToInt32(itens_subtDataGridView.CurrentRow.Cells[8].Value.ToString());
+                itensTableAdapter.DeleteItem(seq);
+            }
+        }
+
+        private void txtAl_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar) || e.KeyChar == (char)8 || e.KeyChar == ',' || e.KeyChar == '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnImp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tabCImpre.Visible)
+                {
+                    tabCImpre.Visible = false;
+                }
+                else
+                {
+                    tabCImpre.Visible = true;
+
+                
+                }
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
