@@ -84,5 +84,52 @@ namespace VidracariaNovo
             this.produtosTableAdapter.Fill(this.dataSet1.produtos);
 
         }
+
+        private void txtQtde_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPrCompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPrVenda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+                {
+                    e.Handled = true;
+                }
+
+                float a = float.Parse(txtPrCompra.Text);
+                float b = float.Parse(txtPrVenda.Text);
+                float total = b - a;
+                string t = Convert.ToString(total);
+                txtLucro.Text = t;
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void txtPrVenda_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrCompra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

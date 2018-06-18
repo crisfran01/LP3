@@ -55,7 +55,22 @@ namespace VidracariaNovo
             if (cbPesquisa.Text == "Nome")
             {
                 this.clientesTableAdapter.FillByName(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
+            }else if (cbPesquisa.Text == "CPF")
+            {
+                this.clientesTableAdapter.FillByCPF(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
+            }else if (cbPesquisa.Text == "Apelido")
+            {
+                this.clientesTableAdapter.FillByApelido(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
             }
+            else if (cbPesquisa.Text == "Cidade")
+            {
+                this.clientesTableAdapter.FillByCidade(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
+            }
+            else if (cbPesquisa.Text == "Endereço")
+            {
+                this.clientesTableAdapter.FillByEndereco(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
+            }
+
         }
 
         private void clientesDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

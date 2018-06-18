@@ -103,5 +103,19 @@ namespace VidracariaNovo
         {
             this.Close();
         }
+
+        private void numTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void emailTextBox_Leave(object sender, EventArgs e)
+        {
+            Verificacao valida = new Verificacao();
+            valida.validaEmail(emailTextBox.Text);
+        }
     }
 }

@@ -4,8 +4,13 @@
 
     partial class DataSet1
     {
-        partial class funcionariosDataTable
+        partial class produtosDataTable
         {
+
+
+            partial class funcionariosDataTable
+            {
+            }
         }
     }
 }

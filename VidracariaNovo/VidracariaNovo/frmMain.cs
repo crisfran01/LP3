@@ -28,60 +28,7 @@ namespace VidracariaNovo
             obj.Show();
         }
 
-        private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void psicologosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void funcionariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void triagemToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void artigoToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void documentosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void consultaStripMenuItem6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void caixaStripMenuItem8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void reciboToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void clientesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -106,16 +53,26 @@ namespace VidracariaNovo
             showForm(CadFornecedor);
         }
 
-        private void psicologosToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            frmCadProduto CadProd = new frmCadProduto();
-            showForm(CadProd);
-        }
+     
 
         private void consultaStripMenuItem6_Click_1(object sender, EventArgs e)
         {
             frmVendas vendas = new frmVendas();
             showForm(vendas);
         }
+
+        private void tlCadProd_Click(object sender, EventArgs e)
+        {
+            frmCadProduto CadProd = new frmCadProduto();
+            showForm(CadProd);
+        }
+
+        private void tlBuscaCli_Click(object sender, EventArgs e)
+        {
+            frmBuscaCli obj = new frmBuscaCli();
+            showForm(obj);
+        }
+
+
     }
 }
