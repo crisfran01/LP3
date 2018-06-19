@@ -91,10 +91,10 @@
     <Compile Include="Cadastros\frmCadProduto.Designer.cs">
       <DependentUpon>frmCadProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\frmBuscaProdutos.cs">
+    <Compile Include="Busca\frmBuscaProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\frmBuscaProdutos.Designer.cs">
+    <Compile Include="Busca\frmBuscaProdutos.Designer.cs">
       <DependentUpon>frmBuscaProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAgenda.cs">
@@ -153,6 +153,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Verificacao.cs" />
     <Compile Include="vidracariaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -173,7 +174,7 @@
     <EmbeddedResource Include="Cadastros\frmCadProduto.resx">
       <DependentUpon>frmCadProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\frmBuscaProdutos.resx">
+    <EmbeddedResource Include="Busca\frmBuscaProdutos.resx">
       <DependentUpon>frmBuscaProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgenda.resx">

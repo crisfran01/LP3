@@ -90,18 +90,40 @@ namespace VidracariaNovo
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            retiraMask();
-            this.Validate();
-            this.fornecedoresBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet1);
-            this.fornecedoresTableAdapter.Fill(this.dataSet1.fornecedores);
-            panelEdit.SendToBack();
-            enableText(true, false);
+            try
+            {
+                retiraMask();
+                this.Validate();
+                this.fornecedoresBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.dataSet1);
+                this.fornecedoresTableAdapter.Fill(this.dataSet1.fornecedores);
+                panelEdit.SendToBack();
+                enableText(true, false);
+            }
+            catch
+            {
+                MessageBox.Show("CNPJ já cadastrado");
+                return;
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void numTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void emailTextBox_Leave(object sender, EventArgs e)
+        {
+            Verificacao valida = new Verificacao();
+            valida.validaEmail(emailTextBox.Text);
         }
     }
 }

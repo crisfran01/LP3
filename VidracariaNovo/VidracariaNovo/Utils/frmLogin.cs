@@ -54,6 +54,7 @@ namespace VidracariaNovo
                     else
                     {
                         MessageBox.Show("Usuario e/ou senha invalido(s)!", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtSenha.Clear();
                     }
 
                 }
@@ -71,6 +72,11 @@ namespace VidracariaNovo
             this.usuariosBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dataSet1);
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

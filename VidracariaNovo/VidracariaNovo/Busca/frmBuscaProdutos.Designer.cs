@@ -32,13 +32,6 @@
             System.Windows.Forms.Label label1;
             this.panel2 = new System.Windows.Forms.Panel();
             this.produtosDataGridView = new System.Windows.Forms.DataGridView();
-            this.codDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prcustoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prvendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qntdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidmedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new VidracariaNovo.DataSet1();
             this.txtConsulta = new System.Windows.Forms.TextBox();
@@ -48,6 +41,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.produtosTableAdapter = new VidracariaNovo.DataSet1TableAdapters.produtosTableAdapter();
             this.tableAdapterManager = new VidracariaNovo.DataSet1TableAdapters.TableAdapterManager();
+            this.codDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prcustoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prvendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qntdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidmedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produtosDataGridView)).BeginInit();
@@ -58,11 +58,12 @@
             // 
             // label1
             // 
-            label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            label1.Location = new System.Drawing.Point(121, 81);
+            label1.Location = new System.Drawing.Point(84, 81);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(108, 28);
@@ -88,6 +89,8 @@
             // 
             // produtosDataGridView
             // 
+            this.produtosDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.produtosDataGridView.AutoGenerateColumns = false;
             this.produtosDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.produtosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -101,64 +104,15 @@
             this.unidmedDataGridViewTextBoxColumn});
             this.produtosDataGridView.DataSource = this.produtosBindingSource;
             this.produtosDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.produtosDataGridView.Location = new System.Drawing.Point(126, 149);
+            this.produtosDataGridView.Location = new System.Drawing.Point(89, 149);
             this.produtosDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.produtosDataGridView.MultiSelect = false;
             this.produtosDataGridView.Name = "produtosDataGridView";
             this.produtosDataGridView.ReadOnly = true;
             this.produtosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.produtosDataGridView.Size = new System.Drawing.Size(918, 467);
+            this.produtosDataGridView.Size = new System.Drawing.Size(991, 467);
             this.produtosDataGridView.TabIndex = 194;
             this.produtosDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.produtosDataGridView_CellDoubleClick);
-            // 
-            // codDataGridViewTextBoxColumn
-            // 
-            this.codDataGridViewTextBoxColumn.DataPropertyName = "cod";
-            this.codDataGridViewTextBoxColumn.HeaderText = "cod";
-            this.codDataGridViewTextBoxColumn.Name = "codDataGridViewTextBoxColumn";
-            this.codDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "descricao";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prcustoDataGridViewTextBoxColumn
-            // 
-            this.prcustoDataGridViewTextBoxColumn.DataPropertyName = "pr_custo";
-            this.prcustoDataGridViewTextBoxColumn.HeaderText = "pr_custo";
-            this.prcustoDataGridViewTextBoxColumn.Name = "prcustoDataGridViewTextBoxColumn";
-            this.prcustoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prvendaDataGridViewTextBoxColumn
-            // 
-            this.prvendaDataGridViewTextBoxColumn.DataPropertyName = "pr_venda";
-            this.prvendaDataGridViewTextBoxColumn.HeaderText = "pr_venda";
-            this.prvendaDataGridViewTextBoxColumn.Name = "prvendaDataGridViewTextBoxColumn";
-            this.prvendaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qntdDataGridViewTextBoxColumn
-            // 
-            this.qntdDataGridViewTextBoxColumn.DataPropertyName = "qntd";
-            this.qntdDataGridViewTextBoxColumn.HeaderText = "qntd";
-            this.qntdDataGridViewTextBoxColumn.Name = "qntdDataGridViewTextBoxColumn";
-            this.qntdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // unidmedDataGridViewTextBoxColumn
-            // 
-            this.unidmedDataGridViewTextBoxColumn.DataPropertyName = "unid_med";
-            this.unidmedDataGridViewTextBoxColumn.HeaderText = "unid_med";
-            this.unidmedDataGridViewTextBoxColumn.Name = "unidmedDataGridViewTextBoxColumn";
-            this.unidmedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // produtosBindingSource
             // 
@@ -172,16 +126,20 @@
             // 
             // txtConsulta
             // 
+            this.txtConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConsulta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConsulta.Location = new System.Drawing.Point(480, 80);
+            this.txtConsulta.Location = new System.Drawing.Point(520, 80);
             this.txtConsulta.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsulta.Name = "txtConsulta";
-            this.txtConsulta.Size = new System.Drawing.Size(564, 34);
+            this.txtConsulta.Size = new System.Drawing.Size(560, 34);
             this.txtConsulta.TabIndex = 190;
             this.txtConsulta.TextChanged += new System.EventHandler(this.txtConsulta_TextChanged);
             // 
             // cbPesquisa
             // 
+            this.cbPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbPesquisa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPesquisa.FormattingEnabled = true;
             this.cbPesquisa.Items.AddRange(new object[] {
@@ -191,10 +149,10 @@
             "CPF",
             "Endereço",
             "Cidade"});
-            this.cbPesquisa.Location = new System.Drawing.Point(257, 79);
+            this.cbPesquisa.Location = new System.Drawing.Point(220, 79);
             this.cbPesquisa.Margin = new System.Windows.Forms.Padding(4);
             this.cbPesquisa.Name = "cbPesquisa";
-            this.cbPesquisa.Size = new System.Drawing.Size(195, 36);
+            this.cbPesquisa.Size = new System.Drawing.Size(268, 36);
             this.cbPesquisa.TabIndex = 189;
             // 
             // panel1
@@ -214,6 +172,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::VidracariaNovo.Properties.Resources._134226_20;
             this.btnClose.Location = new System.Drawing.Point(0, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
@@ -242,6 +201,7 @@
             // 
             this.tableAdapterManager.agendaTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.caixaTableAdapter = null;
             this.tableAdapterManager.clientesTableAdapter = null;
             this.tableAdapterManager.condpgTableAdapter = null;
             this.tableAdapterManager.fornecedoresTableAdapter = null;
@@ -251,6 +211,62 @@
             this.tableAdapterManager.UpdateOrder = VidracariaNovo.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = null;
             this.tableAdapterManager.vendasTableAdapter = null;
+            // 
+            // codDataGridViewTextBoxColumn
+            // 
+            this.codDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.codDataGridViewTextBoxColumn.DataPropertyName = "cod";
+            this.codDataGridViewTextBoxColumn.HeaderText = "Cod";
+            this.codDataGridViewTextBoxColumn.Name = "codDataGridViewTextBoxColumn";
+            this.codDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "descricao";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prcustoDataGridViewTextBoxColumn
+            // 
+            this.prcustoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.prcustoDataGridViewTextBoxColumn.DataPropertyName = "pr_custo";
+            this.prcustoDataGridViewTextBoxColumn.HeaderText = "pr_custo";
+            this.prcustoDataGridViewTextBoxColumn.Name = "prcustoDataGridViewTextBoxColumn";
+            this.prcustoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prvendaDataGridViewTextBoxColumn
+            // 
+            this.prvendaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.prvendaDataGridViewTextBoxColumn.DataPropertyName = "pr_venda";
+            this.prvendaDataGridViewTextBoxColumn.HeaderText = "pr_venda";
+            this.prvendaDataGridViewTextBoxColumn.Name = "prvendaDataGridViewTextBoxColumn";
+            this.prvendaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qntdDataGridViewTextBoxColumn
+            // 
+            this.qntdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.qntdDataGridViewTextBoxColumn.DataPropertyName = "qntd";
+            this.qntdDataGridViewTextBoxColumn.HeaderText = "qntd";
+            this.qntdDataGridViewTextBoxColumn.Name = "qntdDataGridViewTextBoxColumn";
+            this.qntdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // unidmedDataGridViewTextBoxColumn
+            // 
+            this.unidmedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.unidmedDataGridViewTextBoxColumn.DataPropertyName = "unid_med";
+            this.unidmedDataGridViewTextBoxColumn.HeaderText = "Un Med";
+            this.unidmedDataGridViewTextBoxColumn.Name = "unidmedDataGridViewTextBoxColumn";
+            this.unidmedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmBuscaProdutos
             // 

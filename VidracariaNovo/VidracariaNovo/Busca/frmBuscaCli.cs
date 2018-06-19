@@ -52,9 +52,34 @@ namespace VidracariaNovo
 
         private void txtConsulta_TextChanged(object sender, EventArgs e)
         {
-            if (cbPesquisa.Text == "Nome")
+            try
             {
-                this.clientesTableAdapter.FillByName(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
+                if (cbPesquisa.Text == "Nome")
+                {
+                    this.clientesTableAdapter.FillByName(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
+                }
+                else if (cbPesquisa.Text == "CPF")
+                {
+                    this.clientesTableAdapter.FillByCPF(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
+                }
+                else if (cbPesquisa.Text == "Apelido")
+                {
+                    this.clientesTableAdapter.FillByApelido(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
+                }
+                else if (cbPesquisa.Text == "Cidade")
+                {
+                    this.clientesTableAdapter.FillByCidade(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
+                }
+                else if (cbPesquisa.Text == "Endereço")
+                {
+                    this.clientesTableAdapter.FillByEndereco(this.dataSet1.clientes, "%" + txtConsulta.Text + "%");
+                }else if (cbPesquisa.Text == "Código")
+                {
+                    this.clientesTableAdapter.FillByCod(this.dataSet1.clientes, Convert.ToInt32( txtConsulta.Text));
+                }
+            }catch{
+                MessageBox.Show("Erro ao buscar.");
+                return;
             }
         }
 

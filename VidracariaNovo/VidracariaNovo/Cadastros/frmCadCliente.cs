@@ -85,14 +85,21 @@ namespace VidracariaNovo
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-         
+            try
+            {
                 retiraMask();
                 this.Validate();
                 this.clientesBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.dataSet1);
                 this.clientesTableAdapter.Fill(this.dataSet1.clientes);
                 panelEdit.SendToBack();
-                enableText(true, false);    
+                enableText(true, false);
+            }
+            catch
+            {
+                MessageBox.Show("CPF já cadastrado");
+                return;
+            }
            
         }
 
@@ -114,5 +121,52 @@ namespace VidracariaNovo
         {
 
         }
+
+        private void numTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpfTextBox_Leave(object sender, EventArgs e)
+        {
+            Verificacao valida = new Verificacao();
+            valida.validaCpf(cpfTextBox.Text);
+        }
+
+        private void emailTextBox_Leave(object sender, EventArgs e)
+        {
+            Verificacao valida = new Verificacao();
+            valida.validaEmail(emailTextBox.Text);
+        }
+
+        private void rgTextBox_Leave(object sender, EventArgs e)
+        {
+            Verificacao valida = new Verificacao();
+            valida.validaRG(rgTextBox.Text);
+        }
+
+        public void insereCliVend(int codigo)
+        {
+            clientesTableAdapter.FillByCod(this.dataSet1.clientes, codigo);
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmBuscaCli obj = new frmBuscaCli();
+                obj.ShowDialog();
+                insereCliVend( Convert.ToInt32( obj.clienteInfos["cod"]));
+            }
+            catch
+            {
+                return;
+            }
+        }
     }
+
 }

@@ -48,6 +48,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new VidracariaNovo.DataSet1();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.cepTextBox = new System.Windows.Forms.MaskedTextBox();
             this.telTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -73,8 +75,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.dataSet1 = new VidracariaNovo.DataSet1();
-            this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fornecedoresTableAdapter = new VidracariaNovo.DataSet1TableAdapters.fornecedoresTableAdapter();
             this.tableAdapterManager = new VidracariaNovo.DataSet1TableAdapters.TableAdapterManager();
             rgLabel = new System.Windows.Forms.Label();
@@ -93,10 +93,10 @@
             label8 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rgLabel
@@ -298,6 +298,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::VidracariaNovo.Properties.Resources._134226_20;
             this.btnClose.Location = new System.Drawing.Point(0, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
@@ -374,6 +375,17 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(754, 34);
             this.emailTextBox.TabIndex = 189;
+            this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
+            // 
+            // fornecedoresBindingSource
+            // 
+            this.fornecedoresBindingSource.DataMember = "fornecedores";
+            this.fornecedoresBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nomeTextBox
             // 
@@ -479,6 +491,7 @@
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::VidracariaNovo.Properties.Resources.search;
             this.btnBuscar.Location = new System.Drawing.Point(392, 67);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
@@ -498,6 +511,7 @@
             this.numTextBox.Name = "numTextBox";
             this.numTextBox.Size = new System.Drawing.Size(125, 34);
             this.numTextBox.TabIndex = 6;
+            this.numTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
             // 
             // txtCod
             // 
@@ -638,6 +652,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEdit.Image = global::VidracariaNovo.Properties.Resources._353430_32;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Location = new System.Drawing.Point(964, 9);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
@@ -706,6 +721,7 @@
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnNovo.Image = global::VidracariaNovo.Properties.Resources._103172_20;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovo.Location = new System.Drawing.Point(59, 11);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
@@ -778,16 +794,6 @@
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fornecedoresBindingSource
-            // 
-            this.fornecedoresBindingSource.DataMember = "fornecedores";
-            this.fornecedoresBindingSource.DataSource = this.dataSet1;
-            // 
             // fornecedoresTableAdapter
             // 
             this.fornecedoresTableAdapter.ClearBeforeFill = true;
@@ -796,7 +802,9 @@
             // 
             this.tableAdapterManager.agendaTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.caixaTableAdapter = null;
             this.tableAdapterManager.clientesTableAdapter = null;
+            this.tableAdapterManager.condpgTableAdapter = null;
             this.tableAdapterManager.fornecedoresTableAdapter = this.fornecedoresTableAdapter;
             this.tableAdapterManager.funcionariosTableAdapter = null;
             this.tableAdapterManager.itensTableAdapter = null;
@@ -820,10 +828,10 @@
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panelEdit.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

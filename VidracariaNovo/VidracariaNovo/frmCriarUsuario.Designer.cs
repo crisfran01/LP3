@@ -168,6 +168,7 @@
             this.btnClose.Size = new System.Drawing.Size(51, 32);
             this.btnClose.TabIndex = 130;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // label4
             // 

@@ -33,21 +33,19 @@ namespace VidracariaNovo
                 }
                 else
                 {
-
-                    DataRow row = ((DataRowView)usuariosBindingSource.Current).Row;
-                    row["nome"] = txtNome.Text;
-                    row["senha"] = txtNome.Text;
+                    int nivel;
+                   
                     if (cbNivel.Text == "")
                     {
-                        row["nivel"] = "2";
+                        nivel = 2;
                     }
                     else
                     {
-                        row["nivel"] = cbNivel.Text;
+                        nivel = Convert.ToInt32( cbNivel.Text);
                     }
-                  
-                    this.Validate();
-                    this.usuariosBindingSource.EndEdit();
+
+                    usuariosTableAdapter.InsertQuery(txtNome.Text, txtNome.Text, nivel);
+                   
 
                     MessageBox.Show("Usuario Inserido com Sucesso!");
 
@@ -78,6 +76,10 @@ namespace VidracariaNovo
             }
         }
 
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 
 }

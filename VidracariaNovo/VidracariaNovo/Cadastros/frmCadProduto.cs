@@ -17,7 +17,7 @@ namespace VidracariaNovo
             InitializeComponent();
         }
 
-        private void enableText(Boolean enable)
+        private void enableText(Boolean enable, Boolean enablec)
         {
             txtNome.ReadOnly = enable;
             txtUnidadeDeMedida.ReadOnly = enable;
@@ -37,7 +37,7 @@ namespace VidracariaNovo
             panelEdit.BringToFront();
             produtosBindingSource.CancelEdit();
             produtosBindingSource.AddNew();
-            enableText(true);
+            enableText(false, true);
             txtNome.Focus();
         }
 
@@ -56,25 +56,32 @@ namespace VidracariaNovo
         private void btnEdit_Click(object sender, EventArgs e)
         {
             panelEdit.BringToFront();
-            enableText(true);
+            enableText(false, true);
             txtNome.Focus();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.produtosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet1);
-            this.produtosTableAdapter.Fill(this.dataSet1.produtos);
-            panelEdit.SendToBack();
-            enableText(false);
+            try
+            {
+                this.Validate();
+                this.produtosBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.dataSet1);
+                this.produtosTableAdapter.Fill(this.dataSet1.produtos);
+                panelEdit.SendToBack();
+                enableText(true, false);
+            }
+            catch
+            {
+                return;
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
 
             panelEdit.SendToBack();
-            enableText(false);
+            enableText(true, false);
             this.produtosBindingSource.CancelEdit();
         }
 
@@ -82,6 +89,53 @@ namespace VidracariaNovo
         {
             // TODO: This line of code loads data into the 'dataSet1.produtos' table. You can move, or remove it, as needed.
             this.produtosTableAdapter.Fill(this.dataSet1.produtos);
+
+        }
+
+        private void txtQtde_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPrCompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPrVenda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+                {
+                    e.Handled = true;
+                }
+
+                float a = float.Parse(txtPrCompra.Text);
+                float b = float.Parse(txtPrVenda.Text);
+                float total = b - a;
+                string t = Convert.ToString(total);
+                txtLucro.Text = t;
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void txtPrVenda_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrCompra_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

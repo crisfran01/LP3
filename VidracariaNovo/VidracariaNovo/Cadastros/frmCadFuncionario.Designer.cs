@@ -288,7 +288,7 @@
             this.panel5.Controls.Add(this.label7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1165, 34);
             this.panel5.TabIndex = 186;
@@ -298,6 +298,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::VidracariaNovo.Properties.Resources._134226_20;
             this.btnClose.Location = new System.Drawing.Point(0, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
@@ -356,7 +357,7 @@
             this.panel1.Controls.Add(this.panelEdit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1165, 660);
             this.panel1.TabIndex = 3;
@@ -369,7 +370,7 @@
             this.txtFgts.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFgts.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtFgts.Location = new System.Drawing.Point(684, 510);
-            this.txtFgts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFgts.Margin = new System.Windows.Forms.Padding(4);
             this.txtFgts.Mask = "000,000,000-00";
             this.txtFgts.Name = "txtFgts";
             this.txtFgts.Size = new System.Drawing.Size(333, 34);
@@ -399,6 +400,7 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(754, 34);
             this.emailTextBox.TabIndex = 216;
+            this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
             // cepTextBox
             // 
@@ -408,7 +410,7 @@
             this.cepTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cepTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cepTextBox.Location = new System.Drawing.Point(851, 325);
-            this.cepTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cepTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cepTextBox.Mask = "00,000-000";
             this.cepTextBox.Name = "cepTextBox";
             this.cepTextBox.Size = new System.Drawing.Size(168, 34);
@@ -422,7 +424,7 @@
             this.telTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.telTextBox.Location = new System.Drawing.Point(264, 389);
-            this.telTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.telTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.telTextBox.Mask = "(00)00000-0000";
             this.telTextBox.Name = "telTextBox";
             this.telTextBox.Size = new System.Drawing.Size(287, 34);
@@ -436,7 +438,7 @@
             this.celTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.celTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.celTextBox.Location = new System.Drawing.Point(688, 389);
-            this.celTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.celTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.celTextBox.Mask = "(00)00000-0000";
             this.celTextBox.Name = "celTextBox";
             this.celTextBox.Size = new System.Drawing.Size(329, 34);
@@ -450,11 +452,12 @@
             this.rgTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rgTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rgTextBox.Location = new System.Drawing.Point(695, 209);
-            this.rgTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rgTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.rgTextBox.Mask = "00,000,000-C";
             this.rgTextBox.Name = "rgTextBox";
             this.rgTextBox.Size = new System.Drawing.Size(324, 34);
             this.rgTextBox.TabIndex = 4;
+            this.rgTextBox.Leave += new System.EventHandler(this.rgTextBox_Leave);
             // 
             // cpfTextBox
             // 
@@ -464,11 +467,12 @@
             this.cpfTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpfTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cpfTextBox.Location = new System.Drawing.Point(264, 209);
-            this.cpfTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cpfTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cpfTextBox.Mask = "000,000,000-00";
             this.cpfTextBox.Name = "cpfTextBox";
             this.cpfTextBox.Size = new System.Drawing.Size(356, 34);
             this.cpfTextBox.TabIndex = 3;
+            this.cpfTextBox.Leave += new System.EventHandler(this.cpfTextBox_Leave);
             // 
             // funcaoTextBox
             // 
@@ -491,8 +495,9 @@
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::VidracariaNovo.Properties.Resources.search;
             this.btnBuscar.Location = new System.Drawing.Point(400, 89);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(47, 36);
             this.btnBuscar.TabIndex = 175;
@@ -511,6 +516,7 @@
             this.numTextBox.Name = "numTextBox";
             this.numTextBox.Size = new System.Drawing.Size(125, 34);
             this.numTextBox.TabIndex = 6;
+            this.numTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
             // 
             // txtCod
             // 
@@ -567,7 +573,7 @@
             "SE",
             "TO\t\t"});
             this.estadoComboBox.Location = new System.Drawing.Point(692, 325);
-            this.estadoComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.estadoComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.estadoComboBox.Name = "estadoComboBox";
             this.estadoComboBox.Size = new System.Drawing.Size(73, 36);
             this.estadoComboBox.TabIndex = 9;
@@ -581,7 +587,7 @@
             this.cidadeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cidadeTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cidadeTextBox.Location = new System.Drawing.Point(497, 326);
-            this.cidadeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cidadeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cidadeTextBox.Name = "cidadeTextBox";
             this.cidadeTextBox.Size = new System.Drawing.Size(175, 34);
             this.cidadeTextBox.TabIndex = 8;
@@ -638,7 +644,7 @@
             this.panel2.Controls.Add(this.btnNovo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 607);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1165, 53);
             this.panel2.TabIndex = 179;
@@ -651,9 +657,10 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEdit.Image = global::VidracariaNovo.Properties.Resources._353430_32;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Location = new System.Drawing.Point(964, 9);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(157, 33);
             this.btnEdit.TabIndex = 9;
@@ -668,7 +675,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1165, 1);
             this.panel3.TabIndex = 7;
@@ -683,7 +690,7 @@
             this.btnProximo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnProximo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProximo.Location = new System.Drawing.Point(603, 7);
-            this.btnProximo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProximo.Margin = new System.Windows.Forms.Padding(4);
             this.btnProximo.Name = "btnProximo";
             this.btnProximo.Size = new System.Drawing.Size(157, 37);
             this.btnProximo.TabIndex = 3;
@@ -702,7 +709,7 @@
             this.btnAnterior.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAnterior.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnterior.Location = new System.Drawing.Point(387, 7);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(157, 37);
             this.btnAnterior.TabIndex = 2;
@@ -719,9 +726,10 @@
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnNovo.Image = global::VidracariaNovo.Properties.Resources._103172_20;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovo.Location = new System.Drawing.Point(59, 11);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(157, 37);
             this.btnNovo.TabIndex = 1;
@@ -739,7 +747,7 @@
             this.panelEdit.Controls.Add(this.btnCancelar);
             this.panelEdit.Controls.Add(this.btnSalvar);
             this.panelEdit.Location = new System.Drawing.Point(0, 607);
-            this.panelEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelEdit.Margin = new System.Windows.Forms.Padding(4);
             this.panelEdit.Name = "panelEdit";
             this.panelEdit.Size = new System.Drawing.Size(1165, 53);
             this.panelEdit.TabIndex = 88;
@@ -750,7 +758,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1165, 1);
             this.panel4.TabIndex = 6;
@@ -765,7 +773,7 @@
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(759, 10);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(157, 37);
             this.btnCancelar.TabIndex = 16;
@@ -783,7 +791,7 @@
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.Location = new System.Drawing.Point(964, 10);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(157, 37);
             this.btnSalvar.TabIndex = 15;
@@ -799,7 +807,9 @@
             // 
             this.tableAdapterManager.agendaTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.caixaTableAdapter = null;
             this.tableAdapterManager.clientesTableAdapter = null;
+            this.tableAdapterManager.condpgTableAdapter = null;
             this.tableAdapterManager.fornecedoresTableAdapter = null;
             this.tableAdapterManager.funcionariosTableAdapter = this.funcionariosTableAdapter;
             this.tableAdapterManager.itensTableAdapter = null;
@@ -815,7 +825,7 @@
             this.ClientSize = new System.Drawing.Size(1165, 660);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCadFuncionario";
             this.Text = "frmCadFuncionario";
             this.panel5.ResumeLayout(false);

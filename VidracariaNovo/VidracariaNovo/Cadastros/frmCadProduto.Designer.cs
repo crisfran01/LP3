@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label1;
-            System.Windows.Forms.Label lucroPorcentLabel;
             System.Windows.Forms.Label lucroReaisLabel;
             System.Windows.Forms.Label precoVendaLabel;
             System.Windows.Forms.Label precoCompraLabel;
@@ -48,7 +47,6 @@
             this.dataSet1 = new VidracariaNovo.DataSet1();
             this.txtUnidadeDeMedida = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.txtLucroP = new System.Windows.Forms.TextBox();
             this.txtLucro = new System.Windows.Forms.TextBox();
             this.txtPrVenda = new System.Windows.Forms.TextBox();
             this.txtPrCompra = new System.Windows.Forms.TextBox();
@@ -69,7 +67,6 @@
             this.tableAdapterManager = new VidracariaNovo.DataSet1TableAdapters.TableAdapterManager();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
-            lucroPorcentLabel = new System.Windows.Forms.Label();
             lucroReaisLabel = new System.Windows.Forms.Label();
             precoVendaLabel = new System.Windows.Forms.Label();
             precoCompraLabel = new System.Windows.Forms.Label();
@@ -109,19 +106,6 @@
             label1.Text = "Descrição:";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             label1.UseCompatibleTextRendering = true;
-            // 
-            // lucroPorcentLabel
-            // 
-            lucroPorcentLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            lucroPorcentLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lucroPorcentLabel.ForeColor = System.Drawing.SystemColors.Control;
-            lucroPorcentLabel.Location = new System.Drawing.Point(799, 359);
-            lucroPorcentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lucroPorcentLabel.Name = "lucroPorcentLabel";
-            lucroPorcentLabel.Size = new System.Drawing.Size(108, 26);
-            lucroPorcentLabel.TabIndex = 212;
-            lucroPorcentLabel.Text = "Lucro(%):";
-            lucroPorcentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lucroReaisLabel
             // 
@@ -217,6 +201,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::VidracariaNovo.Properties.Resources._134226_20;
             this.btnClose.Location = new System.Drawing.Point(0, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
@@ -248,8 +233,6 @@
             this.panel2.Controls.Add(this.txtUnidadeDeMedida);
             this.panel2.Controls.Add(this.txtDescricao);
             this.panel2.Controls.Add(label1);
-            this.panel2.Controls.Add(lucroPorcentLabel);
-            this.panel2.Controls.Add(this.txtLucroP);
             this.panel2.Controls.Add(lucroReaisLabel);
             this.panel2.Controls.Add(this.txtLucro);
             this.panel2.Controls.Add(precoVendaLabel);
@@ -280,6 +263,7 @@
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBuscar.Image = global::VidracariaNovo.Properties.Resources.search;
             this.btnBuscar.Location = new System.Drawing.Point(405, 158);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
@@ -343,20 +327,6 @@
             this.txtDescricao.Size = new System.Drawing.Size(767, 34);
             this.txtDescricao.TabIndex = 214;
             // 
-            // txtLucroP
-            // 
-            this.txtLucroP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLucroP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtLucroP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLucroP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLucroP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtLucroP.Location = new System.Drawing.Point(923, 354);
-            this.txtLucroP.Margin = new System.Windows.Forms.Padding(0);
-            this.txtLucroP.MaxLength = 3;
-            this.txtLucroP.Name = "txtLucroP";
-            this.txtLucroP.Size = new System.Drawing.Size(114, 34);
-            this.txtLucroP.TabIndex = 211;
-            // 
             // txtLucro
             // 
             this.txtLucro.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -381,10 +351,11 @@
             this.txtPrVenda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtPrVenda.Location = new System.Drawing.Point(923, 289);
             this.txtPrVenda.Margin = new System.Windows.Forms.Padding(0);
-            this.txtPrVenda.MaxLength = 3;
+            this.txtPrVenda.MaxLength = 9;
             this.txtPrVenda.Name = "txtPrVenda";
             this.txtPrVenda.Size = new System.Drawing.Size(114, 34);
             this.txtPrVenda.TabIndex = 207;
+            this.txtPrVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrVenda_KeyPress);
             // 
             // txtPrCompra
             // 
@@ -396,10 +367,11 @@
             this.txtPrCompra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtPrCompra.Location = new System.Drawing.Point(618, 289);
             this.txtPrCompra.Margin = new System.Windows.Forms.Padding(0);
-            this.txtPrCompra.MaxLength = 3;
+            this.txtPrCompra.MaxLength = 9;
             this.txtPrCompra.Name = "txtPrCompra";
             this.txtPrCompra.Size = new System.Drawing.Size(114, 34);
             this.txtPrCompra.TabIndex = 205;
+            this.txtPrCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrCompra_KeyPress);
             // 
             // txtQtde
             // 
@@ -415,6 +387,7 @@
             this.txtQtde.Name = "txtQtde";
             this.txtQtde.Size = new System.Drawing.Size(114, 34);
             this.txtQtde.TabIndex = 201;
+            this.txtQtde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQtde_KeyPress);
             // 
             // txtNome
             // 
@@ -612,6 +585,7 @@
             // 
             this.tableAdapterManager.agendaTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.caixaTableAdapter = null;
             this.tableAdapterManager.clientesTableAdapter = null;
             this.tableAdapterManager.condpgTableAdapter = null;
             this.tableAdapterManager.fornecedoresTableAdapter = null;
@@ -663,7 +637,6 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtUnidadeDeMedida;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.TextBox txtLucroP;
         private System.Windows.Forms.TextBox txtLucro;
         private System.Windows.Forms.TextBox txtPrVenda;
         private System.Windows.Forms.TextBox txtPrCompra;

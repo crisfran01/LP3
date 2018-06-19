@@ -127,9 +127,27 @@ namespace VidracariaNovo
             if (nivel != 1)
             {
                 objInsereUsu.cbNivel.Visible = false;
+                objInsereUsu.lbNivel.Visible = false;
             }
             
             showForm(objInsereUsu);
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
+        {
+            frmBuscaCli obj = new frmBuscaCli();
+            showForm(obj);
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmBuscaProdutos obj = new frmBuscaProdutos();
+            showForm(obj);
         }
     }
 }

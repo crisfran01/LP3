@@ -412,6 +412,7 @@
             this.rgTextBox.Name = "rgTextBox";
             this.rgTextBox.Size = new System.Drawing.Size(337, 34);
             this.rgTextBox.TabIndex = 195;
+            this.rgTextBox.Leave += new System.EventHandler(this.cpfTextBox_Leave);
             // 
             // cpfTextBox
             // 
@@ -427,6 +428,7 @@
             this.cpfTextBox.Name = "cpfTextBox";
             this.cpfTextBox.Size = new System.Drawing.Size(357, 34);
             this.cpfTextBox.TabIndex = 194;
+            this.cpfTextBox.Leave += new System.EventHandler(this.cpfTextBox_Leave);
             // 
             // btnBuscar
             // 
@@ -436,12 +438,14 @@
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBuscar.Image = global::VidracariaNovo.Properties.Resources.search;
             this.btnBuscar.Location = new System.Drawing.Point(410, 104);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(56, 36);
             this.btnBuscar.TabIndex = 222;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // emailTextBox
             // 
@@ -457,6 +461,7 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(767, 34);
             this.emailTextBox.TabIndex = 204;
+            this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
             // estadoComboBox
             // 
@@ -548,6 +553,7 @@
             this.numTextBox.Name = "numTextBox";
             this.numTextBox.Size = new System.Drawing.Size(122, 34);
             this.numTextBox.TabIndex = 197;
+            this.numTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
             // 
             // endTextBox
             // 
@@ -631,6 +637,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::VidracariaNovo.Properties.Resources._134226_20;
             this.btnClose.Location = new System.Drawing.Point(0, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
@@ -684,6 +691,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEdit.Image = global::VidracariaNovo.Properties.Resources._353430_32;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Location = new System.Drawing.Point(963, 5);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
@@ -752,6 +760,7 @@
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnNovo.Image = global::VidracariaNovo.Properties.Resources._103172_20;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovo.Location = new System.Drawing.Point(59, 7);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
@@ -832,7 +841,9 @@
             // 
             this.tableAdapterManager.agendaTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.caixaTableAdapter = null;
             this.tableAdapterManager.clientesTableAdapter = this.clientesTableAdapter;
+            this.tableAdapterManager.condpgTableAdapter = null;
             this.tableAdapterManager.fornecedoresTableAdapter = null;
             this.tableAdapterManager.funcionariosTableAdapter = null;
             this.tableAdapterManager.itensTableAdapter = null;

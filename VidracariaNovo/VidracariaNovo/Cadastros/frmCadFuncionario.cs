@@ -47,13 +47,21 @@ namespace VidracariaNovo
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            retiraMask();
-            this.Validate();
-            funcionariosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet1);
-            this.funcionariosTableAdapter.Fill(this.dataSet1.funcionarios);
-            panelEdit.SendToBack();
-            enableText(true, false);
+            try
+            {
+                retiraMask();
+                this.Validate();
+                funcionariosBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.dataSet1);
+                this.funcionariosTableAdapter.Fill(this.dataSet1.funcionarios);
+                panelEdit.SendToBack();
+                enableText(true, false);
+            }
+            catch
+            {
+                MessageBox.Show("CPF já cadastrado");
+                return;
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -108,7 +116,36 @@ namespace VidracariaNovo
             this.Dispose();
         }
 
+        private void numTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void numTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rgTextBox_Leave(object sender, EventArgs e)
+        {
+            Verificacao valida = new Verificacao();
+            valida.validaRG(rgTextBox.Text);
+        }
+
+        private void emailTextBox_Leave(object sender, EventArgs e)
+        {
+            Verificacao valida = new Verificacao();
+            valida.validaEmail(emailTextBox.Text);
+        }
+
+        private void cpfTextBox_Leave(object sender, EventArgs e)
+        {
+            Verificacao valida = new Verificacao();
+            valida.validaCpf(cpfTextBox.Text);
+        }
 
 
     }
